@@ -1,11 +1,12 @@
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
+import SecurityAuditImg from "../../assets/ServicesImg/security-testing.svg";
 
 export default function SecurityAudit() {
     return (
-        <main className="min-h-screen mb-20">
+        <main className="min-h-screen ">
             <Navigation />
-            <section className="h-screen w-full flex flex-wrap items-center justify-center p-4 lg:justify-between">
+            <section className="h-screen flex flex-col lg:flex-row items-center justify-around p-6 md:justify-between max-w-10/12 mx-auto">
                 <div className="flex flex-col gap-10 max-w-lg text-center lg:text-left">
                     <div>
                         <h1 className="text-2xl md:text-4xl font-bold">
@@ -31,7 +32,7 @@ export default function SecurityAudit() {
                         decoding="async"
                         className="rounded"
                         style={{ color: "transparent" }}
-                        src="/security-testing.svg"
+                        src={SecurityAuditImg}
                     />
                 </div>
             </section>

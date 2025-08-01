@@ -1,13 +1,14 @@
 import React from "react";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
+import Mobile from "../../assets/ServicesImg/mobile-app.png";
 
 export default function MobileDev() {
     return (
         <div>
             <Navigation />
-            <main className="min-h-screen mb-20">
-                <section className="h-screen w-full flex flex-wrap items-center justify-center p-4 lg:justify-between">
+            <main className="min-h-screen">
+               <section className="h-screen flex flex-col lg:flex-row items-center justify-around p-6 md:justify-between max-w-10/12 mx-auto">
                     <div className="flex flex-col gap-6 max-w-lg text-center lg:text-left">
                         <div>
                             <h1 className="text-2xl md:text-4xl font-bold">
@@ -34,8 +35,7 @@ export default function MobileDev() {
                             decoding="async"
                             className="rounded"
                             style={{ color: "transparent" }}
-                            srcSet="/_next/image?url=%2Fmobile-app.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2Fmobile-app.png&amp;w=828&amp;q=75 2x"
-                            src="/_next/image?url=%2Fmobile-app.png&amp;w=828&amp;q=75"
+                            src={Mobile}
                         />
                     </div>
                 </section>

@@ -1,206 +1,213 @@
-import React from 'react';
-import Navigation from '../../components/Navigation';
+import { useState } from 'react';
+import workshopImg from "../../assets/ServicesImg/workshop.avif";
 import Footer from '../../components/Footer';
+import Navigation from '../../components/Navigation';
+import DropDown from "../../assets/Icons/DropDown.png";
 
-export default function Workshop() {
+const workshopServices = [
+    {
+        emoji: "🌐",
+        title: "Web Frontend (HTML, CSS, JS)",
+        topics: [
+            "Introduction to HTML: Elements, Attributes, and Forms",
+            "Introduction to CSS: Selectors, Box Model, and Flexbox",
+            "Responsive Web Design with CSS Grid",
+            "Introduction to JavaScript: Syntax, DOM Manipulation, and Events",
+            "Advanced JavaScript: ES6+ Features, Promises, and Async/Await",
+            "Working with APIs: Fetch and Axios",
+            "Web Performance Optimization: Lazy Loading, Minification",
+        ],
+    },
+    {
+        emoji: "⚛️",
+        title: "ReactJS",
+        topics: [
+            "Introduction to React: JSX, Components, and Props",
+            "State and Lifecycle Methods",
+            "Handling Events and Forms",
+            "React Hooks: useState, useEffect, useContext, and Custom Hooks",
+            "State Management with Redux and Context API",
+            "Routing with React Router",
+            "Performance Optimization: Memoization and Lazy Loading",
+            "Testing with Jest and React Testing Library",
+            "Deploying React Applications",
+        ],
+    },
+    {
+        emoji: "⬛️",
+        title: "NextJS",
+        topics: [
+            "Introduction to Next.js: File-based Routing, Pages, and Layouts",
+            "Static Site Generation (SSG) and Incremental Static Regeneration (ISR)",
+            "Server-side Rendering (SSR) and Client-side Rendering (CSR)",
+            "API Routes in Next.js",
+            "Data Fetching with getStaticProps, getStaticPaths, and getServerSideProps",
+            "Dynamic Routing and Middleware",
+            "Authentication with NextAuth.js",
+            "Styling with CSS Modules and styled-components",
+            "Image Optimization with next/image",
+            "Performance Optimization: Code Splitting, Lazy Loading, and Prefetching",
+            "Internationalization (i18n) with Next.js",
+            "Deploying Next.js Applications: Vercel, Netlify, and AWS",
+        ],
+    },
+    {
+        emoji: "🟢",
+        title: "NodeJS, ExpressJS",
+        topics: [
+            "Introduction to Node.js: Event Loop, Modules, and NPM",
+            "Building RESTful APIs with Express.js",
+            "Middleware: Application-level, Router-level, and Error-handling",
+            "Database Integration with MongoDB and Mongoose",
+            "Authentication and Authorization with JWT",
+            "Real-time Communication with Socket.io",
+            "Testing APIs with Mocha and Chai",
+            "Deploying Node.js Applications: Heroku, AWS",
+        ],
+    },
+    {
+        emoji: "🌱",
+        title: "Spring Boot",
+        topics: [
+            "Introduction to Spring Boot: Setting Up and Configuration",
+            "Building RESTful APIs with Spring MVC",
+            "Spring Data JPA: Repositories and Transactions",
+            "Database Integration with Hibernate",
+            "Spring Security for Authentication and Authorization",
+            "Microservices Architecture with Spring Boot",
+            "Testing Spring Boot Applications with JUnit and Mockito",
+            "Deploying Spring Boot Applications to AWS",
+        ],
+    },
+    {
+        emoji: "📱",
+        title: "Flutter",
+        topics: [
+            "Introduction to Dart: Syntax, Data Types, and Functions",
+            "Setting Up Flutter Environment",
+            "Building UI with Flutter Widgets",
+            "State Management: Provider, Riverpod, and Bloc",
+            "Navigation and Routing in Flutter",
+            "Handling Forms and User Input",
+            "Networking and REST API Integration",
+            "Local Storage with SQLite and Hive",
+            "Using Device Features: Camera, GPS, Sensors",
+            "Testing and Debugging Flutter Apps",
+            "Publishing Apps to Google Play and App Store",
+        ],
+    },
+];
+
+export default function ServicesList() {
+    const [openIndex, setOpenIndex] = useState(null);
+
+    const toggleIndex = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
+
     return (
-        <main className="m-0 md:mb-20">
+        <main className="bg-gray-50 min-h-screen">
             <Navigation />
 
-            <section className="h-screen flex flex-col lg:flex-row items-center justify-center p-4 md:justify-between">
-                <div className="mt-5 md:mt-0 flex flex-col gap-6 max-w-lg text-center md:text-left md:max-w-none md:w-1/2">
-                    <div className="animate-fade-in">
-                        <h1 className="text-3xl md:text-5xl font-extrabold">
-                            Elevate Your Skills with Our ICT Workshop
-                        </h1>
-                        <h2 className="text-2xl md:text-3xl font-medium mt-2">
-                            Join our comprehensive workshops and transform your IT capabilities.
-                        </h2>
-                    </div>
+            {/* Hero Section */}
+            <section className="h-screen flex flex-col lg:flex-row items-center justify-around p-6 md:justify-between max-w-10/12 mx-auto">
+                <div className="mt-8 md:mt-0 flex flex-col gap-6 max-w-lg text-center md:text-left md:max-w-none md:w-1/2">
+                    <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
+                        Elevate Your Skills with Our ICT Workshop
+                    </h1>
+                    <h2 className="text-xl md:text-3xl font-medium text-gray-700 mt-2">
+                        Join our comprehensive workshops and transform your IT capabilities.
+                    </h2>
                     <a
                         href="/contact"
-                        className="text-white bg-indigo-600 font-semibold px-6 py-3 rounded shadow-lg hover:bg-indigo-500 transition duration-300 self-center md:self-start"
+                        className="inline-block mt-4 bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 self-center md:self-start"
                     >
                         Register Now
                     </a>
                 </div>
 
-                <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center animate-float">
+                <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center animate-float">
                     <img
+                        src={workshopImg}
                         alt="ICT Workshop"
                         loading="lazy"
                         width={400}
                         height={500}
                         decoding="async"
-                        className="rounded shadow-lg"
+                        className="rounded-xl shadow-md"
                         style={{ color: "transparent" }}
-                        src="/workshop.avif"
-                        srcSet="/workshop.avif 1x, /workshop.avif 2x"
                     />
                 </div>
             </section>
 
-            <section className="flex flex-col gap-20 py-20 bg-gray-100">
-                <div className="max-w-[900px] m-auto text-center">
-                    <h2 className="text-3xl font-semibold mb-6">ICT Workshop Details</h2>
-                    <p className="text-gray-700 leading-relaxed">
-                        Our ICT workshops are designed to provide hands-on experience and deep understanding of the latest
-                        technologies and tools in the IT industry. From basic computer skills to advanced networking,
-                        our workshops cover a wide range of topics tailored to meet the needs of both beginners and professionals.
-                    </p>
-                </div>
-
-                <div className="max-w-[900px] m-auto text-center">
-                    <h2 className="text-3xl font-semibold mb-6">Our Workshop Services</h2>
-                    <ul className="list-none text-gray-700 leading-relaxed flex flex-col gap-8 items-center">
-                        {[
-                            { emoji: "🌐", title: "Web Frontend (HTML, CSS, JS)" },
-                            { emoji: "⚛️", title: "ReactJS" },
-                            { emoji: "⬛️", title: "NextJS" },
-                            { emoji: "🟢", title: "NodeJS, ExpressJS" },
-                            { emoji: "🌱", title: "Spring Boot" },
-                            { emoji: "📱", title: "Flutter" },
-                        ].map(({ emoji, title }) => (
-                            <li
-                                key={title}
-                                className="w-[500px] flex flex-col items-start gap-2 bg-white p-4 rounded shadow-lg cursor-pointer"
-                            >
-                                <div className="w-full flex items-center justify-between gap-2">
-                                    <div className="flex items-center gap-2 pointer-events-none">
-                                        <span>{emoji}</span>
-                                        <span className="font-semibold">{title}</span>
-                                    </div>
-                                    <svg
-                                        stroke="currentColor"
-                                        fill="currentColor"
-                                        strokeWidth="0"
-                                        viewBox="0 0 512 512"
-                                        height="1em"
-                                        width="1em"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"></path>
-                                    </svg>
+            {/* Workshop Services */}
+            <section className="max-w-4xl mx-auto p-4">
+                <h2 className="text-3xl font-bold mb-10 text-center text-gray-900">
+                    Our Workshop Services
+                </h2>
+                <div className="flex flex-col gap-5">
+                    {workshopServices.map(({ emoji, title, topics }, index) => (
+                        <div
+                            key={title}
+                            className="bg-white rounded-xl shadow-md cursor-pointer border border-gray-200 hover:shadow-lg transition-shadow duration-300"
+                            onClick={() => toggleIndex(index)}
+                            aria-expanded={openIndex === index}
+                            role="button"
+                            tabIndex={0}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") toggleIndex(index);
+                            }}
+                        >
+                            <div className="flex items-center justify-between p-4 select-none">
+                                <div className="flex items-center gap-4">
+                                    <span className="text-3xl">{emoji}</span>
+                                    <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
                                 </div>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-
-                <div>
-                    <h2 className="text-3xl font-semibold text-center">Key Features</h2>
-                    <div className="mt-8 flex flex-wrap gap-8 justify-center">
-                        {[
-                            {
-                                title: "Interactive Learning",
-                                desc: "Hands-on experience with real-world scenarios.",
-                                icon: (
-                                    <svg
-                                        stroke="currentColor"
-                                        fill="currentColor"
-                                        strokeWidth="0"
-                                        viewBox="0 0 24 24"
-                                        className="text-indigo-600"
-                                        height="40"
-                                        width="40"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"></path>
-                                    </svg>
-                                ),
-                            },
-                            {
-                                title: "Expert Instructors",
-                                desc: "Learn from industry experts with years of experience.",
-                                icon: (
-                                    <svg
-                                        stroke="currentColor"
-                                        fill="currentColor"
-                                        strokeWidth="0"
-                                        viewBox="0 0 24 24"
-                                        className="text-indigo-600"
-                                        height="40"
-                                        width="40"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0V0z"></path>
-                                        <path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"></path>
-                                    </svg>
-                                ),
-                            },
-                            {
-                                title: "Comprehensive Curriculum",
-                                desc: "Covering a wide range of ICT topics.",
-                                icon: (
-                                    <svg
-                                        stroke="currentColor"
-                                        fill="currentColor"
-                                        strokeWidth="0"
-                                        viewBox="0 0 24 24"
-                                        className="text-indigo-600"
-                                        height="40"
-                                        width="40"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path d="M20.38 8.57l-1.23 1.85a8 8 0 01-.22 7.58H5.07A8 8 0 0115.58 6.85l1.85-1.23A10 10 0 003.35 19a2 2 0 001.72 1h13.85a2 2 0 001.74-1 10 10 0 00-.27-10.44zm-9.79 6.84a2 2 0 002.83 0l5.66-8.49-8.49 5.66a2 2 0 000 2.83z"></path>
-                                    </svg>
-                                ),
-                            },
-                            {
-                                title: "Certification",
-                                desc: "Receive a certificate upon successful completion.",
-                                icon: (
-                                    <svg
-                                        stroke="currentColor"
-                                        fill="currentColor"
-                                        strokeWidth="0"
-                                        viewBox="0 0 24 24"
-                                        className="text-indigo-600"
-                                        height="40"
-                                        width="40"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0V0z"></path>
-                                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"></path>
-                                    </svg>
-                                ),
-                            },
-                        ].map(({ title, desc, icon }) => (
-                            <div
-                                key={title}
-                                className="rounded-sm shadow-lg bg-white p-4 flex flex-col gap-2 w-80 cursor-pointer transition-all hover:shadow-2xl hover:scale-105"
-                            >
-                                <div>{icon}</div>
-                                <div>
-                                    <h3 className="uppercase text-md font-semibold">{title}</h3>
-                                    <p className="text-sm">{desc}</p>
+                                <div className="text-indigo-600 text-2xl transition-transform duration-300 transform">
+                                   {openIndex === index ? <img className="w-5 h-5 cursor-pointer rotate-180" src={DropDown} alt="dropdown icon" /> : <img src={DropDown} className="w-5 h-5  cursor-pointer"  alt="dropdown icon" /> }
                                 </div>
                             </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
-            <section className="py-20 bg-indigo-600 text-white">
-                <div className="max-w-[900px] m-auto text-center">
-                    <h2 className="text-3xl font-semibold mb-6">Ready to Elevate Your Skills?</h2>
-                    <p className="text-lg leading-relaxed mb-6">
-                        Join our ICT workshops and take the first step towards mastering the latest technologies and tools
-                        in the IT industry. Our workshops are designed to provide you with the skills and knowledge needed
-                        to excel in your career.
-                    </p>
-                    <a
-                        href="/contact"
-                        className="bg-white text-indigo-600 font-semibold px-6 py-3 rounded shadow-lg hover:bg-gray-100 transition duration-300"
-                    >
-                        Register Now
-                    </a>
-                </div>
-            </section>
 
-            <Footer />
-        </main>
-    );
+                            <div
+                                className={`overflow-hidden transition-[max-height,padding] duration-500 ease-in-out text-gray-700 ${openIndex === index
+                                        ? "max-h-[1000px] px-8 pb-5"
+                                        : "max-h-0 px-0 pb-0"
+                                    }`}
+                            >
+                                
+                <ul className="list-disc space-y-2">
+                  {topics.map((topic) => (
+                    <li key={topic} className="pl-4">
+                      {topic}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Call to Action */}
+                                <section className="py-24 bg-indigo-600 text-white">
+                                    <div className="max-w-3xl mx-auto text-center px-6">
+                                        <h2 className="text-4xl font-bold mb-6">Ready to Elevate Your Skills?</h2>
+                                        <p className="text-lg leading-relaxed max-w-xl mx-auto mb-8">
+                                            Join our ICT workshops and take the first step towards mastering the latest
+                                            technologies and tools in the IT industry. Our workshops are designed to provide
+                                            you with the skills and knowledge needed to excel in your career.
+                                        </p>
+                                        <a
+                                            href="/contact"
+                                            className="inline-block bg-white text-indigo-600 font-semibold px-10 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300"
+                                        >
+                                            Register Now
+                                        </a>
+                                    </div>
+                                </section>
+
+                                <Footer />
+                            </main>
+                            );
 }

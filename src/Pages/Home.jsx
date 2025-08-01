@@ -91,14 +91,16 @@ export default function Home() {
                     </section>
 
 
-                    <section class="relative min-h-screen bg-indigo-900 text-white py-20">
-                        <div class="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-8">
+                    <section class="flex relative min-h-screen bg-indigo-900 text-white py-20 items-center">
+                        <div class="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-center gap-8">
                             <div class="lg:w-1/2">
                                 <h2 class="text-2xl font-semibold mb-4">Who We Are</h2>
                                 <p class="text-gray-300 mb-6">
-                                    Founded in 2023, A1 IT Innovation is a leading provider of software development, training, and consulting. Our passionate team drives digital transformation through innovation, quality, and collaboration.
+                                    Founded in 2023, A1 IT Innovation is a premier provider of comprehensive IT solutions, specializing in software development, training, courses, and workshops. 
+                                    We pride ourselves on delivering scalable, cost-efficient, and high-quality services, backed by a team of elite engineers and industry experts. Our commitment to 
+                                    excellence and continuous earning ensures that we stay at the forefront of technology, empowering businesses and individuals to achieve their full potential.
                                 </p>
-                                <a href="/about" class="font-semibold hover:underline">Learn More</a>
+                                <a href="/company/about" class="font-semibold hover:underline">Learn More</a>
                                 <div class="flex gap-8 mt-8">
                                     <div>
                                         <h3 class="text-3xl font-semibold">19+</h3>

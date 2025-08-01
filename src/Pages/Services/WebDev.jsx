@@ -1,12 +1,13 @@
 import Footer from '../../components/Footer';
 import Navigation from "../../components/Navigation";
+import WebImg from "../../assets/ServicesImg/software-dev.png";
 
 export default function WebDev() {
     return (
-        <main className="m-0 md:mb-20">
+        <main className="m-0 ">
             <Navigation />
 
-            <section className="h-screen flex flex-col lg:flex-row items-center justify-center p-4 md:justify-between">
+           <section className="h-screen flex flex-col lg:flex-row items-center justify-around p-6 md:justify-between max-w-10/12 mx-auto">
                 <div className="mt-5 md:mt-0 flex flex-col gap-6 max-w-lg text-center md:text-left md:max-w-none md:w-1/2">
                     <div className="animate-fade-in">
                         <h1 className="text-3xl md:text-5xl font-extrabold">
@@ -31,7 +32,7 @@ export default function WebDev() {
                         height="500"
                         decoding="async"
                         className="rounded shadow-lg"
-                        src="/software-dev.png"
+                        src={WebImg}
                         style={{ color: "transparent" }}
                     />
                 </div>

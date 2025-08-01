@@ -1,7 +1,13 @@
 import Navigation from "../components/Navigation"
 import Footer from "../components/Footer"
 import Laptop from "../assets/laptop.png"
-
+import Birhat from "../assets/Clients/brihat.webp"
+import damakcampus from "../assets/Clients/dmc.jpg"
+import Shree from "../assets/Clients/dtef.jpg"
+import Utkrista from "../assets/Clients/utkrista Logo.png"
+import Hamrodokan from "../assets/Clients/hamrodokan Logo.png"
+import himalayan from "../assets/Clients/himalayan.webp"
+import Tufan from  "../assets/Clients/tufan.png"
 
 export default function Client() {
     return (
@@ -49,21 +55,21 @@ export default function Client() {
                             <div class="swiper-slide">
                                 <a href="#" target="_blank" rel="noopener noreferrer"
                                     class="flex justify-center items-center w-40 h-40 p-4 bg-white rounded-full shadow-sm overflow-hidden">
-                                    <img alt="Logo of Hamrodokan" class="object-contain" src="/_next/image?url=%2Fclients%2Fhamrodokan.png&amp;w=640&amp;q=75" />
+                                    <img alt="Logo of Hamrodokan" class="object-contain" src={Hamrodokan}/>
                                 </a>
                             </div>
 
                             <div class="swiper-slide">
                                 <a href="https://damakcampus.edu.np/" target="_blank" rel="noopener noreferrer"
                                     class="flex justify-center items-center w-40 h-40 p-4 bg-white rounded-full shadow-sm overflow-hidden">
-                                    <img alt="Logo of Damak Multiple Campus" class="object-contain" src="/_next/image?url=%2Fclients%2Fdmc.jpg&amp;w=640&amp;q=75" />
+                                    <img alt="Logo of Damak Multiple Campus" class="object-contain" src={damakcampus} />
                                 </a>
                             </div>
 
                             <div class="swiper-slide">
                                 <a href="https://himalayan-sanchaya.vercel.app/" target="_blank" rel="noopener noreferrer"
                                     class="flex justify-center items-center w-40 h-40 p-4 bg-white rounded-full shadow-sm overflow-hidden">
-                                    <img alt="Logo of Himalayan Sanchaya" class="object-contain" src="/_next/image?url=%2Fclients%2Fhimalayan.webp&amp;w=640&amp;q=75" />
+                                    <img alt="Logo of Himalayan Sanchaya" class="object-contain" src={himalayan} />
                                 </a>
                             </div>
 
@@ -71,7 +77,7 @@ export default function Client() {
                             <div class="swiper-slide">
                                 <a href="https://damaktechnical.edu.np/" target="_blank" rel="noopener noreferrer"
                                     class="flex justify-center items-center w-40 h-40 p-4 bg-white rounded-full shadow-sm overflow-hidden">
-                                    <img alt="Logo of Damak Technical Education Foundation" class="object-contain" src="/_next/image?url=%2Fclients%2Fdtef.jpg&amp;w=640&amp;q=75" />
+                                    <img alt="Logo of Damak Technical Education Foundation" class="object-contain" src={Shree} />
                                 </a>
                             </div>
 
@@ -80,7 +86,7 @@ export default function Client() {
                                 <a href="https://play.google.com/store/apps/details?id=com.nepaliyogi.brihatpatro" target="_blank"
                                     rel="noopener noreferrer"
                                     class="flex justify-center items-center w-40 h-40 p-4 bg-white rounded-full shadow-sm overflow-hidden">
-                                    <img alt="Logo of Brihat Patro" class="object-contain" src="/_next/image?url=%2Fclients%2Fbrihat.webp&amp;w=640&amp;q=75" />
+                                    <img alt="Logo of Brihat Patro" class="object-contain" src={Birhat} />
                                 </a>
                             </div>
 
@@ -88,7 +94,7 @@ export default function Client() {
                             <div class="swiper-slide">
                                 <a href="https://utkristashikshya.com/" target="_blank" rel="noopener noreferrer"
                                     class="flex justify-center items-center w-40 h-40 p-4 bg-white rounded-full shadow-sm overflow-hidden">
-                                    <img alt="Logo of Utkrista Shikshya" class="object-contain" src="/_next/image?url=%2Fclients%2Futkrista.png&amp;w=640&amp;q=75" />
+                                    <img alt="Logo of Utkrista Shikshya" class="object-contain" src={Utkrista} />
                                 </a>
                             </div>
 
@@ -96,7 +102,7 @@ export default function Client() {
                             <div class="swiper-slide">
                                 <a href="#" target="_blank" rel="noopener noreferrer"
                                     class="flex justify-center items-center w-40 h-40 p-4 bg-white rounded-full shadow-sm overflow-hidden">
-                                    <img alt="Logo of Tufan Transport" class="object-contain" src="/_next/image?url=%2Fclients%2Ftufan.png&amp;w=640&amp;q=75" />
+                                    <img alt="Logo of Tufan Transport" class="object-contain" src={Tufan} />
                                 </a>
                             </div>
 
