@@ -147,7 +147,7 @@ export default function ServicesList() {
                         width={500}
                         height={500}
                         decoding="async"
-                        className="rounded-xl shadow-2xl border-4 border-white transform hover:scale-105 transition duration-500"
+                        className="rounded-xl  border-4 border-white transform  transition duration-500"
                     />
                 </div>
             </section>
