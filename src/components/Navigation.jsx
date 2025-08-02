@@ -58,6 +58,7 @@ export default function Navigation() {
     { href: "/company/why-us", label: "Why A1 IT Innovation" },
     { href: "/company/faq", label: "FAQ" },
     { href: "/company/gallery", label: "Gallery" },
+    { href: "/company/career", label: "Career" },
   ];
 
   return (
