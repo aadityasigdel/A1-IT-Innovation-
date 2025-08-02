@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Navigation from "../../components/Navigation"
-import Footer from "../../components/Footer"
+import Navigation from "../../components/Navigation";
+import Footer from "../../components/Footer";
 
 const faqData = [
     { question: 'What is A1 IT Innovation?', answer: 'A1 IT Innovation is a technology company that specializes in delivering cutting-edge digital solutions tailored for modern business challenges.' },
@@ -24,46 +24,66 @@ export default function FaqSection() {
 
     return (
         <>
+            <Navigation />
+            <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-16">
+                <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h1 className="text-4xl font-bold text-indigo-800 mb-4">Frequently Asked Questions</h1>
+                        <div className="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
+                        <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+                            Find answers to common questions about our services and processes
+                        </p>
+                    </div>
 
-  <Navigation/>
-            <main className="min-h-screen py-10">
-                <section>
-                    <h2 className="text-center text-2xl font-bold mb-4">Frequently Asked Questions (FAQ)</h2>
-                    <div className="max-w-[500px] mx-auto flex flex-col gap-4">
+                    <div className="space-y-4 max-w-3xl mx-auto">
                         {faqData.map((item, index) => (
                             <div
                                 key={index}
-                                className={`bg-white shadow-custom rounded p-4 flex flex-col transition-all duration-300 overflow-hidden ${openIndex === index ? 'h-auto' : 'h-14'
-                                    }`}
+                                className={`bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 ${openIndex === index ? 'ring-2 ring-indigo-500' : 'hover:shadow-lg'}`}
                             >
-                                <div
-                                    className="flex cursor-pointer font-semibold items-center"
+                                <button
+                                    className="w-full px-6 py-5 text-left focus:outline-none"
                                     onClick={() => toggleIndex(index)}
+                                    aria-expanded={openIndex === index}
+                                    aria-controls={`faq-${index}`}
                                 >
-                                    <p className="flex-1 capitalize">{item.question}</p>
-                                    <div className={`transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
-                                        <svg
-                                            stroke="currentColor"
-                                            fill="currentColor"
-                                            strokeWidth="0"
-                                            viewBox="0 0 512 512"
-                                            height="1em"
-                                            width="1em"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"></path>
-                                        </svg>
+                                    <div className="flex items-center justify-between">
+                                        <h3 className="text-lg font-semibold text-gray-800">{item.question}</h3>
+                                        <div className={`ml-4 transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
+                                            <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </button>
+                                
+                                <div
+                                    id={`faq-${index}`}
+                                    className={`px-6 pb-5 text-gray-600 transition-all duration-300 ${openIndex === index ? 'block' : 'hidden'}`}
+                                >
+                                    <div className="border-t border-gray-200 pt-4">
+                                        {item.answer}
                                     </div>
                                 </div>
-                                {openIndex === index && (
-                                    <div className="text-gray-600 mt-2 text-sm">{item.answer}</div>
-                                )}
                             </div>
                         ))}
                     </div>
+
+                    <div className="mt-16 text-center">
+                        <h3 className="text-xl font-semibold text-gray-800 mb-4">Still have questions?</h3>
+                        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                            Contact our team for more information about our services and solutions.
+                        </p>
+                        <a href='/contact' className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 px-8 rounded-lg transition-colors duration-300 inline-flex items-center">
+                            Contact Us
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
                 </section>
             </main>
-             <Footer/>
+            <Footer />
         </>
     );
 }

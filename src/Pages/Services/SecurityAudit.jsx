@@ -3,168 +3,167 @@ import Footer from "../../components/Footer";
 import SecurityAuditImg from "../../assets/ServicesImg/security-testing.svg";
 
 export default function SecurityAudit() {
+    const features = [
+        {
+            title: "Vulnerability Assessment",
+            description: "Identify and mitigate potential vulnerabilities in your system before they can be exploited.",
+            icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10 text-indigo-600">
+                    <path fillRule="evenodd" d="M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm3.094 8.016a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+                </svg>
+            )
+        },
+        {
+            title: "Compliance Checks",
+            description: "Ensure your systems comply with industry standards and regulations to avoid legal and financial penalties.",
+            icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10 text-indigo-600">
+                    <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+                </svg>
+            )
+        },
+        {
+            title: "Penetration Testing",
+            description: "Simulate real-world attacks to test the effectiveness of your security measures and identify weaknesses.",
+            icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10 text-indigo-600">
+                    <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clipRule="evenodd" />
+                </svg>
+            )
+        },
+        {
+            title: "Risk Management",
+            description: "Develop a comprehensive risk management strategy to protect your business from potential threats.",
+            icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10 text-indigo-600">
+                    <path fillRule="evenodd" d="M11.484 2.17a.75.75 0 011.032 0 11.209 11.209 0 007.877 3.08.75.75 0 01.722.515 12.74 12.74 0 01.635 3.985c0 5.942-4.064 10.933-9.563 12.348a.749.749 0 01-.374 0C6.314 20.683 2.25 15.692 2.25 9.75c0-1.39.223-2.73.635-3.985a.75.75 0 01.722-.516l.143.001c2.996 0 5.718-1.17 7.734-3.08zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zM12 15a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75v-.008a.75.75 0 00-.75-.75H12z" clipRule="evenodd" />
+                </svg>
+            )
+        },
+        {
+            title: "Continuous Monitoring",
+            description: "Implement continuous monitoring solutions to detect and respond to security incidents in real-time.",
+            icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10 text-indigo-600">
+                    <path d="M4.5 4.5a3 3 0 00-3 3v9a3 3 0 003 3h8.25a3 3 0 003-3v-9a3 3 0 00-3-3H4.5zM19.94 18.75l-2.69-2.69V7.94l2.69-2.69c.944-.945 2.56-.276 2.56 1.06v11.38c0 1.336-1.616 2.005-2.56 1.06z" />
+                </svg>
+            )
+        }
+    ];
+
     return (
-        <main className="min-h-screen ">
+        <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             <Navigation />
-            <section className="h-screen flex flex-col lg:flex-row items-center justify-around p-6 md:justify-between max-w-10/12 mx-auto">
-                <div className="flex flex-col gap-10 max-w-lg text-center lg:text-left">
-                    <div>
-                        <h1 className="text-2xl md:text-4xl font-bold">
-                            Conduct a comprehensive security audit to safeguard your digital assets.
+
+            {/* Hero Section */}
+            <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 lg:px-12 max-w-7xl mx-auto gap-12">
+                <div className="flex flex-col gap-8 max-w-2xl text-center lg:text-left">
+                    <div className="space-y-4">
+                        <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+                            Comprehensive <span className="text-indigo-600">Security Audits</span>
                         </h1>
-                        <h1 className="text-xl md:text-2xl font-medium mt-1">
-                            We are here to protect your business from vulnerabilities and threats.
-                        </h1>
+                        <h2 className="text-xl md:text-2xl font-medium text-gray-600">
+                            We protect your business from vulnerabilities and cyber threats with expert security assessments.
+                        </h2>
                     </div>
-                    <a
-                        href="/contact"
-                        className="bg-indigo-600 w-fit text-center text-white font-semibold px-6 py-3 rounded hover:bg-indigo-700 transition duration-300"
-                    >
-                        Get in touch
-                    </a>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                     
+                        <a
+                            href="/contact"
+                            className="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 font-semibold px-8 py-3 rounded-lg transition duration-300 inline-flex items-center justify-center"
+                        >
+                            Contact Us
+                        </a>
+                    </div>
                 </div>
+
                 <div className="mt-8 lg:mt-0">
                     <img
-                        alt="mobile app development"
+                        alt="Security audit and testing illustration"
                         loading="lazy"
-                        width={400}
+                        width={500}
                         height={500}
                         decoding="async"
-                        className="rounded"
-                        style={{ color: "transparent" }}
+                        className="rounded-xl border-4 border-white transform transition duration-500"
                         src={SecurityAuditImg}
                     />
                 </div>
             </section>
 
-            <section className="flex flex-col gap-20">
-                <div className="max-w-[900px] m-auto">
-                    <h2 className="text-2xl font-semibold text-center mb-4">Security Audit</h2>
-                    <p className="text-gray-700 text-center">
-                        At A1 IT Innovation, we offer comprehensive security audit services to ensure your systems are secure and resilient.
-                        Our experts meticulously analyze your infrastructure to identify vulnerabilities, provide actionable insights,
-                        and ensure compliance with industry standards. Our goal is to protect your data and systems from potential threats and breaches.
-                    </p>
-                </div>
+            {/* Features Section */}
+            <section id="features" className="py-20 bg-white">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-4">Security Audit Services</h2>
+                        <div className="w-20 h-1 bg-indigo-600 mx-auto rounded-full mb-4"></div>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Our experts meticulously analyze your infrastructure to identify vulnerabilities, provide actionable insights,
+                            and ensure compliance with industry standards to protect your data and systems.
+                        </p>
+                    </div>
 
-                <div>
-                    <h2 className="text-2xl font-semibold text-center">Key Features</h2>
-                    <div className="mt-4 flex flex-wrap gap-4 justify-center">
-                        {[
-                            {
-                                title: "Vulnerability Assessment",
-                                description:
-                                    "Identify and mitigate potential vulnerabilities in your system before they can be exploited.",
-                                icon: (
-                                    <svg
-                                        stroke="currentColor"
-                                        fill="currentColor"
-                                        strokeWidth="0"
-                                        viewBox="0 0 24 24"
-                                        className="text-indigo-600"
-                                        height="40"
-                                        width="40"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0V0z" />
-                                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
-                                    </svg>
-                                ),
-                            },
-                            {
-                                title: "Compliance Checks",
-                                description:
-                                    "Ensure your systems comply with industry standards and regulations to avoid legal and financial penalties.",
-                                icon: (
-                                    <svg
-                                        stroke="currentColor"
-                                        fill="currentColor"
-                                        strokeWidth="0"
-                                        viewBox="0 0 24 24"
-                                        className="text-indigo-600"
-                                        height="40"
-                                        width="40"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z" />
-                                    </svg>
-                                ),
-                            },
-                            {
-                                title: "Penetration Testing",
-                                description:
-                                    "Simulate real-world attacks to test the effectiveness of your security measures and identify weaknesses.",
-                                icon: (
-                                    <svg
-                                        stroke="currentColor"
-                                        fill="currentColor"
-                                        strokeWidth="0"
-                                        viewBox="0 0 24 24"
-                                        className="text-indigo-600"
-                                        height="40"
-                                        width="40"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M20.38 8.57l-1.23 1.85a8 8 0 01-.22 7.58H5.07A8 8 0 0115.58 6.85l1.85-1.23A10 10 0 003.35 19a2 2 0 001.72 1h13.85a2 2 0 001.74-1 10 10 0 00-.27-10.44zm-9.79 6.84a2 2 0 002.83 0l5.66-8.49-8.49 5.66a2 2 0 000 2.83z" />
-                                    </svg>
-                                ),
-                            },
-                            {
-                                title: "Risk Management",
-                                description:
-                                    "Develop a comprehensive risk management strategy to protect your business from potential threats.",
-                                icon: (
-                                    <svg
-                                        stroke="currentColor"
-                                        fill="currentColor"
-                                        strokeWidth="0"
-                                        viewBox="0 0 24 24"
-                                        className="text-indigo-600"
-                                        height="40"
-                                        width="40"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M11.71 17.99A5.993 5.993 0 016 12c0-3.31 2.69-6 6-6 3.22 0 5.84 2.53 5.99 5.71l-2.1-.63a3.999 3.999 0 10-4.81 4.81l.63 2.1zM22 12c0 .3-.01.6-.04.9l-1.97-.59c.01-.1.01-.21.01-.31 0-4.42-3.58-8-8-8s-8 3.58-8 8 3.58 8 8 8c.1 0 .21 0 .31-.01l.59 1.97c-.3.03-.6.04-.9.04-5.52 0-10-4.48-10-10S6.48 2 12 2s10 4.48 10 10zm-3.77 4.26L22 15l-10-3 3 10 1.26-3.77 4.27 4.27 1.98-1.98-4.28-4.26z" />
-                                    </svg>
-                                ),
-                            },
-                            {
-                                title: "Continuous Monitoring",
-                                description:
-                                    "Implement continuous monitoring solutions to detect and respond to security incidents in real-time.",
-                                icon: (
-                                    <svg
-                                        stroke="currentColor"
-                                        fill="currentColor"
-                                        strokeWidth="0"
-                                        viewBox="0 0 640 512"
-                                        className="text-indigo-600"
-                                        height="40"
-                                        width="40"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path d="M72 88a56 56 0 1 1 112 0A56 56 0 1 1 72 88zM64 245.7C54 256.9 48 271.8 48 288s6 31.1 16 42.3V245.7zm144.4-49.3C178.7 222.7 160 261.2 160 304c0 34.3 12 65.8 32 90.5V416c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V389.2C26.2 371.2 0 332.7 0 288c0-61.9 50.1-112 112-112h32c24 0 46.2 7.5 64.4 20.3zM448 416V394.5c20-24.7 32-56.2 32-90.5c0-42.8-18.7-81.3-48.4-107.7C449.8 183.5 472 176 496 176h32c61.9 0 112 50.1 112 112c0 44.7-26.2 83.2-64 101.2V416c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32zm8-328a56 56 0 1 1 112 0A56 56 0 1 1 456 88zM576 245.7v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM320 32a64 64 0 1 1 0 128 64 64 0 1 1 0-128zM240 304c0 16.2 6 31 16 42.3V261.7c-10 11.3-16 26.1-16 42.3zm144-42.3v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM448 304c0 44.7-26.2 83.2-64 101.2V448c0 17.7-14.3 32-32 32H288c-17.7 0-32-14.3-32-32V405.2c-37.8-18-64-56.5-64-101.2c0-61.9 50.1-112 112-112h32c61.9 0 112 50.1 112 112z" />
-                                    </svg>
-                                ),
-                            },
-                        ].map(({ title, description, icon }) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {features.map((feature, index) => (
                             <div
-                                key={title}
-                                className="rounded-sm shadow-lg bg-white p-4 flex flex-col gap-2 w-80 cursor-pointer transition-all hover:shadow-2xl hover:scale-105"
+                                key={index}
+                                className="bg-gray-50 rounded-xl shadow-md p-8 flex flex-col gap-4 hover:shadow-lg transition duration-300 hover:-translate-y-2 border border-gray-100"
+                                data-aos="fade-up"
+                                data-aos-delay={index * 100}
                             >
-                                <div>{icon}</div>
-                                <div>
-                                    <h3 className="uppercase text-md font-semibold">{title}</h3>
-                                    <p className="text-sm">{description}</p>
+                                <div className="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center">
+                                    {feature.icon}
                                 </div>
+                                <h3 className="text-xl font-semibold text-gray-800">{feature.title}</h3>
+                                <p className="text-gray-600">{feature.description}</p>
                             </div>
                         ))}
+
+                       
                     </div>
                 </div>
             </section>
+
+            {/* Methodology Section */}
+            <section className="py-20 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Audit Methodology</h2>
+                        <div className="w-20 h-1 bg-indigo-600 mx-auto rounded-full mb-4"></div>
+                    </div>
+
+                    <div className="grid md:grid-cols-4 gap-8">
+                        <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+                            <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span className="text-2xl font-bold text-indigo-600">1</span>
+                            </div>
+                            <h3 className="text-lg font-semibold mb-2">Discovery</h3>
+                            <p className="text-gray-600">Comprehensive system analysis and asset identification</p>
+                        </div>
+                        <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+                            <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span className="text-2xl font-bold text-indigo-600">2</span>
+                            </div>
+                            <h3 className="text-lg font-semibold mb-2">Assessment</h3>
+                            <p className="text-gray-600">Vulnerability scanning and penetration testing</p>
+                        </div>
+                        <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+                            <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span className="text-2xl font-bold text-indigo-600">3</span>
+                            </div>
+                            <h3 className="text-lg font-semibold mb-2">Reporting</h3>
+                            <p className="text-gray-600">Detailed findings with risk prioritization</p>
+                        </div>
+                        <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+                            <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span className="text-2xl font-bold text-indigo-600">4</span>
+                            </div>
+                            <h3 className="text-lg font-semibold mb-2">Remediation</h3>
+                            <p className="text-gray-600">Actionable recommendations and support</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <Footer />
         </main>
     );

@@ -7,7 +7,7 @@ export default function WebDev() {
         <main className="m-0 ">
             <Navigation />
 
-           <section className="h-screen flex flex-col lg:flex-row items-center justify-around p-6 md:justify-between max-w-10/12 mx-auto">
+            <section className="h-screen flex flex-col lg:flex-row items-center justify-around p-6 md:justify-between max-w-10/12 mx-auto">
                 <div className="mt-5 md:mt-0 flex flex-col gap-6 max-w-lg text-center md:text-left md:max-w-none md:w-1/2">
                     <div className="animate-fade-in">
                         <h1 className="text-3xl md:text-5xl font-extrabold">

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import workshopImg from "../../assets/ServicesImg/workshop.avif";
 import Footer from '../../components/Footer';
 import Navigation from '../../components/Navigation';
-import DropDown from "../../assets/Icons/DropDown.png";
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
 const workshopServices = [
     {
@@ -106,108 +106,126 @@ export default function ServicesList() {
     };
 
     return (
-        <main className="bg-gray-50 min-h-screen">
+        <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             <Navigation />
 
             {/* Hero Section */}
-            <section className="h-screen flex flex-col lg:flex-row items-center justify-around p-6 md:justify-between max-w-10/12 mx-auto">
-                <div className="mt-8 md:mt-0 flex flex-col gap-6 max-w-lg text-center md:text-left md:max-w-none md:w-1/2">
-                    <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
-                        Elevate Your Skills with Our ICT Workshop
-                    </h1>
-                    <h2 className="text-xl md:text-3xl font-medium text-gray-700 mt-2">
-                        Join our comprehensive workshops and transform your IT capabilities.
-                    </h2>
-                    <a
-                        href="/contact"
-                        className="inline-block mt-4 bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 self-center md:self-start"
-                    >
-                        Register Now
-                    </a>
+            <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 lg:px-12 max-w-7xl mx-auto gap-12">
+                <div className="flex flex-col gap-8 max-w-2xl text-center lg:text-left">
+                    <div className="space-y-4">
+                        <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+                            Elevate Your Skills with <span className="text-indigo-600">ICT Workshops</span>
+                        </h1>
+                        <h2 className="text-xl md:text-2xl font-medium text-gray-600">
+                            Join our comprehensive workshops and transform your IT capabilities with hands-on training.
+                        </h2>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a
+                            href="/contact"
+                            className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition duration-300 inline-flex items-center justify-center"
+                        >
+                            Register Now
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                        </a>
+                        <a
+                            href="#workshops"
+                            className="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 font-semibold px-8 py-3 rounded-lg transition duration-300 inline-flex items-center justify-center"
+                        >
+                            Explore Workshops
+                        </a>
+                    </div>
                 </div>
 
-                <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center animate-float">
+                <div className="mt-8 lg:mt-0">
                     <img
                         src={workshopImg}
                         alt="ICT Workshop"
                         loading="lazy"
-                        width={400}
+                        width={500}
                         height={500}
                         decoding="async"
-                        className="rounded-xl shadow-md"
-                        style={{ color: "transparent" }}
+                        className="rounded-xl shadow-2xl border-4 border-white transform hover:scale-105 transition duration-500"
                     />
                 </div>
             </section>
 
             {/* Workshop Services */}
-            <section className="max-w-4xl mx-auto p-4">
-                <h2 className="text-3xl font-bold mb-10 text-center text-gray-900">
-                    Our Workshop Services
-                </h2>
-                <div className="flex flex-col gap-5">
-                    {workshopServices.map(({ emoji, title, topics }, index) => (
-                        <div
-                            key={title}
-                            className="bg-white rounded-xl shadow-md cursor-pointer border border-gray-200 hover:shadow-lg transition-shadow duration-300"
-                            onClick={() => toggleIndex(index)}
-                            aria-expanded={openIndex === index}
-                            role="button"
-                            tabIndex={0}
-                            onKeyDown={(e) => {
-                                if (e.key === "Enter" || e.key === " ") toggleIndex(index);
-                            }}
-                        >
-                            <div className="flex items-center justify-between p-4 select-none">
-                                <div className="flex items-center gap-4">
-                                    <span className="text-3xl">{emoji}</span>
-                                    <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
-                                </div>
-                                <div className="text-indigo-600 text-2xl transition-transform duration-300 transform">
-                                   {openIndex === index ? <img className="w-5 h-5 cursor-pointer rotate-180" src={DropDown} alt="dropdown icon" /> : <img src={DropDown} className="w-5 h-5  cursor-pointer"  alt="dropdown icon" /> }
+            <section id="workshops" className="py-20 bg-white">
+                <div className="max-w-4xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Workshop Services</h2>
+                        <div className="w-20 h-1 bg-indigo-600 mx-auto rounded-full mb-4"></div>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Comprehensive training programs designed to provide practical, hands-on experience with the latest technologies.
+                        </p>
+                    </div>
+
+                    <div className="space-y-4">
+                        {workshopServices.map(({ emoji, title, topics }, index) => (
+                            <div
+                                key={title}
+                                className={`bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ${openIndex === index ? 'ring-2 ring-indigo-500' : 'hover:shadow-lg'}`}
+                            >
+                                <button
+                                    className="w-full px-6 py-5 text-left focus:outline-none"
+                                    onClick={() => toggleIndex(index)}
+                                    aria-expanded={openIndex === index}
+                                    aria-controls={`workshop-${index}`}
+                                >
+                                    <div className="flex items-center justify-between">
+                                        <div className="flex items-center gap-4">
+                                            <span className="text-2xl">{emoji}</span>
+                                            <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
+                                        </div>
+                                        <div className={`ml-4 transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
+                                            <ChevronDownIcon className="w-5 h-5 text-indigo-600" />
+                                        </div>
+                                    </div>
+                                </button>
+                                
+                                <div
+                                    id={`workshop-${index}`}
+                                    className={`px-6 pb-5 text-gray-600 transition-all duration-300 ${openIndex === index ? 'block' : 'hidden'}`}
+                                >
+                                    <div className="border-t border-gray-200 pt-4">
+                                        <ul className="list-disc space-y-2 pl-5">
+                                            {topics.map((topic) => (
+                                                <li key={topic} className="text-gray-700">
+                                                    {topic}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
+            {/* Call to Action */}
+            <section className="py-20 bg-gradient-to-r from-indigo-600 to-blue-600 text-white">
+                <div className="max-w-4xl mx-auto text-center px-6">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Skills?</h2>
+                    <p className="text-xl mb-8 leading-relaxed max-w-3xl mx-auto">
+                        Join our ICT workshops and gain practical, hands-on experience with the latest technologies from industry experts.
+                    </p>
+                    <a
+                        href="/contact"
+                        className="bg-white text-indigo-600 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg shadow-lg transition duration-300 inline-flex items-center mx-auto"
+                    >
+                        Enroll Today
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </section>
 
-                            <div
-                                className={`overflow-hidden transition-[max-height,padding] duration-500 ease-in-out text-gray-700 ${openIndex === index
-                                        ? "max-h-[1000px] px-8 pb-5"
-                                        : "max-h-0 px-0 pb-0"
-                                    }`}
-                            >
-                                
-                <ul className="list-disc space-y-2">
-                  {topics.map((topic) => (
-                    <li key={topic} className="pl-4">
-                      {topic}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Call to Action */}
-                                <section className="py-24 bg-indigo-600 text-white">
-                                    <div className="max-w-3xl mx-auto text-center px-6">
-                                        <h2 className="text-4xl font-bold mb-6">Ready to Elevate Your Skills?</h2>
-                                        <p className="text-lg leading-relaxed max-w-xl mx-auto mb-8">
-                                            Join our ICT workshops and take the first step towards mastering the latest
-                                            technologies and tools in the IT industry. Our workshops are designed to provide
-                                            you with the skills and knowledge needed to excel in your career.
-                                        </p>
-                                        <a
-                                            href="/contact"
-                                            className="inline-block bg-white text-indigo-600 font-semibold px-10 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300"
-                                        >
-                                            Register Now
-                                        </a>
-                                    </div>
-                                </section>
-
-                                <Footer />
-                            </main>
-                            );
+            <Footer />
+        </main>
+    );
 }
