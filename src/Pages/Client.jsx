@@ -1,13 +1,13 @@
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
-import Laptop from "../assets/laptop.png"
 import Birhat from "../assets/Clients/brihat.webp"
 import damakcampus from "../assets/Clients/dmc.jpg"
 import Shree from "../assets/Clients/dtef.jpg"
-import Utkrista from "../assets/Clients/utkrista Logo.png"
 import Hamrodokan from "../assets/Clients/hamrodokan Logo.png"
 import himalayan from "../assets/Clients/himalayan.webp"
 import Tufan from "../assets/Clients/tufan.png"
+import Utkrista from "../assets/Clients/utkrista Logo.png"
+import Laptop from "../assets/laptop.png"
+import Footer from "../components/Footer"
+import Navigation from "../components/Navigation"
 
 export default function Client() {
     return (
@@ -66,7 +66,7 @@ export default function Client() {
                                 { logo: Shree, url: "https://damaktechnical.edu.np/", alt: "Damak Technical Education Foundation", name: "DTEF" },
                                 { logo: Birhat, url: "https://play.google.com/store/apps/details?id=com.nepaliyogi.brihatpatro", alt: "Brihat Patro", name: "Brihat Patro" },
                                 { logo: Utkrista, url: "https://utkristashikshya.com/", alt: "Utkrista Shikshya", name: "Utkrista" },
-                                { logo: Tufan, url: "#", alt: "Tufan Transport", name: "Tufan Transport" }
+                                { logo: Tufan, url: "https://mytufan.com/", alt: "Tufan Transport", name: "Tufan Transport" }
                             ].map((client, index) => (
                                 <div
                                     key={index}
