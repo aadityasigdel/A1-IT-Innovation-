@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react';
-import { FiMail, FiMessageSquare, FiUpload, FiUser, FiFileText } from 'react-icons/fi';
+import { useRef, useState } from 'react';
+import { FiFileText, FiMail, FiMessageSquare, FiUpload, FiUser } from 'react-icons/fi';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 
@@ -71,26 +71,41 @@ const CareerPage = () => {
         }
 
         setIsSubmitting(true);
+        const formPayload = new FormData();
+        formPayload.append('Full Name', formData.fullName);
+        formPayload.append('Email', formData.email);
+        formPayload.append('Message', formData.message);
+        formPayload.append('CV', formData.cv);
+        formPayload.append('_captcha', 'false');
+        formPayload.append('_subject', 'New Career Form Submission from Website');
+        formPayload.append('_template', 'box');
 
         try {
-            // Simulate API call
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            
-            setSubmitSuccess(true);
-            setFormData({
-                fullName: '',
-                email: '',
-                message: '',
-                cv: null,
+            const response = await fetch('https://formsubmit.co/info@a1itinnovation.com.np', {
+                method: 'POST',
+                body: formPayload
             });
-            setErrors({});
+
+            if (response.ok) {
+                setSubmitSuccess(true);
+                setFormData({
+                    fullName: '',
+                    email: '',
+                    message: '',
+                    cv: null,
+                });
+                setErrors({});
+            } else {
+                setErrors({ submit: 'Failed to send application. Please try again.' });
+            }
         } catch (error) {
             console.error('Submission error:', error);
-            setErrors({ submit: 'Failed to submit application. Please try again.' });
+            setErrors({ submit: 'Error occurred. Please try again later.' });
         } finally {
             setIsSubmitting(false);
         }
     };
+
 
     const triggerFileInput = () => {
         fileInputRef.current.click();
@@ -141,7 +156,7 @@ const CareerPage = () => {
                     ) : (
                         <form onSubmit={handleSubmit} className="p-8" encType="multipart/form-data">
                             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Application Form</h2>
-                            
+
                             <div className="space-y-8">
                                 {/* Full Name Field */}
                                 <div>
@@ -159,7 +174,7 @@ const CareerPage = () => {
                                             value={formData.fullName}
                                             onChange={handleChange}
                                             className={`block w-full pl-10 pr-3 py-3 border ${errors.fullName ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-300 focus:ring-indigo-500 focus:border-indigo-500'} rounded-md shadow-sm placeholder-gray-400`}
-                                            placeholder="John Doe"
+                                            placeholder="Your Name....."
                                         />
                                     </div>
                                     {errors.fullName && <p className="mt-2 text-sm text-red-600">{errors.fullName}</p>}
@@ -181,7 +196,7 @@ const CareerPage = () => {
                                             value={formData.email}
                                             onChange={handleChange}
                                             className={`block w-full pl-10 pr-3 py-3 border ${errors.email ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-300 focus:ring-indigo-500 focus:border-indigo-500'} rounded-md shadow-sm placeholder-gray-400`}
-                                            placeholder="you@example.com"
+                                            placeholder="your Email....."
                                         />
                                     </div>
                                     {errors.email && <p className="mt-2 text-sm text-red-600">{errors.email}</p>}
@@ -214,7 +229,7 @@ const CareerPage = () => {
                                     <label htmlFor="cv" className="block text-sm font-medium text-gray-700 mb-2">
                                         Upload Your CV <span className="text-red-500">*</span>
                                     </label>
-                                    <div 
+                                    <div
                                         className={`mt-1 flex justify-center px-6 pt-8 pb-8 border-2 ${errors.cv ? 'border-red-300' : 'border-gray-300'} border-dashed rounded-md cursor-pointer transition-colors duration-200 hover:border-indigo-400`}
                                         onDragOver={handleDragOver}
                                         onDrop={handleDrop}

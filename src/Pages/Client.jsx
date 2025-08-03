@@ -15,17 +15,17 @@ export default function Client() {
             <Navigation />
             <main class="min-h-screen pt-10 mb-10 bg-gray-100">
                 {/* Hero Section */}
-                <section className="container h-screen flex  mx-auto px-4 py-12">
-                    <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-12">
-                        <div className="w-full  md:w-1/2 flex flex-col items-center justify-center gap-6">
+                <section className="container  justify-center h-screen flex  mx-auto px-4 py-12">
+                    <div className="flex max-w-6xl flex-col-reverse md:flex-row items-center gap-12">
+                        <div className="w-full  md:w-1/2 flex flex-col gap-6">
                             <h1 className="text-4xl font-bold text-gray-800">Your Trusted IT Partner</h1>
                             <h2 className="text-2xl font-semibold text-indigo-600">Innovating Today for a Better Tomorrow</h2>
-                            <p className="text-gray-600 text-lg leading-relaxed">
+                            <p className="text-gray-600 text-lg leading-relaxed w-11/12">
                                 At A1 IT Innovation, we empower businesses to overcome modern IT challenges with innovative solutions and expert guidance.
                                 Discover how we help organizations achieve their goals through tailored, cutting-edge technologies.
                             </p>
                             <a href="/contact"
-                                className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 font-medium rounded-lg shadow-md hover:shadow-lg transition duration-300 inline-flex items-center">
+                                className="bg-indigo-600 w-fit hover:bg-indigo-700 text-white px-6 py-3 font-medium rounded-lg shadow-md hover:shadow-lg transition duration-300 inline-flex items-center">
                                 Get in Touch
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -40,7 +40,7 @@ export default function Client() {
                                 width="500"
                                 height="350"
                                 decoding="async"
-                                className="rounded-xl shadow-xl border-4 border-white transform hover:scale-105 transition duration-500"
+                                className="rounded-xl border-4 border-white transform  transition duration-500"
                                 src={Laptop}
                             />
                         </div>

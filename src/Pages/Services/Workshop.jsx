@@ -150,20 +150,27 @@ export default function ServicesList() {
                         className="rounded-xl  border-4 border-white transform  transition duration-500"
                     />
                 </div>
+
+
             </section>
+
+            <div className="text-center mb-16">
+                <div className="w-20 h-1 bg-indigo-600 mx-auto rounded-full mb-4"></div>
+                <div className="max-w-4xl mx-auto text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6">ICT Workshop Details</h2>
+                    <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                        Our ICT workshops are crafted to offer practical, hands-on experience with modern technologies and tools in the IT industry. Covering a wide spectrum—from basic digital skills to advanced topics like networking and cybersecurity—these sessions are tailored for learners of all levels, ensuring both beginners and professionals gain valuable knowledge and applicable skills.
+                    </p>
+                </div>
+            </div>
 
             {/* Workshop Services */}
             <section id="workshops" className="py-20 bg-white">
                 <div className="max-w-4xl mx-auto px-6">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Workshop Services</h2>
-                        <div className="w-20 h-1 bg-indigo-600 mx-auto rounded-full mb-4"></div>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Comprehensive training programs designed to provide practical, hands-on experience with the latest technologies.
-                        </p>
-                    </div>
+
 
                     <div className="space-y-4">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Workshop Services</h2>
                         {workshopServices.map(({ emoji, title, topics }, index) => (
                             <div
                                 key={title}
@@ -185,7 +192,7 @@ export default function ServicesList() {
                                         </div>
                                     </div>
                                 </button>
-                                
+
                                 <div
                                     id={`workshop-${index}`}
                                     className={`px-6 pb-5 text-gray-600 transition-all duration-300 ${openIndex === index ? 'block' : 'hidden'}`}

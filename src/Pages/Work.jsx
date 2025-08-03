@@ -7,6 +7,7 @@ import Brihat from "../assets/brihat.png";
 import Hamrodokan from "../assets/hamrodokan.png";
 import Himalayansanchaya from "../assets/himalayan-sanchaya.png";
 import Utkrista from "../assets/utkrista.png";
+import Tufan from "../assets/Clients/tufan.png"
 
 const projects = [
   {
@@ -19,7 +20,7 @@ const projects = [
       database: "MySQL",
       deliverable: "Web Application",
     },
-    link: "#" // Add actual project links here
+    link: "#" 
   },
   {
     img: Brihat,
@@ -57,6 +58,19 @@ const projects = [
     },
     link: "#"
   },
+  {
+    img: Tufan,
+    title: "Tufan",
+    description: "Tufan is an innovative transportation platform that simplifies  ride-sharing. It prioritizes safety, efficiency, and convenience, offering reliable solutions for both passengers and operators to enhance the travel experience.",
+    tech: {
+      frontend: "React (Web)",
+      backend: "Java (Mobile App)",
+      database: "SQL",
+      deliverable: "Mobile & Web Application",
+    },
+    link: "https://mytufan.com/"
+  }
+
 ];
 
 export default function Work() {
@@ -66,31 +80,38 @@ export default function Work() {
 
       <main className="m-0">
         {/* Hero Section */}
-        <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center p-6 lg:p-12 w-11/12 mx-auto">
-          <div className="flex flex-col gap-6 max-w-xl text-center lg:text-left lg:max-w-md lg:w-1/2 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-extrabold">Our Portfolio</h1>
-            <h2 className="text-2xl md:text-3xl font-medium text-gray-700">
+        <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 py-12 lg:py-24 mx-auto bg-white">
+          <div className="flex flex-col gap-6 max-w-xl lg:max-w-md lg:w-1/2 items-center lg:items-start text-center lg:text-left animate-fade-in">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+              Our Portfolio
+            </h1>
+            <h2 className="text-xl md:text-2xl font-medium text-gray-700">
               Discover the Projects We've Brought to Life
             </h2>
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+              We have been working with clients across various industries, creating innovative and impactful digital solutions. Take a look at some of the success stories we’ve helped build.
+            </p>
             <a
               href="/contact"
-              className="bg-blue-600 text-white font-semibold px-6 py-3 rounded shadow-lg hover:bg-blue-500 transition duration-300 w-fit mx-auto lg:mx-0"
+              className="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded shadow-lg transition duration-300 w-fit"
             >
               Contact Us
             </a>
           </div>
 
-          <div className="mt-10 lg:mt-0 lg:w-1/2 flex justify-center animate-float">
+          <div className="mt-10  lg:mt-0 lg:w-1/2 flex justify-center">
             <img
               src={portfolio}
               alt="Portfolio"
               width="400"
               height="500"
               loading="lazy"
-              className="rounded-xl shadow-xl max-w-full"
+              className="rounded-xl max-w-full"
               decoding="async"
             />
+
           </div>
+
         </section>
 
 

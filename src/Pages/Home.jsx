@@ -77,7 +77,7 @@ export default function Home() {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="py-12 md:py-20">
+        <section className=" flex py-12 md:py-20 h-screen items-center justify-center">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="lg:w-1/2 text-center lg:text-left">
@@ -106,7 +106,7 @@ export default function Home() {
                 <img 
                   src={HeroImg} 
                   alt="IT solutions illustration" 
-                  className="mx-auto w-full max-w-md rounded-lg shadow-xl" 
+                  className="mx-auto w-full max-w-md rounded-lg " 
                   loading="lazy"
                 />
               </div>
@@ -190,7 +190,7 @@ export default function Home() {
                 <img 
                   src={CircleImg} 
                   alt="Company statistics visualization" 
-                  className="mx-auto w-full max-w-md rounded-lg shadow-2xl" 
+                  className="mx-auto w-full max-w-md rounded-lg " 
                   loading="lazy"
                 />
               </div>

@@ -105,8 +105,7 @@ export default function DomainHosting() {
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">Domain & Hosting Services</h2>
                         <div className="w-20 h-1 bg-indigo-600 mx-auto rounded-full mb-4"></div>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            A1 IT Innovation offers comprehensive solutions tailored to meet your business needs.
-                            Ensure your website is always secure, fast, and reliable with our expert services.
+                            A1 IT Innovation offers comprehensive domain registration and hosting solutions tailored to meet your business needs. Our services ensure your website is always secure, fast, and reliable. With our expert team, you can rest assured that your online presence is in good hands.
                         </p>
                     </div>
 
