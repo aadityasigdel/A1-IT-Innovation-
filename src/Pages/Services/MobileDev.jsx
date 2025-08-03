@@ -1,7 +1,6 @@
-import React from "react";
-import Navigation from "../../components/Navigation";
-import Footer from "../../components/Footer";
 import Mobile from "../../assets/ServicesImg/mobile-app.png";
+import Footer from "../../components/Footer";
+import Navigation from "../../components/Navigation";
 
 export default function MobileDev() {
   const services = [
