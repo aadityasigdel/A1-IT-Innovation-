@@ -71,11 +71,12 @@ const CareerPage = () => {
         }
 
         setIsSubmitting(true);
-        const formPayload = new FormData();
-        formPayload.append('Full Name', formData.fullName);
-        formPayload.append('Email', formData.email);
-        formPayload.append('Message', formData.message);
-        formPayload.append('CV', formData.cv);
+        const formPayload = new FormData();  // <-- add this line
+
+        formPayload.append('fullName', formData.fullName);
+        formPayload.append('email', formData.email);
+        formPayload.append('message', formData.message);
+        formPayload.append('cv', formData.cv);
         formPayload.append('_captcha', 'false');
         formPayload.append('_subject', 'New Career Form Submission from Website');
         formPayload.append('_template', 'box');
@@ -105,6 +106,7 @@ const CareerPage = () => {
             setIsSubmitting(false);
         }
     };
+
 
 
     const triggerFileInput = () => {
@@ -144,7 +146,7 @@ const CareerPage = () => {
                             </div>
                             <h2 className="text-2xl font-bold text-gray-900 mb-3">Application Submitted!</h2>
                             <p className="text-gray-600 mb-8 max-w-md mx-auto">
-                                Thank you for your interest in joining our team. We've received your application and will review it carefully. We'll get back to you within 5-7 business days.
+                                Thank you for your interest in joining our team. We've received your application and will review it carefully. We'll get back to you within few days.
                             </p>
                             <button
                                 onClick={() => setSubmitSuccess(false)}
