@@ -1,7 +1,7 @@
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import SarkarHasada from "../../assets/Team/sarkarhasada.jpg"
-import SandipChapagain from "../../assets/team/SandipChapagain.jpg"
+import  SandipChapagain from "../../assets/Team/SandipChapagain.jpg"
 import AadityaSigdel from "../../assets/team/AadityaSigdel.jpg"
 export default function Aboutus() {
     return (

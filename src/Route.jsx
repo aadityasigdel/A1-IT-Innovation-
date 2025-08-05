@@ -14,6 +14,7 @@ import WebDev from "./Pages/Services/WebDev"
 import Workshop from "./Pages/Services/Workshop"
 import Work from "./Pages/Work"
 import Career from "./Pages/Career.jsx"
+import Intern from "./Pages/Services/InternShip.jsx"
 
 
 export default function RoutSetup() {
@@ -35,7 +36,8 @@ export default function RoutSetup() {
 
                 {/* service*/}
                 <Route path="/services/domain-hosting" element={<DomainHosting />} />
-                <Route path="/services/internship" element={<Workshop />} />
+                <Route path="/services/Workshop" element={<Workshop />} />
+                <Route path="/services/internship" element={<Intern />} />
                 <Route path="/services/mobile-dev" element={<MobileDev />} />
                 <Route path="/services/web-dev" element={<WebDev />} />
                 <Route path="/services/security-audit" element={<SecurityAudit />} />

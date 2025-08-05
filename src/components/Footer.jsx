@@ -2,19 +2,19 @@ import logoImage from "../assets/logo.png";
 
 export default function Footer() {
   const servicesLinks = [
-    { href: "/services/mobile-dev", label: "Mobile App Development" },
-    { href: "/services/web-dev", label: "Website Development" },
-    { href: "/services/security-audit", label: "Security Audit" },
-    { href: "/services/domain-hosting", label: "Domain & Hosting" },
-    { href: "/services/internship", label: "Workshop & Intern" },
+    { href: "/services/mobile-dev", label: "Mobile App Development", icon: "fas fa-mobile-alt" },
+    { href: "/services/web-dev", label: "Website Development", icon: "fas fa-globe" },
+    { href: "/services/security-audit", label: "Security Audit", icon: "fas fa-shield-alt" },
+    { href: "/services/domain-hosting", label: "Domain & Hosting", icon: "fas fa-server" },
+    { href: "/services/internship", label: "Workshop & Intern", icon: "fas fa-chalkboard-teacher" },
   ];
 
   const companyLinks = [
-    { href: "/company/about", label: "About Us" },
-    { href: "/company/why-us", label: "Why A1 IT Innovation" },
-    { href: "/company/faq", label: "FAQ" },
-    { href: "/company/gallery", label: "Gallery" },
-    { href: "/company/career", label: "Career" },
+    { href: "/company/about", label: "About Us", icon: "fas fa-info-circle" },
+    { href: "/company/why-us", label: "Why A1 IT Innovation", icon: "fas fa-bolt" },
+    { href: "/company/faq", label: "FAQ", icon: "fas fa-question-circle" },
+    { href: "/company/gallery", label: "Gallery", icon: "fas fa-image" },
+    { href: "/company/career", label: "Career", icon: "fas fa-briefcase" },
   ];
 
   return (
@@ -37,12 +37,14 @@ export default function Footer() {
           <ul className="flex flex-col gap-2 text-sm">
             {servicesLinks.map((link, idx) => (
               <li key={idx}>
-                <a href={link.href} className="text-gray-700 hover:underline">
+                <a href={link.href} className="text-gray-700 hover:underline flex items-center gap-2">
+                  <i className={link.icon}></i>
                   {link.label}
                 </a>
               </li>
             ))}
           </ul>
+
         </div>
 
         {/* Company */}

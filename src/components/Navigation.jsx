@@ -50,7 +50,9 @@ export default function Navigation() {
     { href: "/services/web-dev", label: "Website Development" },
     { href: "/services/security-audit", label: "Security Audit" },
     { href: "/services/domain-hosting", label: "Domain & Hosting" },
-    { href: "/services/internship", label: "Workshop & Intern" },
+    { href: "/services/internship", label: "Intern" },
+    { href: "/services/Workshop", label: "Workshop" },
+    
   ];
 
   const companyLinks = [
