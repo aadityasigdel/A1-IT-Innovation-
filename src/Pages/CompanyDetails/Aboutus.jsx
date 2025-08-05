@@ -1,8 +1,8 @@
-import Navigation from "../../components/Navigation";
+import AadityaSigdel from "../../assets/Team/AadityaSigdel.jpg";
+import SandipChapagain from "../../assets/Team/SandipChapagain.jpg";
+import SarkarHasada from "../../assets/Team/sarkarhasada.jpg";
 import Footer from "../../components/Footer";
-import SarkarHasada from "../../assets/Team/sarkarhasada.jpg"
-import  SandipChapagain from "../../assets/Team/SandipChapagain.jpg"
-import AadityaSigdel from "../../assets/team/AadityaSigdel.jpg"
+import Navigation from "../../components/Navigation";
 export default function Aboutus() {
     return (
         <>
