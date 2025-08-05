@@ -1,13 +1,13 @@
-import React from 'react';
 import portfolio from "../assets/portfolio.jpg";
-import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import Navigation from "../components/Navigation";
 
 import Brihat from "../assets/brihat.png";
+import Kryzox from "../assets/Clients/KryZone.png";
+import Tufan from "../assets/Clients/tufan.png";
 import Hamrodokan from "../assets/hamrodokan.png";
 import Himalayansanchaya from "../assets/himalayan-sanchaya.png";
 import Utkrista from "../assets/utkrista.png";
-import Tufan from "../assets/Clients/tufan.png"
 
 const projects = [
   {
@@ -69,7 +69,22 @@ const projects = [
       deliverable: "Mobile & Web Application",
     },
     link: "https://mytufan.com/"
+  },
+  {
+    img: Kryzox,
+    title: "Kryzox",
+    description: "Created a platform where users can join games like PUBG, Free Fire, Ludo, Chess by paying an entry fee. Winners are rewarded with prize money. Included wallet system, match scheduling, result uploading, and admin controls. Focused on secure transaction handling and real-time updates.",
+    tech: {
+      frontend: "React (Web)",
+      backend: "Java (Mobile App)",
+      database: "SQL",
+      deliverable: "Mobile & Web Application",
+    },
+    link: "https://Kryzox.com/"
   }
+
+
+  
 
 ];
 
