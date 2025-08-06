@@ -26,7 +26,8 @@ export default function GoogleLog() {
         <section className="bg-white flex flex-col rounded-lg shadow-lg p-8 max-w-md w-full text-center items-center justify-center">
           <h1 className="text-3xl font-bold mb-6 text-gray-800">Sign in with Google</h1>
           <GoogleLogin onSuccess={handleSuccess} onError={handleError} />
-          <p className="mt-6 text-gray-600">
+          
+          {/* <p className="mt-6 text-gray-600">
             By signing in, you agree to our{' '}
             <a href="/terms" className="text-indigo-600 underline hover:text-indigo-800">
               Terms of Service
@@ -35,7 +36,7 @@ export default function GoogleLog() {
             <a href="/privacy" className="text-indigo-600 underline hover:text-indigo-800">
               Privacy Policy
             </a>.
-          </p>
+          </p> */}
         </section>
       </main>
       <Footer />

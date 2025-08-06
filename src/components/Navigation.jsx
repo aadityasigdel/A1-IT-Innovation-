@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 import logoimage from "../assets/logo.png";
 
 function Dropdown({ title, links, isOpen, toggle, isMobile = false }) {
@@ -89,7 +88,7 @@ export default function Navigation() {
             isOpen={openDropdown === "company"}
             toggle={() => toggleDropdown("company")}
           />
-          
+
           <div className="flex gap-3 items-center ml-2">
             <a
               href="/contact"
@@ -110,7 +109,16 @@ export default function Navigation() {
 
         {/* Mobile Toggle */}
         <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden text-2xl">
-          {mobileOpen ? <FaTimes /> : <FaBars />}
+          {mobileOpen ? (
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
+
         </button>
       </div>
 
