@@ -82,6 +82,7 @@ export default function Navigation() {
           />
           <a href="/clients" className="hover:text-indigo-600">Clients</a>
           <a href="/works" className="hover:text-indigo-600">Works</a>
+          
           <Dropdown
             title="Company"
             links={companyLinks}
@@ -93,6 +94,12 @@ export default function Navigation() {
             className="ml-4 block w-full bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 whitespace-nowrap text-center"
           >
             Contact Us
+          </a>
+           <a
+            href="/register"
+            className="ml-4 block w-full bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-orange-700 whitespace-nowrap text-center"
+          >
+            Sign Up
           </a>
 
 
@@ -133,6 +140,14 @@ export default function Navigation() {
             className="inline-flex justify-center items-center mt-4 bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition duration-200 whitespace-nowrap mx-auto"
           >
             Contact Us
+          </a>
+
+          <a
+            href="/register"
+            onClick={closeAll}
+            className="inline-flex justify-center items-center mt-4 ml-4 bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-700 transition duration-200 whitespace-nowrap mx-auto"
+          >
+            Sign Up
           </a>
 
 
