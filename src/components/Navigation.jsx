@@ -52,7 +52,7 @@ export default function Navigation() {
     { href: "/services/domain-hosting", label: "Domain & Hosting" },
     { href: "/services/internship", label: "Intern" },
     { href: "/services/Workshop", label: "Workshop" },
-    
+
   ];
 
   const companyLinks = [
@@ -82,25 +82,28 @@ export default function Navigation() {
           />
           <a href="/clients" className="hover:text-indigo-600">Clients</a>
           <a href="/works" className="hover:text-indigo-600">Works</a>
-          
+
           <Dropdown
             title="Company"
             links={companyLinks}
             isOpen={openDropdown === "company"}
             toggle={() => toggleDropdown("company")}
           />
-          <a
-            href="/contact"
-            className="ml-4 block w-full bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 whitespace-nowrap text-center"
-          >
-            Contact Us
-          </a>
-           <a
-            href="/register"
-            className="ml-4 block w-full bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-orange-700 whitespace-nowrap text-center"
-          >
-            Sign Up
-          </a>
+          
+          <div className="flex gap-3 items-center ml-2">
+            <a
+              href="/contact"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-5 py-2 rounded-md transition duration-200 whitespace-nowrap"
+            >
+              Contact Us
+            </a>
+            <a
+              href="/register"
+              className="bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium px-5 py-2 rounded-md transition duration-200 whitespace-nowrap"
+            >
+              Sign Up
+            </a>
+          </div>
 
 
         </div>
@@ -134,21 +137,23 @@ export default function Navigation() {
             toggle={() => toggleDropdown("company")}
             isMobile
           />
-          <a
-            href="/contact"
-            onClick={closeAll}
-            className="inline-flex justify-center items-center mt-4 bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition duration-200 whitespace-nowrap mx-auto"
-          >
-            Contact Us
-          </a>
+          <div className="mt-6 flex flex-col gap-4 items-center">
+            <a
+              href="/contact"
+              onClick={closeAll}
+              className="w-full text-center bg-indigo-600 text-white px-6 py-3 rounded-md text-base font-medium hover:bg-indigo-700 transition"
+            >
+              Contact Us
+            </a>
+            <a
+              href="/register"
+              onClick={closeAll}
+              className="w-full text-center bg-orange-600 text-white px-6 py-3 rounded-md text-base font-medium hover:bg-orange-700 transition"
+            >
+              Sign Up
+            </a>
+          </div>
 
-          <a
-            href="/register"
-            onClick={closeAll}
-            className="inline-flex justify-center items-center mt-4 ml-4 bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-700 transition duration-200 whitespace-nowrap mx-auto"
-          >
-            Sign Up
-          </a>
 
 
         </div>
