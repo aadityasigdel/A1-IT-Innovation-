@@ -1,93 +1,102 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import logoimage from "../assets/logo.png";
 
-function Dropdown({ title, links, isOpen, toggle, isMobile = false }) {
+// DROPDOWN COMPONENT
+function Dropdown({ title, links, isMobile = false }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <div className="w-full">
+    <div
+      ref={dropdownRef}
+      className={`w-full ${isMobile ? "" : "relative"}`}
+      onMouseEnter={() => !isMobile && setIsOpen(true)}
+      onMouseLeave={() => !isMobile && setIsOpen(false)}
+    >
       <button
-        onClick={toggle}
+        onClick={() => setIsOpen(!isOpen)}
         className="flex justify-between items-center w-full py-2 text-left font-medium text-gray-800 hover:text-indigo-600"
       >
         {title}
-        <span className={`ml-2 transform transition-transform ${isOpen ? "rotate-180" : ""}`}>
-          ▼
-        </span>
+        <span className="ml-2">▼</span>
       </button>
-      {isOpen && (
-        <ul className={`${isMobile ? "pl-4" : "absolute bg-white shadow-md mt-1"} z-50`}>
-          {links.map(({ href, label }) => (
-            <li key={href} className="py-1">
-              <a
-                href={href}
-                className="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-700"
-                onClick={() => isMobile && toggle()}
-              >
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
+
+      {/* Dropdown Menu */}
+      <ul
+        className={`
+          ${isOpen ? "block" : "hidden"}
+          ${isMobile ? "pl-4" : "absolute bg-white mt-1 shadow-md w-52 rounded"}
+          z-50
+        `}
+      >
+        {links.map(({ href, label }) => (
+          <li key={href} className="py-1">
+            <a
+              href={href}
+              className="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-700"
+              onClick={() => isMobile && setIsOpen(false)}
+            >
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
 
+// NAVIGATION COMPONENT
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
 
-  const toggleDropdown = (key) =>
-    setOpenDropdown(openDropdown === key ? null : key);
-
-  const closeAll = () => {
-    setOpenDropdown(null);
+  const closeMobileMenu = () => {
     setMobileOpen(false);
   };
 
   const servicesLinks = [
-    { href: "/services/mobile-dev", label: "Mobile App Development" },
-    { href: "/services/web-dev", label: "Website Development" },
-    { href: "/services/security-audit", label: "Security Audit" },
-    { href: "/services/domain-hosting", label: "Domain & Hosting" },
-    { href: "/services/internship", label: "Intern" },
-    { href: "/services/Workshop", label: "Workshop" },
-
+    { href: "/services/mobile-dev", label: "📱 Mobile App Development" },
+    { href: "/services/web-dev", label: "💻 Web Development" },
+    { href: "/services/security-audit", label: "🛡️ Security Audit" },
+    { href: "/services/domain-hosting", label: "🌐 Domain & Hosting" },
+    { href: "/services/internship", label: "🧑‍💼 Internship Program" },
+    { href: "/services/workshop", label: "🎓 Technical Workshop" },
   ];
 
+
   const companyLinks = [
-    { href: "/company/about", label: "About Us" },
-    { href: "/company/why-us", label: "Why A1 IT Innovation" },
-    { href: "/company/faq", label: "FAQ" },
-    { href: "/company/gallery", label: "Gallery" },
-    { href: "/company/career", label: "Career" },
+    { href: "/company/about", label: "🏢 About Us" },
+    { href: "/company/why-us", label: "❓ Why A1 IT Innovation" },
+    { href: "/company/faq", label: "📖 FAQ" },
+    { href: "/company/gallery", label: "🖼️ Gallery" },
+    { href: "/company/career", label: "🚀 Career" },
   ];
 
   return (
     <nav className="sticky top-0 z-40 bg-white shadow-md w-full">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-3" onClick={closeAll}>
+        <a href="/" className="flex items-center gap-3" onClick={closeMobileMenu}>
           <img src={logoimage} alt="Logo" className="w-10 h-10 rounded-full object-contain" />
           <span className="text-xl font-bold text-gray-900">A1 IT Innovation</span>
         </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-6 items-center font-medium text-gray-800 relative">
-          <Dropdown
-            title="Services"
-            links={servicesLinks}
-            isOpen={openDropdown === "services"}
-            toggle={() => toggleDropdown("services")}
-          />
+          <Dropdown title="Services" links={servicesLinks} />
           <a href="/clients" className="hover:text-indigo-600">Clients</a>
           <a href="/works" className="hover:text-indigo-600">Works</a>
-
-          <Dropdown
-            title="Company"
-            links={companyLinks}
-            isOpen={openDropdown === "company"}
-            toggle={() => toggleDropdown("company")}
-          />
+          <Dropdown title="Company" links={companyLinks} />
 
           <div className="flex gap-3 items-center ml-2">
             <a
@@ -103,8 +112,6 @@ export default function Navigation() {
               Sign Up
             </a>
           </div>
-
-
         </div>
 
         {/* Mobile Toggle */}
@@ -118,52 +125,33 @@ export default function Navigation() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           )}
-
         </button>
       </div>
 
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="md:hidden px-6 pt-4 pb-6 bg-white shadow-md overflow-y-auto max-h-[80vh] space-y-2">
-          <Dropdown
-            title="Services"
-            links={servicesLinks}
-            isOpen={openDropdown === "services"}
-            toggle={() => toggleDropdown("services")}
-            isMobile
-          />
-          <a href="/clients" onClick={closeAll} className="block font-medium text-gray-800">
-            Clients
-          </a>
-          <a href="/works" onClick={closeAll} className="block font-medium text-gray-800">
-            Works
-          </a>
-          <Dropdown
-            title="Company"
-            links={companyLinks}
-            isOpen={openDropdown === "company"}
-            toggle={() => toggleDropdown("company")}
-            isMobile
-          />
+          <Dropdown title="Services" links={servicesLinks} isMobile />
+          <a href="/clients" onClick={closeMobileMenu} className="block font-medium text-gray-800">Clients</a>
+          <a href="/works" onClick={closeMobileMenu} className="block font-medium text-gray-800">Works</a>
+          <Dropdown title="Company" links={companyLinks} isMobile />
+
           <div className="mt-6 flex flex-col gap-4 items-center">
             <a
               href="/contact"
-              onClick={closeAll}
+              onClick={closeMobileMenu}
               className="w-full text-center bg-indigo-600 text-white px-6 py-3 rounded-md text-base font-medium hover:bg-indigo-700 transition"
             >
               Contact Us
             </a>
             <a
               href="/register"
-              onClick={closeAll}
+              onClick={closeMobileMenu}
               className="w-full text-center bg-orange-600 text-white px-6 py-3 rounded-md text-base font-medium hover:bg-orange-700 transition"
             >
               Sign Up
             </a>
           </div>
-
-
-
         </div>
       )}
     </nav>
