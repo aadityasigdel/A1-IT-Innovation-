@@ -127,12 +127,8 @@ const getBeliefDescription = (title) => {
 
 const teamMembers = [
     { name: "Sandip Chapagain", role: "Founder & CEO (Java Developer)", image: SandipChapagain },
-    { name: "Ashok Thapa", role: "Co-Founder & Fullstack Developer", image: "/leaders/4.jpeg" },
     { name: "Alish Karki", role: "Django Developer", image: "/leaders/7.jpg" },
-    { name: "Bishwas Limbu", role: "UI/UX Designer", image: "/leaders/bishwas.png" },
     { name: "Suraj Rai", role: "Graphic Designer", image: "/leaders/graphic.jpeg" },
-    { name: "Saurav Rijal", role: "Graphic Designer", image: "/leaders/sourav.jpeg" },
-    { name: "Anmol Adhikari", role: "Graphic Designer", image: "/leaders/anmol.jpeg" },
     { name: "Aaditya Sigdel", role: "Frontend Developer", image: AadityaSigdel },
     { name: "Sarkar Hasada", role: "Frontend Developer", image: SarkarHasada },
 

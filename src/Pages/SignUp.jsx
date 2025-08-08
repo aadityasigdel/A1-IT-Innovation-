@@ -44,7 +44,7 @@ export default function GoogleLog() {
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-indigo-100 via-white to-indigo-200">
       <Navigation />
 
-      <main className="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <main className="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 h-screen">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 w-full max-w-6xl">
 
           {/* Image Section - Visible on all screen sizes */}

@@ -4,14 +4,6 @@ import Navigation from "../../components/Navigation";
 
 // Import all images
 import Img1 from "../../assets/Gallery/1.jpg";
-import Img2 from "../../assets/Gallery/2.jpg";
-import Img3 from "../../assets/Gallery/3.jpg";
-import Img4 from "../../assets/Gallery/4.jpg";
-import Img5 from "../../assets/Gallery/5.jpg";
-import Img6 from "../../assets/Gallery/6.jpg";
-import Img7 from "../../assets/Gallery/7.jpg";
-import Img8 from "../../assets/Gallery/8.jpg";
-import Img9 from "../../assets/Gallery/9.jpg";
 import Img10 from "../../assets/Gallery/10.jpg";
 import Img11 from "../../assets/Gallery/11.jpg";
 import Img12 from "../../assets/Gallery/12.jpg";
@@ -22,6 +14,7 @@ import Img16 from "../../assets/Gallery/16.jpg";
 import Img17 from "../../assets/Gallery/17.jpg";
 import Img18 from "../../assets/Gallery/18.jpg";
 import Img19 from "../../assets/Gallery/19.jpg";
+import Img2 from "../../assets/Gallery/2.jpg";
 import Img20 from "../../assets/Gallery/20.jpg";
 import Img21 from "../../assets/Gallery/21.jpg";
 import Img22 from "../../assets/Gallery/22.jpg";
@@ -29,6 +22,13 @@ import Img23 from "../../assets/Gallery/23.jpg";
 import Img24 from "../../assets/Gallery/24.jpg";
 import Img25 from "../../assets/Gallery/25.jpg";
 import Img26 from "../../assets/Gallery/26.jpg";
+import Img3 from "../../assets/Gallery/3.jpg";
+import Img4 from "../../assets/Gallery/4.jpg";
+import Img5 from "../../assets/Gallery/5.jpg";
+import Img6 from "../../assets/Gallery/6.jpg";
+import Img7 from "../../assets/Gallery/7.jpg";
+import Img8 from "../../assets/Gallery/8.jpg";
+import Img9 from "../../assets/Gallery/9.jpg";
 
 //include image sources
 const images = [
@@ -76,7 +76,6 @@ export default function Gallery() {
                   src={src}
                   alt=""
                   loading="lazy"
-                  fetchpriority="low"
                   className="object-cover w-full h-60"
                 />
               </div>
