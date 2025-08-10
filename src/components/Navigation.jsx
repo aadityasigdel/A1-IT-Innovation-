@@ -1,10 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import logoimage from "../assets/logo.png";
 
+ 
+
 // DROPDOWN COMPONENT
 function Dropdown({ title, links, isMobile = false }) {
+
+
+
   const [isOpen, setIsOpen] = useState(false);
+
   const dropdownRef = useRef(null);
+
+
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -16,6 +24,8 @@ function Dropdown({ title, links, isMobile = false }) {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+
 
   return (
     <div
@@ -59,6 +69,15 @@ function Dropdown({ title, links, isMobile = false }) {
 // NAVIGATION bar
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  
+
+   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+   
+    useEffect(() => {
+    const user = localStorage.getItem('user');
+    setIsLoggedIn(!!user);
+  }, []);
 
   const closeMobileMenu = () => {
     setMobileOpen(false);
@@ -105,12 +124,15 @@ export default function Navigation() {
             >
               Contact Us
             </a>
-            <a
-              href="/register"
-              className="bg-teal-700 hover:bg-teal-800 text-white text-sm font-medium px-5 py-2 rounded-md transition duration-200 whitespace-nowrap"
-            >
-              Sign Up
-            </a>
+            {!isLoggedIn && (
+              <a
+                href="/register"
+                className="bg-teal-700 hover:bg-teal-800 text-white text-sm font-medium px-5 py-2 rounded-md transition duration-200 whitespace-nowrap"
+              >
+                Sign Up
+              </a>
+            )}
+
 
 
 
@@ -171,13 +193,16 @@ export default function Navigation() {
               >
                 Contact Us
               </a>
-              <a
-                href="/register"
-                onClick={closeMobileMenu}
-                className="w-full text-center bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-md text-base font-medium  transition"
-              >
-                Sign Up
-              </a>
+              {!isLoggedIn && (
+                <a
+                  href="/register"
+                  onClick={closeMobileMenu}
+                  className="w-full text-center bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-md text-base font-medium  transition"
+                >
+                  Sign Up
+                </a>
+              )}
+
 
             </div>
 
