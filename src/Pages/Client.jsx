@@ -23,7 +23,7 @@ export default function Client() {
     { logo: Birhat, name: "Brihat Patro", url: "https://play.google.com/store/apps/details?id=com.nepaliyogi.brihatpatro" },
     { logo: Utkrista, name: "Utkrista", url: "https://utkristashikshya.com/" },
     { logo: kryzox, name: "Kryzox", url: "https://kryzox.com" },
-    { logo: Tufan, name: "Tufan", url: "#" },
+    { logo: Tufan, name: "Tufan", url: "https://mytufan.com/" },
   ];
 
   return (
@@ -70,8 +70,8 @@ export default function Client() {
               <img
                 alt="Laptop showcasing IT solutions"
                 loading="lazy"
-                width="500"
-                height="350"
+                width="400"
+                height="300"
                 decoding="async"
                 className="rounded-xl border-4 border-white transform transition duration-500"
                 src={Laptop}

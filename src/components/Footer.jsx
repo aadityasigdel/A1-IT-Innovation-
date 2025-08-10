@@ -179,7 +179,25 @@ export default function Footer() {
               </svg>
               Terms and Conditions
             </a>
-
+            <a
+              className="flex items-center gap-2 hover:underline"
+              href="https://maps.google.com/?q=A1+IT+Innovation+Damak"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"
+                />
+              </svg>
+              <span>View on Google Maps</span>
+            </a>
 
           </div>
 
@@ -218,7 +236,9 @@ export default function Footer() {
                 <path d="M4 3a2 2 0 110 4 2 2 0 010-4zm0 4h4v12H4zm6 0h4v2.5c.6-1 2-2.5 4-2.5 4 0 4.5 2.5 4.5 5.7V19h-4v-5c0-1.2 0-2.7-2-2.7-2 0-2.3 1.5-2.3 2.5V19h-4z" />
               </svg>
             </a>
+
           </div>
+
         </div>
       </div>
 

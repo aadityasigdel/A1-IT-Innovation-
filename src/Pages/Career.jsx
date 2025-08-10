@@ -8,8 +8,10 @@ const CareerPage = () => {
         fullName: '',
         email: '',
         message: '',
+        jobType: '',
         cv: null,
     });
+
     const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -23,6 +25,7 @@ const CareerPage = () => {
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
             newErrors.email = 'Please enter a valid email';
         }
+        if (!formData.jobType.trim()) newErrors.jobType = 'Please select a job type';
         if (!formData.cv) newErrors.cv = 'CV is required';
         else if (formData.cv.size > 5 * 1024 * 1024) {
             newErrors.cv = 'File size must be less than 5MB';
@@ -80,6 +83,8 @@ const CareerPage = () => {
         formPayload.append('_captcha', 'false');
         formPayload.append('_subject', 'New Career Form Submission from Website');
         formPayload.append('_template', 'box');
+        formPayload.append('jobType', formData.jobType);
+
 
         try {
             const response = await fetch('https://formsubmit.co/info@a1itinnovation.com.np', {
@@ -180,6 +185,29 @@ const CareerPage = () => {
                                         />
                                     </div>
                                     {errors.fullName && <p className="mt-2 text-sm text-red-600">{errors.fullName}</p>}
+                                </div>
+
+                                <div>
+                                    <label htmlFor="jobType" className="block text-sm font-medium text-gray-700 mb-2">
+                                        Job Type <span className="text-red-500">*</span>
+                                    </label>
+                                    <select
+                                        id="jobType"
+                                        name="jobType"
+                                        value={formData.jobType}
+                                        onChange={handleChange}
+                                        className={`block w-full pl-3 pr-10 py-3 border ${errors.jobType
+                                                ? 'border-red-300 focus:ring-red-500 focus:border-red-500'
+                                                : 'border-gray-300 focus:ring-indigo-500 focus:border-indigo-500'
+                                            } rounded-md shadow-sm`}
+                                    >
+                                        <option value="">Select a job type</option>
+                                        <option value="Internship">Internship</option>
+                                        <option value="Full-Time">Full-Time</option>
+                                        <option value="Part-Time">Part-Time</option>
+                                        <option value="Part-Time">Remote</option>
+                                    </select>
+                                    {errors.jobType && <p className="mt-2 text-sm text-red-600">{errors.jobType}</p>}
                                 </div>
 
                                 {/* Email Field */}

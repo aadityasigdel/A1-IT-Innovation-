@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import Navigation from "../../components/Navigation";
+import { useState } from 'react';
 import Footer from "../../components/Footer";
+import Navigation from "../../components/Navigation";
 
 const faqData = [
     { question: 'What is A1 IT Innovation?', answer: 'A1 IT Innovation is a technology company that specializes in delivering cutting-edge digital solutions tailored for modern business challenges.' },
+     { question: 'Where are you located?',answer: 'Our main office is in Damak, Jhapa, Nepal (ZIP: 57217). Contact: +977-981-6032025. Open 24 hours.' },
     { question: 'What services do you provide?', answer: 'We offer software development, IT consulting, cloud solutions, UI/UX design, and product innovation services.' },
     { question: 'How to contact support?', answer: 'You can reach our support team via the Contact page, email, or live chat during business hours.' },
     { question: 'What is your typical project timeline?', answer: 'Project timelines vary based on complexity but typically range from 2 weeks to 3 months.' },
@@ -13,6 +14,8 @@ const faqData = [
     { question: 'What technologies do you specialize in?', answer: 'We specialize in React, Node.js, Python, AWS, Azure, Docker, and modern DevOps practices.' },
     { question: 'Can you help with software migration and upgrades?', answer: 'Absolutely. We assist with legacy migrations, cloud transitions, and software upgrades.' },
     { question: 'What is your pricing structure?', answer: 'Our pricing depends on project scope, duration, and complexity. Contact us for a custom quote.' },
+   
+
 ];
 
 export default function FaqSection() {

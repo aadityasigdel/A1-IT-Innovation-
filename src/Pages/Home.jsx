@@ -3,6 +3,7 @@ import HeroImg from "../assets/hero.png";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 
+
 // Service data array with matching icons and short link texts
 const services = [
   {
@@ -177,8 +178,10 @@ export default function Home() {
                 <img
                   src={HeroImg}
                   alt="IT solutions illustration"
-                  className="mx-auto w-full max-w-md rounded-lg"
-                  loading="lazy"
+                  className="mx-auto  max-w-md rounded-lg"
+                  width={768}        
+                  height={432}  
+                  loading="eager"
                 />
               </div>
             </div>
@@ -220,6 +223,7 @@ export default function Home() {
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
+                        loading="lazy"
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
@@ -262,7 +266,9 @@ export default function Home() {
                 <img
                   src={CircleImg}
                   alt="Company statistics visualization"
-                  className="mx-auto w-full max-w-md rounded-lg"
+                  className="mx-auto max-w-md rounded-lg"
+                  width={250}        
+                  height={250}  
                   loading="lazy"
                 />
               </div>
