@@ -114,7 +114,7 @@ const companyLinks = [
 export default function Footer() {
   return (
     <footer className="bg-indigo-100 text-black py-10">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
         {/* Logo Section */}
         <div className="flex flex-col items-start">
           <img
@@ -166,14 +166,14 @@ export default function Footer() {
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.48 2.5.74 3.85.74a1 1 0 011 1v3.5a1 1 0 01-1 1C9.61 22 2 14.39 2 5.5a1 1 0 011-1H6.5a1 1 0 011 1c0 1.35.26 2.65.74 3.85a1 1 0 01-.21 1.11l-2.2 2.2z" /></svg>
               9816032025
             </a>
-            <a href="/company-policy" className="flex items-center gap-2 hover:underline">
+            <a href="/company/policy" className="flex items-center gap-2 hover:underline">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M6 2a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6H6zM14 3.5L18.5 8H14V3.5zM8 12h8v2H8v-2zm0 4h8v2H8v-2z" />
               </svg>
               Company Policy
             </a>
 
-            <a href="/terms-and-conditions" className="flex items-center gap-2 hover:underline">
+            <a href="/company/terms" className="flex items-center gap-2 hover:underline">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M4 2h14a2 2 0 012 2v9.5l-4-4-4 4-4-4-4 4V4a2 2 0 012-2zm0 20h16v-2H4v2z" />
               </svg>
@@ -198,7 +198,6 @@ export default function Footer() {
               </svg>
               <span>View on Google Maps</span>
             </a>
-
           </div>
 
 
@@ -240,13 +239,23 @@ export default function Footer() {
           </div>
 
         </div>
+                  
+            <div className=" max-w-sm text-sm  text-gray-700">
+              <h3 className="text-lg font-semibold text-gray-800">Our Office</h3>
+              <address className="mt-2 not-italic text-gray-700">
+                A One .IT Innovation Pvt. Ltd. <br />
+                A1 IT Innovation <br />
+                Damak-8, Jhapa, Nepal
+              </address>
+            </div>
+
       </div>
 
 
       {/* Bottom Line */}
       <div className="mt-10 border-t pt-4 border-gray-300">
         <p className="text-center text-sm text-gray-700">
-          © 2018 - 2025 A1 IT Innovation Pvt Ltd. All rights reserved.
+          © 2018 - 2025 A1 IT Innovation — Officially registered as A. One .IT Innovation Pvt. Ltd.
         </p>
       </div>
     </footer>

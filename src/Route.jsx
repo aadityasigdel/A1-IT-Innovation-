@@ -14,6 +14,8 @@ const Aboutus = lazy(() => import("./Pages/CompanyDetails/Aboutus"));
 const FaqSection = lazy(() => import("./Pages/CompanyDetails/FAQ"));
 const Gallery = lazy(() => import("./Pages/CompanyDetails/Gallery"));
 const WhyUs = lazy(() => import("./Pages/CompanyDetails/WhyUS"));
+const Terms = lazy(() => import("./Pages/CompanyDetails/Terms"));
+const Policy = lazy(() => import("./Pages/CompanyDetails/PrivacyPolicy"));
 
 // Services
 const DomainHosting = lazy(() => import("./Pages/Services/DomainHosting"));
@@ -42,6 +44,8 @@ export default function RoutSetup() {
                     <Route path="/company/why-us" element={<WhyUs />} />
                     <Route path="/company/faq" element={<FaqSection />} />
                     <Route path="/company/career" element={<Career />} />
+                    <Route path="/company/terms" element={<Terms />} />
+                    <Route path="/company/policy" element={<Policy />} />
 
                     {/* Services */}
                     <Route path="/services/domain-hosting" element={<DomainHosting />} />
