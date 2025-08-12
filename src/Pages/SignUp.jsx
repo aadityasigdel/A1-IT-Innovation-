@@ -79,7 +79,7 @@ export default function GoogleLog() {
                 <p>
                   By continuing, you agree to our{" "}
                   <a
-                    href="/terms"
+                    href="company/terms"
                     className="text-indigo-600 hover:text-indigo-800 font-medium transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -88,7 +88,7 @@ export default function GoogleLog() {
                   </a>{" "}
                   and{" "}
                   <a
-                    href="/privacy"
+                    href="company/policy"
                     className="text-indigo-600 hover:text-indigo-800 font-medium transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"

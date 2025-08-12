@@ -74,7 +74,7 @@ const CareerPage = () => {
         }
 
         setIsSubmitting(true);
-        const formPayload = new FormData();  // <-- add this line
+        const formPayload = new FormData();  
 
         formPayload.append('fullName', formData.fullName);
         formPayload.append('email', formData.email);

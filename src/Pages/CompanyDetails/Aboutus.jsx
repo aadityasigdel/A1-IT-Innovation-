@@ -1,14 +1,22 @@
+// Importing team member images
 import AadityaSigdel from "../../assets/Team/AadityaSigdel.jpg";
 import SandipChapagain from "../../assets/Team/SandipChapagain.jpg";
 import SarkarHasada from "../../assets/Team/sarkarhasada.jpg";
+
+// Importing layout components
 import Footer from "../../components/Footer";
 import Navigation from "../../components/Navigation";
+
+
 export default function Aboutus() {
     return (
         <>
+            {/* Top navigation bar */}
             <Navigation />
+
             <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white pb-16">
-                {/* Hero Section */}
+
+                {/* Hero Section*/}
                 <section className="py-16 px-4 sm:px-8 max-w-7xl mx-auto">
                     <div className="text-center space-y-4 animate-fade-in">
                         <h1 className="text-5xl font-bold text-indigo-800 bg-clip-text">
@@ -20,9 +28,9 @@ export default function Aboutus() {
                         </p>
                     </div>
 
-                    {/* Company Description */}
+                    {/*  Company Description  */}
                     <div className="mt-16 max-w-4xl mx-auto">
-                        <div className="bg-white p-8 rounded-xl shadow-lg border-l-8 border-indigo-600 transform transition  duration-300">
+                        <div className="bg-white p-8 rounded-xl shadow-lg border-l-8 border-indigo-600 transform transition duration-300">
                             <h2 className="text-2xl font-bold text-indigo-700 mb-6">Our Story</h2>
                             <div className="space-y-6 text-gray-700 leading-relaxed">
                                 <p className="text-lg">
@@ -38,7 +46,7 @@ export default function Aboutus() {
                         </div>
                     </div>
 
-                    {/* Core Beliefs */}
+                    {/*  Core Values */}
                     <div className="pt-24">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold text-indigo-800">Our Core Values</h2>
@@ -75,7 +83,7 @@ export default function Aboutus() {
                         </div>
                     </div>
 
-                    {/* Our Team */}
+                    {/* Team Section */}
                     <div className="pt-24">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold text-indigo-800">Meet Our Team</h2>
@@ -83,12 +91,15 @@ export default function Aboutus() {
                                 The talented people behind our success
                             </p>
                         </div>
+
+                        {/* Team member grid */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                             {teamMembers.map((member, i) => (
                                 <div
                                     key={i}
                                     className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
                                 >
+                                    {/* Team member image */}
                                     <div className="relative mx-auto w-32 h-32 mb-5 rounded-full overflow-hidden border-4 border-indigo-100 group-hover:border-indigo-300 transition-colors duration-300">
                                         <img
                                             src={member.image}
@@ -96,6 +107,7 @@ export default function Aboutus() {
                                             className="w-full h-full object-cover"
                                         />
                                     </div>
+                                    {/* Name and role */}
                                     <h3 className="text-xl font-bold text-gray-800">{member.name}</h3>
                                     <p className="text-indigo-600 text-sm font-medium mt-1">{member.role}</p>
                                 </div>
@@ -104,11 +116,14 @@ export default function Aboutus() {
                     </div>
                 </section>
             </main>
+
+            {/* Footer section */}
             <Footer />
         </>
     );
 }
 
+/* Returns a descriptiion of company */
 const getBeliefDescription = (title) => {
     const descriptions = {
         Innovation: "We embrace change and are committed to developing innovative solutions that push boundaries.",
@@ -125,11 +140,13 @@ const getBeliefDescription = (title) => {
     return descriptions[title];
 };
 
+/* List of team members and their details.*/
 const teamMembers = [
     { name: "Sandip Chapagain", role: "Founder & CEO (Java Developer)", image: SandipChapagain },
-    { name: "Alish Karki", role: "Django Developer", image: "/leaders/7.jpg" },
+    { name: "Alish Karki", role: "Co-Founder & Flutter Developer", image: "/leaders/7.jpg" },
     { name: "Suraj Rai", role: "Graphic Designer", image: "/leaders/graphic.jpeg" },
     { name: "Aaditya Sigdel", role: "Frontend Developer", image: AadityaSigdel },
     { name: "Sarkar Hasada", role: "Frontend Developer", image: SarkarHasada },
-
+    { name: "Sujal Thapa", role: "Digital Marketing", image: "" },
+    { name: "Prajwal Dahala", role: "AI / ML", image: "" },
 ];

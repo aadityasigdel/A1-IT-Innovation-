@@ -2,9 +2,10 @@ import { useState } from 'react';
 import Footer from "../../components/Footer";
 import Navigation from "../../components/Navigation";
 
+// FAQ questions and answers data
 const faqData = [
     { question: 'What is A1 IT Innovation?', answer: 'A1 IT Innovation is a technology company that specializes in delivering cutting-edge digital solutions tailored for modern business challenges.' },
-     { question: 'Where are you located?',answer: 'Our main office is in Damak, Jhapa, Nepal (ZIP: 57217). Contact: +977-981-6032025. Open 24 hours.' },
+    { question: 'Where are you located?', answer: 'Our main office is in Damak, Jhapa, Nepal (ZIP: 57217). Contact: +977-981-6032025. Open 24 hours.' },
     { question: 'What services do you provide?', answer: 'We offer software development, IT consulting, cloud solutions, UI/UX design, and product innovation services.' },
     { question: 'How to contact support?', answer: 'You can reach our support team via the Contact page, email, or live chat during business hours.' },
     { question: 'What is your typical project timeline?', answer: 'Project timelines vary based on complexity but typically range from 2 weeks to 3 months.' },
@@ -14,22 +15,28 @@ const faqData = [
     { question: 'What technologies do you specialize in?', answer: 'We specialize in React, Node.js, Python, AWS, Azure, Docker, and modern DevOps practices.' },
     { question: 'Can you help with software migration and upgrades?', answer: 'Absolutely. We assist with legacy migrations, cloud transitions, and software upgrades.' },
     { question: 'What is your pricing structure?', answer: 'Our pricing depends on project scope, duration, and complexity. Contact us for a custom quote.' },
-   
-
 ];
 
+// FAQ Section component
 export default function FaqSection() {
+
     const [openIndex, setOpenIndex] = useState(null);
 
+    // Toggle FAQ item 
     const toggleIndex = (index) => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
     return (
         <>
+            {/* Navigation bar */}
             <Navigation />
+
+            {/* Main content area */}
             <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-16">
                 <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                    {/* Header section */}
                     <div className="text-center mb-12">
                         <h1 className="text-4xl font-bold text-indigo-800 mb-4">Frequently Asked Questions</h1>
                         <div className="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
@@ -38,12 +45,14 @@ export default function FaqSection() {
                         </p>
                     </div>
 
+                    {/* FAQ items list */}
                     <div className="space-y-4 max-w-3xl mx-auto">
                         {faqData.map((item, index) => (
                             <div
                                 key={index}
                                 className={`bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 ${openIndex === index ? 'ring-2 ring-indigo-500' : 'hover:shadow-lg'}`}
                             >
+                                
                                 <button
                                     className="w-full px-6 py-5 text-left focus:outline-none"
                                     onClick={() => toggleIndex(index)}
@@ -53,6 +62,8 @@ export default function FaqSection() {
                                     <div className="flex items-center justify-between">
                                         <h3 className="text-lg font-semibold text-gray-800">{item.question}</h3>
                                         <div className={`ml-4 transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
+
+                                         {/* Arrow icon */}
                                             <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                             </svg>
@@ -60,6 +71,7 @@ export default function FaqSection() {
                                     </div>
                                 </button>
                                 
+                                {/* FAQ answer, shown when open */}
                                 <div
                                     id={`faq-${index}`}
                                     className={`px-6 pb-5 text-gray-600 transition-all duration-300 ${openIndex === index ? 'block' : 'hidden'}`}
@@ -72,6 +84,7 @@ export default function FaqSection() {
                         ))}
                     </div>
 
+                    {/* Contact prompt */}
                     <div className="mt-16 text-center">
                         <h3 className="text-xl font-semibold text-gray-800 mb-4">Still have questions?</h3>
                         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -86,6 +99,8 @@ export default function FaqSection() {
                     </div>
                 </section>
             </main>
+
+            {/* Footer section */}
             <Footer />
         </>
     );

@@ -1,8 +1,8 @@
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import workshopImg from "../../assets/ServicesImg/workshop.avif";
 import Footer from '../../components/Footer';
 import Navigation from '../../components/Navigation';
-import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
 const workshopServices = [
     {
