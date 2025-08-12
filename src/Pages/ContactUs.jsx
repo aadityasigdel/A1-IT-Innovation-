@@ -53,7 +53,7 @@ export default function ContactUS() {
                 setSubmitError('Something went wrong. Try again.');
             }
         } catch (err) {
-            setSubmitError('Network error. Please try again later.');
+            setSubmitError('Network error. Please try again later.',err);
         } finally {
             setIsSubmitting(false);
         }
