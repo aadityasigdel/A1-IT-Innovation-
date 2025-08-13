@@ -1,13 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-import compression from 'vite-plugin-compression'
+import tailwindcss from '@tailwindcss/vite';
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
+import compression from 'vite-plugin-compression';
 
 export default defineConfig({
   base: '/',
-  plugins: [
-    tailwindcss(),
-    react(),
-    compression(), 
-  ],
-})
+  plugins: [react(), tailwindcss(), compression()],
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets', 
+  },
+});
