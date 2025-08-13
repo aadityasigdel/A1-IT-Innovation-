@@ -89,14 +89,16 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-40 bg-white shadow-md w-full">
+    <nav className="sticky top-0 z-40 bg-white shadow-md w-full h-24">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-3" onClick={closeMobileMenu}>
+        <a href="/" className="flex items-center gap-3 justify-center" onClick={closeMobileMenu}>
           <img
             src={logoimage}
             alt="Logo"
-            className="w-10 h-10 rounded-full object-contain"
+            className=" rounded-full object-contain mt-5 "
+            height={80}
+            width={80}
           />
           <span className="text-xl font-bold text-gray-900">A1 IT Innovation</span>
         </a>
@@ -169,14 +171,28 @@ export default function Navigation() {
           className={`fixed inset-0 z-50 flex justify-end transition-transform duration-300 ease-in-out ${mobileOpen ? "translate-x-0" : "translate-x-full"
             }`}
         >
+          
           {/* Background Overlay */}
+          
           <div
             className="absolute inset-0 bg-black bg-opacity-50"
             onClick={closeMobileMenu}
-          ></div>
+          >
+          </div>
 
           {/* Sliding Menu Panel */}
           <div className="relative h-full w-full sm:w-80 bg-white shadow-lg p-6 overflow-y-auto">
+             <a href="/" className="flex items-center gap-3 justify-center" onClick={closeMobileMenu}>
+          <img
+            src={logoimage}
+            alt="Logo"
+            className=" rounded-full object-contain mt-5 "
+            height={20}
+            width={20}
+          />
+          <span className="text-xl font-bold text-gray-900">A1 IT Innovation</span>
+        </a>
+
             {/* Close Button */}
             <div className="flex justify-end ">
               <button
@@ -226,7 +242,39 @@ export default function Navigation() {
             </div>
 
             <div className="flex gap-4 mt-4 text-xl justify-center items-end">
-              {/* Social icons omitted for brevity */}
+              
+            <a
+              href="https://www.facebook.com/profile.php?id=61557621773133"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-indigo-600"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22 12a10 10 0 10-11.6 9.9v-7h-2v-3h2v-2c0-2 1.2-3 3-3 .9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v1.7h2.3l-.3 3H14v7A10 10 0 0022 12z" />
+              </svg>
+            </a>
+
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-indigo-600"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14.86A4.48 4.48 0 0022.4 1s-1.89.9-3.1 1.2a4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 2s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+              </svg>
+            </a>
+
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-indigo-600"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4 3a2 2 0 110 4 2 2 0 010-4zm0 4h4v12H4zm6 0h4v2.5c.6-1 2-2.5 4-2.5 4 0 4.5 2.5 4.5 5.7V19h-4v-5c0-1.2 0-2.7-2-2.7-2 0-2.3 1.5-2.3 2.5V19h-4z" />
+              </svg>
+            </a>
             </div>
           </div>
         </div>

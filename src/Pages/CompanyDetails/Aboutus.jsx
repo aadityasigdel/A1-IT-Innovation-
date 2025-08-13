@@ -13,7 +13,7 @@ export default function Aboutus() {
             {/* Top navigation bar */}
             <Navigation />
 
-            <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white pb-16">
+            <main className=" bg-gradient-to-b from-gray-50 to-white pb-24 ">
                 {/* Hero Section */}
                 <section className="py-16 px-4 sm:px-8 max-w-7xl mx-auto">
                     <div className="text-center space-y-4 animate-fade-in">
@@ -93,7 +93,8 @@ export default function Aboutus() {
                     </div>
 
                     {/* Team Section */}
-                    <div className="pt-24">
+                    <div className="pt-16 max-h-screen flex flex-col justify-between">
+
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold text-indigo-800">Meet Our Team</h2>
                             <p className="text-gray-500 mt-3">The talented people behind our success</p>
@@ -111,24 +112,26 @@ export default function Aboutus() {
                                     .map((member, i) => (
                                         <div
                                             key={`founder-${i}`}
-                                            className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
+                                            className="bg-white p-3 rounded-lg shadow-md text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
+
                                         >
-                                            <div className="relative mx-auto w-32 h-32 mb-5 rounded-full overflow-hidden border-4 border-indigo-100 group-hover:border-indigo-300 transition-colors duration-300">
+                                            <div className="relative mx-auto w-24 h-24 mb-3 rounded-full overflow-hidden border-2 border-indigo-100 group-hover:border-indigo-300 transition-colors duration-300">
+
                                                 <img
                                                     src={member.image}
                                                     alt={member.name}
                                                     className="w-full h-full object-cover"
                                                 />
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-800">{member.name}</h3>
-                                            <p className="text-indigo-600 text-sm font-medium mt-1">{member.role}</p>
+                                            <h3 className="text-lg font-bold text-gray-800">{member.name}</h3>
+                                            <p className="text-xs text-indigo-600 font-medium mt-1">{member.role}</p>
                                         </div>
                                     ))}
                             </div>
                         </div>
 
                         {/*  team members  */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 items-center mx-auto">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 items-center mx-auto">
                             {teamMembers
                                 .filter(
                                     (member) =>
@@ -136,13 +139,12 @@ export default function Aboutus() {
                                             member.role.toLowerCase().includes("founder") &&
                                             !member.role.toLowerCase().includes("co-founder")
                                         )
-                                )
-                                .map((member, i) => (
+                                ).map((member, i) => (
                                     <div
                                         key={`member-${i}`}
-                                        className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
+                                        className="bg-white p-2 rounded-lg shadow-sm text-center hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 group"
                                     >
-                                        <div className="relative mx-auto w-32 h-32 mb-5 rounded-full overflow-hidden border-4 border-indigo-100 group-hover:border-indigo-300 transition-colors duration-300">
+                                        <div className="relative mx-auto w-20 h-20 mb-2 rounded-full overflow-hidden border-2 border-indigo-100 group-hover:border-indigo-300 transition-colors duration-200">
                                             {member.image ? (
                                                 <img
                                                     src={member.image}
@@ -150,21 +152,21 @@ export default function Aboutus() {
                                                     className="w-full h-full object-cover"
                                                 />
                                             ) : (
-                                                <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400">
+                                                <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400 text-xs">
                                                     No Image
                                                 </div>
                                             )}
                                         </div>
-                                        <h3 className="text-xl font-bold text-gray-800">{member.name}</h3>
-                                        <p className="text-indigo-600 text-sm font-medium mt-1">{member.role}</p>
+                                        <h3 className="text-sm font-bold text-gray-800">{member.name}</h3>
+                                        <p className="text-xs text-indigo-600 font-medium mt-0.5">{member.role}</p>
                                     </div>
                                 ))}
                         </div>
+
+
                     </div>
                 </section>
             </main>
-
-            {/* Footer section */}
             <Footer />
         </>
     );
