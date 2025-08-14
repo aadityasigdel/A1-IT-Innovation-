@@ -202,7 +202,7 @@ const teamMembers = [
         role: "Founder & CEO (Java Developer)",
         image: SandipChapagain,
     },
-    { name: "Alish Karki", role: "Co-Founder & Flutter Developer", image: AlishKarki },
+    { name: "Alish Karki", role: "Flutter Developer", image: AlishKarki },
     { name: "Suraj Rai", role: "Graphic Designer", image: "" },
     { name: "Aaditya Sigdel", role: "Frontend Developer", image: AadityaSigdel },
     { name: "Sarkar Hasada", role: "Frontend Developer", image: SarkarHasada },

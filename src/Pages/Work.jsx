@@ -3,6 +3,8 @@ import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 
 import Brihat from "../assets/brihat.png";
+import DamakMultipleCampus from "../assets/Clients/Dmc.png";
+import Damaktechnical from "../assets/Clients/DT.png";
 import Kryzox from "../assets/Clients/KryZone.png";
 import Tufan from "../assets/Clients/tufan.png";
 import Hamrodokan from "../assets/hamrodokan.png";
@@ -11,53 +13,18 @@ import Utkrista from "../assets/utkrista.png";
 
 const projects = [
   {
-    img: Utkrista,
-    title: "Utkrista Shikshya",
-    description: "Online learning platform committed to providing accessible and high-quality education for all. Empowering learners with affordable and effective knowledge.",
+    img: Kryzox,
+    title: "Kryzox",
+    description: "Created a platform where users can join games like PUBG, Free Fire, Ludo, Chess by paying an entry fee. Winners are rewarded with prize money. Included wallet system, match scheduling, result uploading, and admin controls. Focused on secure transaction handling and real-time updates.",
     tech: {
-      frontend: "Next.js, React.js, TypeScript",
-      backend: "Spring Boot (Java)",
-      database: "MySQL",
-      deliverable: "Web Application",
+      frontend: "React (Web)",
+      backend: "Java (Mobile App)",
+      database: "SQL",
+      deliverable: "Mobile & Web Application",
     },
-    link: "#" 
+    link: "https://Kryzox.com/"
   },
-  {
-    img: Brihat,
-    title: "Brihat Patro",
-    description: "The ultimate Nepali calendar and panchang app that connects users with Nepal's rich culture and traditions — including astrology, festivals, and more.",
-    tech: {
-      frontend: "Flutter, Dart",
-      backend: "PHP",
-      database: "MySQL",
-      deliverable: "Web, Mobile",
-    },
-    link: "#"
-  },
-  {
-    img: Himalayansanchaya,
-    title: "Himalayan Sanchaya",
-    description: "A business management tool offering inventory tracking, transaction logs, analytics, and automated workflows for small to medium businesses.",
-    tech: {
-      frontend: "Next.js, React.js",
-      backend: "Next.js (Server Actions)",
-      database: "PostgreSQL",
-      deliverable: "Web Application",
-    },
-    link: "#"
-  },
-  {
-    img: Hamrodokan,
-    title: "Hamrodokan",
-    description: "An online grocery mobile app for shop owners. Key features include QR scanning, inventory and user management — all powered by Firebase.",
-    tech: {
-      frontend: "Flutter, Dart",
-      backend: "Firebase",
-      database: "Firebase",
-      deliverable: "Mobile Application",
-    },
-    link: "#"
-  },
+
   {
     img: Tufan,
     title: "Tufan",
@@ -70,21 +37,85 @@ const projects = [
     },
     link: "https://mytufan.com/"
   },
+
   {
-    img: Kryzox,
-    title: "Kryzox",
-    description: "Created a platform where users can join games like PUBG, Free Fire, Ludo, Chess by paying an entry fee. Winners are rewarded with prize money. Included wallet system, match scheduling, result uploading, and admin controls. Focused on secure transaction handling and real-time updates.",
+    img: Brihat,
+    title: "Brihat Patro",
+    description: "The ultimate Nepali calendar and panchang app that connects users with Nepal's rich culture and traditions — including astrology, festivals, and more.",
     tech: {
-      frontend: "React (Web)",
-      backend: "Java (Mobile App)",
-      database: "SQL",
-      deliverable: "Mobile & Web Application",
+      frontend: "Flutter, Dart",
+      backend: "PHP",
+      database: "MySQL",
+      deliverable: "Web, Mobile",
     },
-    link: "https://Kryzox.com/"
-  }
+    link: "https://play.google.com/store/apps/details?id=com.nepaliyogi.brihatpatro&hl=ne"
+  },
+  {
+    img: Himalayansanchaya,
+    title: "Himalayan Sanchaya",
+    description: "A business management tool offering inventory tracking, transaction logs, analytics, and automated workflows for small to medium businesses.",
+    tech: {
+      frontend: "Next.js, React.js",
+      backend: "Next.js (Server Actions)",
+      database: "PostgreSQL",
+      deliverable: "Web Application",
+    },
+    link: "https://himalayan-sanchaya.vercel.app"
+  },
+
+  {
+    img: Damaktechnical,
+    title: "Damak Technical Education Foundation",
+    description: "A technical and vocational education institution in Damak, Nepal, offering diploma and bachelor programs in engineering, IT, management, and healthcare, with practical labs, student support services, and industry-aligned training.",
+    tech: {
+      frontend: " React.js",
+      backend: "Mysql",
+      database: "MySQL",
+      deliverable: "Website",
+    },
+    link: "https://damaktechnical.edu.np"
+  },
+  {
+    img: DamakMultipleCampus,
+    title: "Damak Multiple Campus",
+    description: "A community-based campus in Damak, Nepal, affiliated with Tribhuvan University, offering undergraduate and graduate programs in management, education, humanities, and sciences, with a focus on quality assurance and community engagement.",
+    tech: {
+      frontend: " React.js",
+      backend: "PHP",
+      database: "MySQL",
+      deliverable: "Website",
+    },
+    link: "https://damakcampus.edu.np"
+  },
+  {
+    img: Utkrista,
+    title: "Utkrista Shikshya",
+    description: "Online learning platform committed to providing accessible and high-quality education for all. Empowering learners with affordable and effective knowledge.",
+    tech: {
+      frontend: "Next.js, React.js, TypeScript",
+      backend: "Spring Boot (Java)",
+      database: "MySQL",
+      deliverable: "Web Application",
+    },
+    link: "#"
+  },
 
 
-  
+  {
+    img: Hamrodokan,
+    title: "Hamrodokan",
+    description: "An online grocery mobile app for shop owners. Key features include QR scanning, inventory and user management — all powered by Firebase.",
+    tech: {
+      frontend: "Flutter, Dart",
+      backend: "Firebase",
+      database: "Firebase",
+      deliverable: "Mobile Application",
+    },
+    link: "#"
+  },
+
+
+
 
 ];
 
@@ -143,49 +174,55 @@ export default function Work() {
 
             <div className="grid gap-12">
               {projects.map((project, index) => (
-                <div
+                <a
                   key={index}
-                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
                 >
-                  <div className="flex flex-col lg:flex-row">
-                    <div className="lg:w-1/3 p-6 flex items-center justify-center bg-gray-100">
-                      <img
-                        src={project.img}
-                        alt={project.title}
-                        className="w-full h-64 object-contain rounded-md"
-                        loading="lazy"
-                      />
-                    </div>
-
-                    <div className="lg:w-2/3 p-8 flex flex-col justify-between">
-                      <div>
-                        <h3 className="text-2xl font-bold text-indigo-700 mb-3">{project.title}</h3>
-                        <p className="text-gray-700 mb-6">{project.description}</p>
+                  <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <div className="flex flex-col lg:flex-row">
+                      <div className="lg:w-1/3 p-6 flex items-center justify-center bg-gray-100">
+                        <img
+                          src={project.img}
+                          alt={project.title}
+                          className="w-full h-64 object-contain rounded-md"
+                          loading="lazy"
+                        />
                       </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                        <div className="bg-indigo-50 p-3 rounded-lg">
-                          <h4 className="font-semibold text-indigo-700 mb-1">Frontend</h4>
-                          <p className="text-gray-700">{project.tech.frontend}</p>
+                      <div className="lg:w-2/3 p-8 flex flex-col justify-between">
+                        <div>
+                          <h3 className="text-2xl font-bold text-indigo-700 mb-3">{project.title}</h3>
+                          <p className="text-gray-700 mb-6">{project.description}</p>
                         </div>
-                        <div className="bg-indigo-50 p-3 rounded-lg">
-                          <h4 className="font-semibold text-indigo-700 mb-1">Backend</h4>
-                          <p className="text-gray-700">{project.tech.backend}</p>
-                        </div>
-                        <div className="bg-indigo-50 p-3 rounded-lg">
-                          <h4 className="font-semibold text-indigo-700 mb-1">Database</h4>
-                          <p className="text-gray-700">{project.tech.database}</p>
-                        </div>
-                        <div className="bg-indigo-50 p-3 rounded-lg">
-                          <h4 className="font-semibold text-indigo-700 mb-1">Deliverable</h4>
-                          <p className="text-gray-700">{project.tech.deliverable}</p>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                          <div className="bg-indigo-50 p-3 rounded-lg">
+                            <h4 className="font-semibold text-indigo-700 mb-1">Frontend</h4>
+                            <p className="text-gray-700">{project.tech.frontend}</p>
+                          </div>
+                          <div className="bg-indigo-50 p-3 rounded-lg">
+                            <h4 className="font-semibold text-indigo-700 mb-1">Backend</h4>
+                            <p className="text-gray-700">{project.tech.backend}</p>
+                          </div>
+                          <div className="bg-indigo-50 p-3 rounded-lg">
+                            <h4 className="font-semibold text-indigo-700 mb-1">Database</h4>
+                            <p className="text-gray-700">{project.tech.database}</p>
+                          </div>
+                          <div className="bg-indigo-50 p-3 rounded-lg">
+                            <h4 className="font-semibold text-indigo-700 mb-1">Deliverable</h4>
+                            <p className="text-gray-700">{project.tech.deliverable}</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
+
           </div>
         </section>
 
