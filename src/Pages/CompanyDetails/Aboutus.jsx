@@ -1,5 +1,7 @@
 // Importing team member images
 import AadityaSigdel from "../../assets/Team/AadityaSigdel.jpg";
+import AlishKarki from "../../assets/Team/Alice.jpg";
+import PrajwalDahala from "../../assets/Team/Prajwal.jpg";
 import SandipChapagain from "../../assets/Team/SandipChapagain.jpg";
 import SarkarHasada from "../../assets/Team/sarkarhasada.jpg";
 
@@ -200,10 +202,10 @@ const teamMembers = [
         role: "Founder & CEO (Java Developer)",
         image: SandipChapagain,
     },
-    { name: "Alish Karki", role: "Co-Founder & Flutter Developer", image: "" },
+    { name: "Alish Karki", role: "Co-Founder & Flutter Developer", image: AlishKarki },
     { name: "Suraj Rai", role: "Graphic Designer", image: "" },
     { name: "Aaditya Sigdel", role: "Frontend Developer", image: AadityaSigdel },
     { name: "Sarkar Hasada", role: "Frontend Developer", image: SarkarHasada },
     { name: "Sujal Thapa", role: "Digital Marketing", image: "" },
-    { name: "Prajwal Dahala", role: "AI / ML", image: "" },
+    { name: "PrajwalDahala", role: "AI / ML", image: PrajwalDahala },
 ];
