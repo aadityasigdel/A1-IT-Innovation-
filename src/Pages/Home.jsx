@@ -1,14 +1,14 @@
+import { Helmet } from "react-helmet";
 import CircleImg from "../assets/circle.png";
 import HeroImg from "../assets/hero.png";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 
-
-// Service data array with matching icons and short link texts
 const services = [
   {
     title: "Web Development",
-    description: "We create fast, responsive, and secure websites that deliver performance and user satisfaction.",
+    description:
+      "We build fast, SEO-optimized, and responsive websites that grow your business presence all over Nepal — from startups to enterprises.",
     icon: (
       <svg
         className="text-blue-500"
@@ -23,10 +23,6 @@ const services = [
         <path d="M5 12L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
         <path d="M3.5 7L6.5 10L3.5 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M20.5 7L17.5 10L20.5 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M9.5 4L7.5 6L9.5 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M14.5 4L16.5 6L14.5 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M9.5 16L7.5 18L9.5 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M14.5 16L16.5 18L14.5 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     link: "/services/web-dev",
@@ -34,7 +30,8 @@ const services = [
   },
   {
     title: "Mobile App Development",
-    description: "From idea to app store, we build engaging apps for Android and iOS platforms.",
+    description:
+      "Professional Android and iOS app development services in Nepal — turning ideas into high-performing mobile experiences.",
     icon: (
       <svg
         className="text-green-500"
@@ -59,7 +56,8 @@ const services = [
   },
   {
     title: "Internships",
-    description: "Gain real-world experience with our guided internship programs in software, AI, and web tech.",
+    description:
+      "Gain hands-on IT experience with our internship programs in web development, app development, and AI training across Nepal.",
     icon: (
       <svg
         className="text-red-500"
@@ -84,7 +82,8 @@ const services = [
   },
   {
     title: "Security Audit",
-    description: "Protect your digital assets with our in-depth vulnerability assessments and security audits.",
+    description:
+      "Comprehensive website and app security audit service in Nepal. We detect vulnerabilities and strengthen your system protection.",
     icon: (
       <svg
         className="text-yellow-500"
@@ -109,7 +108,8 @@ const services = [
   },
   {
     title: "Domain & Hosting",
-    description: "Register your domain and host your business website on our fast, secure, and reliable servers.",
+    description:
+      "Reliable and affordable domain registration and web hosting services across Nepal. Fast, secure, and scalable servers.",
     icon: (
       <svg
         className="text-purple-500"
@@ -143,44 +143,90 @@ const stats = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+        <title>
+          A1 IT Innovation Nepal — Web, App, AI & Software Company in Nepal | IT Services Damak, Jhapa & Kathmandu
+        </title>
+        <meta
+          name="description"
+          content="A1 IT Innovation is Nepal’s trusted IT company offering website development, app development, AI solutions, software training, and IT internships across Nepal."
+        />
+        <meta
+          name="keywords"
+          content="A1 IT Innovation Nepal, IT company Nepal, web development Damak, software company Jhapa, app development Kathmandu, AI company Nepal, chatbot developer, internship Nepal, hosting services Nepal"
+        />
+        <link rel="canonical" href="https://a1itinnovation.com" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="A1 IT Innovation Nepal — Complete IT Solutions Across Nepal" />
+        <meta
+          property="og:description"
+          content="Leading IT company in Nepal for web, mobile app, and AI development. Based in Damak, Jhapa & Kathmandu."
+        />
+        <meta property="og:image" content="https://a1itinnovation.com/assets/hero.png" />
+        <meta property="og:url" content="https://a1itinnovation.com" />
+        <meta property="og:type" content="website" />
+
+        {/* Schema Markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "A1 IT Innovation Nepal",
+              "url": "https://a1itinnovation.com",
+              "logo": "https://a1itinnovation.com/logo.png",
+              "description":
+                "A1 IT Innovation is a full-service IT company in Nepal specializing in software, web, app, and AI development.",
+              "sameAs": [
+                "https://www.facebook.com/a1itinnovation",
+                "https://www.instagram.com/a1itinnovation",
+                "https://www.linkedin.com/company/a1-it-innovation"
+              ],
+            }),
+          }}
+        />
+      </Helmet>
+
       <Navigation />
 
       <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="flex py-12 md:py-20 h-screen items-center justify-center">
+        {/* HERO SECTION */}
+        <section className="flex py-12 md:py-20 min-h-screen items-center justify-center bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="lg:w-1/2 text-center lg:text-left">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-                  Your One Stop{" "}
-                  <span className="text-indigo-600 block md:inline">IT Solution 🖥️</span>
+                  Nepal’s Trusted{" "}
+                  <span className="text-indigo-600 block md:inline">IT Company 🚀</span>
                 </h1>
                 <p className="text-lg text-gray-600 mt-6 max-w-lg">
-                  At A1 IT Innovation, we specialize in transforming your digital dreams into reality. Our cutting-edge software solutions simplify complexity and unlock business potential in today's digital world.
+                  A1 IT Innovation is empowering digital Nepal with web development, app creation, AI automation, and IT training programs across Damak, Jhapa, Kathmandu, and beyond.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start">
                   <a
                     href="/company/why-us"
                     className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg shadow-md transition-colors duration-300 text-center"
                   >
-                    Why A1 IT Innovation?
+                    Why Choose A1 IT Innovation?
                   </a>
                   <a
                     href="/company/about"
                     className="bg-white hover:bg-gray-50 border border-gray-200 px-6 py-3 rounded-lg shadow-md transition-colors duration-300 text-center"
                     aria-label="Learn more about A1 IT Innovation company"
                   >
-                    Learn More About Us
+                    Learn About Us
                   </a>
                 </div>
               </div>
               <div className="lg:w-1/2">
                 <img
                   src={HeroImg}
-                  alt="IT solutions illustration"
-                  className="mx-auto  max-w-md rounded-lg"
-                  width={768}        
-                  height={432}  
+                  alt="A1 IT Innovation - Software and IT solutions in Nepal"
+                  className="mx-auto max-w-md rounded-lg"
+                  width={768}
+                  height={432}
                   loading="eager"
                 />
               </div>
@@ -188,21 +234,21 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Services Section */}
-        <section className="py-16 bg-gray-50">
+        {/* SERVICES */}
+        <section className="py-16 bg-gray-50" aria-labelledby="services-heading">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                We Offer the Following Services
+              <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our IT Services Across Nepal
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Comprehensive solutions tailored to your business needs
+                We offer complete IT solutions — from web and app development to cloud hosting and AI automation.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div
+                <article
                   key={index}
                   className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
                 >
@@ -223,26 +269,27 @@ export default function Home() {
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
-                        loading="lazy"
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
                     </a>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
-        {/* About Section */}
-        <section className="py-16 bg-indigo-900 text-white">
+        {/* ABOUT SECTION */}
+        <section className="py-16 bg-indigo-900 text-white" aria-labelledby="about-heading">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="lg:w-1/2">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Who We Are</h2>
+                <h2 id="about-heading" className="text-3xl md:text-4xl font-bold mb-6">
+                  About A1 IT Innovation
+                </h2>
                 <p className="text-lg text-indigo-100 mb-8">
-                  Founded in 2023, A1 IT Innovation is a premier provider of comprehensive IT solutions, specializing in software development, training, courses, and workshops. We pride ourselves on delivering scalable, cost-efficient, and high-quality services, backed by a team of elite engineers and industry experts.
+                  Founded in 2023, A1 IT Innovation is a leading IT company in Nepal offering full-stack software, AI, and web services. We focus on scalable, secure, and affordable IT solutions that help Nepalese businesses go digital.
                 </p>
                 <a
                   href="/company/about"
@@ -265,10 +312,10 @@ export default function Home() {
               <div className="lg:w-1/2 mt-10 lg:mt-0">
                 <img
                   src={CircleImg}
-                  alt="Company statistics visualization"
+                  alt="A1 IT Innovation company statistics"
                   className="mx-auto max-w-md rounded-lg"
-                  width={250}        
-                  height={250}  
+                  width={250}
+                  height={250}
                   loading="lazy"
                 />
               </div>
