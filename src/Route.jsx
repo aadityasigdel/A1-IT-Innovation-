@@ -1,65 +1,83 @@
-import { lazy, Suspense } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import PageWrapper from "./components/PageWrapper";
 
-// Lazy load pages
-const Home = lazy(() => import("./Pages/Home"));
-const Client = lazy(() => import("./Pages/Client"));
-const Work = lazy(() => import("./Pages/Work"));
-const ContactUS = lazy(() => import("./Pages/ContactUs"));
-const Career = lazy(() => import("./Pages/Career.jsx"));
-const SignUp = lazy(() => import("./Pages/SignUp.jsx"));
-const Blog = lazy(() => import("./Pages/Blog"));
-const BlogPost = lazy(() => import("./Pages/BlogPost"));
+// Import pages normally (no lazy loading)
+import Home from "./Pages/Home";
+import Client from "./Pages/Client";
+import Work from "./Pages/Work";
+import ContactUS from "./Pages/ContactUs";
+import Career from "./Pages/Career.jsx";
+import SignUp from "./Pages/SignUp.jsx";
+import Blog from "./Pages/Blog";
+import BlogPost from "./Pages/BlogPost";
 
 // Company
-const Aboutus = lazy(() => import("./Pages/CompanyDetails/Aboutus"));
-const FaqSection = lazy(() => import("./Pages/CompanyDetails/FAQ"));
-const Gallery = lazy(() => import("./Pages/CompanyDetails/Gallery"));
-const WhyUs = lazy(() => import("./Pages/CompanyDetails/WhyUS"));
-const Terms = lazy(() => import("./Pages/CompanyDetails/Terms"));
-const Policy = lazy(() => import("./Pages/CompanyDetails/PrivacyPolicy"));
+import Aboutus from "./Pages/CompanyDetails/Aboutus";
+import FaqSection from "./Pages/CompanyDetails/FAQ";
+import Gallery from "./Pages/CompanyDetails/Gallery";
+import WhyUs from "./Pages/CompanyDetails/WhyUS";
+import Terms from "./Pages/CompanyDetails/Terms";
+import Policy from "./Pages/CompanyDetails/PrivacyPolicy";
 
 // Services
-const DomainHosting = lazy(() => import("./Pages/Services/DomainHosting"));
-const Intern = lazy(() => import("./Pages/Services/InternShip.jsx"));
-const MobileDev = lazy(() => import("./Pages/Services/MobileDev"));
-const SecurityAudit = lazy(() => import("./Pages/Services/SecurityAudit"));
-const WebDev = lazy(() => import("./Pages/Services/WebDev"));
-const Workshop = lazy(() => import("./Pages/Services/Workshop"));
+import DomainHosting from "./Pages/Services/DomainHosting";
+import Intern from "./Pages/Services/InternShip.jsx";
+import MobileDev from "./Pages/Services/MobileDev";
+import SecurityAudit from "./Pages/Services/SecurityAudit";
+import WebDev from "./Pages/Services/WebDev";
+import Workshop from "./Pages/Services/Workshop";
+
+// Scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+function RouteContent() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/clients" element={<Client />} />
+      <Route path="/works" element={<Work />} />
+      <Route path="/contact" element={<ContactUS />} />
+      <Route path="/career" element={<Career />} />
+      <Route path="/register" element={<SignUp />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
+
+      {/* Company */}
+      <Route path="/company/about" element={<Aboutus />} />
+      <Route path="/company/gallery" element={<Gallery />} />
+      <Route path="/company/why-us" element={<WhyUs />} />
+      <Route path="/company/faq" element={<FaqSection />} />
+      <Route path="/company/career" element={<Career />} />
+      <Route path="/company/terms" element={<Terms />} />
+      <Route path="/company/policy" element={<Policy />} />
+
+      {/* Services */}
+      <Route path="/services/domain-hosting" element={<DomainHosting />} />
+      <Route path="/services/Workshop" element={<Workshop />} />
+      <Route path="/services/internship" element={<Intern />} />
+      <Route path="/services/mobile-dev" element={<MobileDev />} />
+      <Route path="/services/web-dev" element={<WebDev />} />
+      <Route path="/services/security-audit" element={<SecurityAudit />} />
+    </Routes>
+  );
+}
 
 export default function RoutSetup() {
     return (
         <BrowserRouter>
-            {/* Suspense shows fallback while a page is loading */}
-            <Suspense fallback={<div className="text-center mt-20">Loading...</div>}>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/clients" element={<Client />} />
-                    <Route path="/works" element={<Work />} />
-                    <Route path="/contact" element={<ContactUS />} />
-                    <Route path="/career" element={<Career />} />
-                    <Route path="/register" element={<SignUp />} />
-                    <Route path="/blog" element={<Blog />} />
-                    <Route path="/blog/:slug" element={<BlogPost />} />
-
-                    {/* Company */}
-                    <Route path="/company/about" element={<Aboutus />} />
-                    <Route path="/company/gallery" element={<Gallery />} />
-                    <Route path="/company/why-us" element={<WhyUs />} />
-                    <Route path="/company/faq" element={<FaqSection />} />
-                    <Route path="/company/career" element={<Career />} />
-                    <Route path="/company/terms" element={<Terms />} />
-                    <Route path="/company/policy" element={<Policy />} />
-
-                    {/* Services */}
-                    <Route path="/services/domain-hosting" element={<DomainHosting />} />
-                    <Route path="/services/Workshop" element={<Workshop />} />
-                    <Route path="/services/internship" element={<Intern />} />
-                    <Route path="/services/mobile-dev" element={<MobileDev />} />
-                    <Route path="/services/web-dev" element={<WebDev />} />
-                    <Route path="/services/security-audit" element={<SecurityAudit />} />
-                </Routes>
-            </Suspense>
+            <ScrollToTop />
+            <PageWrapper>
+              <RouteContent />
+            </PageWrapper>
         </BrowserRouter>
     );
 }
