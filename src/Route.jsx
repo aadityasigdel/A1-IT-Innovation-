@@ -8,6 +8,8 @@ const Work = lazy(() => import("./Pages/Work"));
 const ContactUS = lazy(() => import("./Pages/ContactUs"));
 const Career = lazy(() => import("./Pages/Career.jsx"));
 const SignUp = lazy(() => import("./Pages/SignUp.jsx"));
+const Blog = lazy(() => import("./Pages/Blog"));
+const BlogPost = lazy(() => import("./Pages/BlogPost"));
 
 // Company
 const Aboutus = lazy(() => import("./Pages/CompanyDetails/Aboutus"));
@@ -37,6 +39,8 @@ export default function RoutSetup() {
                     <Route path="/contact" element={<ContactUS />} />
                     <Route path="/career" element={<Career />} />
                     <Route path="/register" element={<SignUp />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog/:slug" element={<BlogPost />} />
 
                     {/* Company */}
                     <Route path="/company/about" element={<Aboutus />} />

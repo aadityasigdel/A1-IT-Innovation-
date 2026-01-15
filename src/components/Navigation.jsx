@@ -122,6 +122,7 @@ export default function Navigation() {
             <Dropdown title="Services" links={servicesLinks} />
             <a href="/clients" className="hover:text-indigo-600">Clients</a>
             <a href="/works" className="hover:text-indigo-600">Works</a>
+            <a href="/blog" className="hover:text-indigo-600">Blog</a>
             <Dropdown title="Company" links={companyLinks} />
 
             <div className="flex gap-3 items-center ml-2">
@@ -193,6 +194,7 @@ export default function Navigation() {
             <Dropdown title="Services" links={servicesLinks} isMobile />
             <a href="/clients" onClick={closeMobileMenu} className="block font-medium text-gray-800 py-2">Clients</a>
             <a href="/works" onClick={closeMobileMenu} className="block font-medium text-gray-800 py-2">Works</a>
+            <a href="/blog" onClick={closeMobileMenu} className="block font-medium text-gray-800 py-2">Blog</a>
             <Dropdown title="Company" links={companyLinks} isMobile />
 
             {/* Buttons */}
