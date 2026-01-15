@@ -21,8 +21,8 @@ const projects = [
       "Developed a multi-platform gaming solution for PUBG, Free Fire, and Chess tournaments with wallet integration, match scheduling, and real-time result updates.",
     tech: {
       frontend: "React (Web)",
-      backend: "Java (Mobile App)",
-      database: "SQL",
+      backend: "Node.js",
+      database: "PostgreSQL",
       deliverable: "Mobile & Web Application",
     },
     link: "https://kryzox.com/",
@@ -34,8 +34,8 @@ const projects = [
       "A smart transportation app enhancing safety and convenience through ride-sharing technology for passengers and operators.",
     tech: {
       frontend: "React (Web)",
-      backend: "Java (Mobile App)",
-      database: "SQL",
+      backend: "Node.js",
+      database: "PostgreSQL",
       deliverable: "Mobile & Web Application",
     },
     link: "https://mytufan.com/",
@@ -47,8 +47,8 @@ const projects = [
       "A Nepali calendar and panchang app with astrology, festivals, and daily updates. Built for culture lovers with rich UI and offline access.",
     tech: {
       frontend: "Flutter, Dart",
-      backend: "PHP",
-      database: "MySQL",
+      backend: "Node.js",
+      database: "PostgreSQL",
       deliverable: "Web & Mobile",
     },
     link: "https://play.google.com/store/apps/details?id=com.nepaliyogi.brihatpatro",
@@ -73,8 +73,8 @@ const projects = [
       "A leading technical and vocational institution in Nepal offering engineering and IT programs with a digital presence powered by React.",
     tech: {
       frontend: "React.js",
-      backend: "MySQL",
-      database: "MySQL",
+      backend: "Node.js",
+      database: "MongoDB",
       deliverable: "Website",
     },
     link: "https://damaktechnical.edu.np",
@@ -86,8 +86,8 @@ const projects = [
       "A Tribhuvan University-affiliated community campus website with content management, notice board, and program details.",
     tech: {
       frontend: "React.js",
-      backend: "PHP",
-      database: "MySQL",
+      backend: "Node.js",
+      database: "PostgreSQL",
       deliverable: "Website",
     },
     link: "https://damakcampus.edu.np",
@@ -100,8 +100,8 @@ const projects = [
   "Official website of Rolwaling Community Hospital — providing quality healthcare, emergency services, and community health support in Nepal.",
     tech: {
       frontend: "React.js",
-      backend: "PHP",
-      database: "MySQL",
+      backend: "Node.js",
+      database: "PostgreSQL",
       deliverable: "Website",
     },
     link: "https://www.rolwalingsamudaikaaspatal.com.np/",
@@ -114,8 +114,8 @@ const projects = [
       "An e-learning platform for affordable and accessible education built with modern technologies for scalability and security.",
     tech: {
       frontend: "Next.js, TypeScript",
-      backend: "Spring Boot (Java)",
-      database: "MySQL",
+      backend: "Node.js (Express)",
+      database: "PostgreSQL",
       deliverable: "Web Application",
     },
     link: "https://utkristashikshya.com/",
@@ -337,11 +337,19 @@ export default function Work() {
         {/* ✅ Hidden SEO Content */}
         <div className="hidden">
           <p>
-            A1 IT Innovation Nepal is a leading software and web development
-            company based in Damak, Jhapa, Nepal. Our portfolio includes projects like Kryzox,
-            Tufan, Brihat Patro, Utkrista, and Himalayan Sanchaya — built using
-            React, Next.js, Java, Flutter, and AI technologies. We serve clients
-            across Kathmandu, Pokhara, Biratnagar, and beyond.
+            A1 IT Innovation Nepal is a leading software development and web development company based in Damak, Jhapa, Nepal. We specialize in custom web development, mobile app development, React development, Next.js development, Flutter development, and full-stack software solutions. Our portfolio includes successful projects like Kryzox esports platform, Tufan ride-sharing app, Brihat Patro Nepali calendar, Utkrista e-learning platform, Himalayan Sanchaya business management tool, and websites for educational institutions and healthcare providers.
+          </p>
+          <p>
+            We provide web development services in Kathmandu, Pokhara, Biratnagar, and across Nepal. Our expertise includes React.js development, Next.js web development, Node.js backend development, TypeScript development, Flutter mobile app development, responsive web design, e-commerce solutions, business management systems, and educational platform development. We build scalable, secure, and user-friendly applications using modern technologies and best practices.
+          </p>
+          <p>
+            A1 IT Innovation offers software development services for startups, SMEs, and enterprises in Nepal. We create custom web applications, mobile applications, business solutions, and digital transformation projects. Our team specializes in creating innovative digital products, delivering high-quality code, and providing excellent customer support.
+          </p>
+          <p>
+            Portfolio highlights: Kryzox esports match organizer with wallet integration, Tufan ride-sharing and transport application, Brihat Patro Nepali calendar and panchang app, Himalayan Sanchaya cloud-based business management tool, Damak Technical Education Foundation website, Damak Multiple Campus Tribhuvan University website, Rolwaling Community Hospital healthcare website, Utkrista Shikshya online learning platform, Hamro Dokan grocery management mobile application.
+          </p>
+          <p>
+            Software development technologies: React, Next.js, TypeScript, Node.js, Express.js, Flutter, Dart, Firebase, PostgreSQL, MongoDB, Redux, REST APIs, microservices architecture. We build responsive websites, progressive web apps, native mobile applications, cross-platform solutions, and enterprise-grade software systems.
           </p>
         </div>
       </main>
