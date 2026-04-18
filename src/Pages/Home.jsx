@@ -132,6 +132,44 @@ const services = [
     link: "/services/domain-hosting",
     shortLinkText: "Domain & Hosting",
   },
+  {
+    title: "DevOps as a Service",
+    description:
+      "Professional DevOps outsourcing, CI/CD pipeline setup, Kubernetes deployment, and managed cloud infrastructure services across Nepal.",
+    icon: (
+      <svg
+        className="text-orange-500"
+        height="50"
+        width="50"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M16 3.46482C17.4018 4.16 18.6309 5.17749 19.5812 6.4246C20.5315 7.67171 21.1742 9.12558 21.4558 10.6658"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M12 8V12L15 15"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+    link: "/services/devops",
+    shortLinkText: "DevOps",
+  },
 ];
 
 const stats = [
@@ -199,7 +237,7 @@ export default function Home() {
               <div className="lg:w-1/2 text-center lg:text-left">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
                   Nepal’s Trusted{" "}
-                  <span className="text-indigo-600 block md:inline">IT Company 🚀</span>
+                  <span className="text-indigo-600 block md:inline">IT Company <span className="rocket-fly">🚀</span></span>
                 </h1>
                 <p className="text-lg text-gray-600 mt-6 max-w-lg">
                   A1 IT Innovation is empowering digital Nepal with web development, app creation, AI automation, and IT training programs across Damak, Jhapa, Kathmandu, and beyond.

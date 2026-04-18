@@ -57,6 +57,21 @@ export default function DevOps() {
         "Disaster Recovery Planning"
     ];
 
+    const tools = [
+        { name: "Kubernetes",  logo: "https://images.seeklogo.com/logo-png/27/1/kubernetes-logo-png_seeklogo-273594.png" },
+        { name: "Docker",      logo: "https://cdn.simpleicons.org/docker" },
+        { name: "ArgoCD",      logo: "https://cdn.simpleicons.org/argo" },
+        { name: "Apache Kafka",logo: "https://cdn.simpleicons.org/apachekafka" },
+        { name: "Grafana",     logo: "https://cdn.simpleicons.org/grafana" },
+        { name: "GitLab",      logo: "https://cdn.simpleicons.org/gitlab" },
+        { name: "Prometheus",  logo: "https://cdn.simpleicons.org/prometheus" },
+        { name: "Loki",        logo: "https://grafana.com/media/docs/loki/logo-grafana-loki.png" },
+        { name: "Terraform",   logo: "https://cdn.simpleicons.org/terraform" },
+        { name: "Ansible",     logo: "https://cdn.simpleicons.org/ansible" },
+        { name: "Jenkins",     logo: "https://cdn.simpleicons.org/jenkins" },
+        { name: "Nginx",       logo: "https://cdn.simpleicons.org/nginx" },
+    ];
+
     const hostingProviders = {
         nepal: ["LinkUp Nepal - Cloud hosting", "Bibsu Innovations (Bisup)", "Prabhu Host - AWS Partner", "Nest Nepal - Managed AWS"],
         global: ["AWS (Amazon Web Services)", "Google Cloud Platform (GCP)", "Microsoft Azure", "DigitalOcean", "Linode", "Vultr", "Contabo", "Hostinger"]
@@ -110,6 +125,35 @@ export default function DevOps() {
                                 <p className="text-gray-700 text-sm">{feature.description}</p>
                             </div>
                         ))}
+                    </div>
+                </section>
+
+                {/* DevOps Toolset Marquee */}
+                <section className="mb-16">
+                    <div className="text-center mb-8">
+                        <h2 className="text-3xl font-bold text-gray-900">Our DevOps Toolset</h2>
+                        <p className="text-gray-500 mt-2 text-base">Industry-standard tools we use to deliver robust, scalable infrastructure</p>
+                    </div>
+                    <div className="overflow-hidden rounded-xl border border-gray-100 bg-gray-50 py-6">
+                        <div className="devtools-track gap-6" style={{ display: "flex" }}>
+                            {[...tools, ...tools].map((tool, i) => (
+                                <div
+                                    key={i}
+                                    aria-hidden={i >= tools.length ? "true" : undefined}
+                                    className="flex-shrink-0 flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-7 py-5 shadow-sm hover:shadow-md transition-shadow duration-200"
+                                >
+                                    <img
+                                        src={tool.logo}
+                                        alt={tool.name}
+                                        width={52}
+                                        height={52}
+                                        className="object-contain"
+                                        loading="lazy"
+                                    />
+                                    <span className="text-xs font-semibold text-gray-600 whitespace-nowrap">{tool.name}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </section>
 

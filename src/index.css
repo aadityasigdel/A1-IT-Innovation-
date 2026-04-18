@@ -19,3 +19,31 @@ body, html, #root {
 html {
   scroll-behavior: smooth;
 }
+
+/* DevOps toolset marquee */
+@keyframes devtoolsScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.devtools-track {
+  display: flex;
+  width: max-content;
+  animation: devtoolsScroll 22s linear infinite;
+}
+
+.devtools-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes rocketFly {
+  0%   { transform: translateY(0) rotate(0deg); }
+  30%  { transform: translateY(-18px) rotate(-15deg); }
+  60%  { transform: translateY(-8px) rotate(10deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.rocket-fly {
+  display: inline-block;
+  animation: rocketFly 1.6s ease-in-out infinite;
+}
