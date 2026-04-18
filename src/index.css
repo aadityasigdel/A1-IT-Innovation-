@@ -47,3 +47,47 @@ html {
   display: inline-block;
   animation: rocketFly 1.6s ease-in-out infinite;
 }
+
+/* ── Client network animations ── */
+
+/* Heartbeat on center A1 IT circle */
+@keyframes heartPulse {
+  0%   { transform: scale(1);    }
+  10%  { transform: scale(1.13); }
+  20%  { transform: scale(1);    }
+  35%  { transform: scale(1.07); }
+  50%  { transform: scale(1);    }
+  100% { transform: scale(1);    }
+}
+.heart-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: heartPulse 2.2s ease-in-out infinite;
+}
+
+/* Ripple ring that expands outward from center */
+@keyframes rippleOut {
+  0%   { transform: scale(1);   opacity: 0.55; }
+  100% { transform: scale(2);   opacity: 0;    }
+}
+.ripple-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rippleOut 3s ease-out infinite;
+}
+
+/* Spinning dashed ring around each client node */
+@keyframes spinRing {
+  from { transform: rotate(0deg);   }
+  to   { transform: rotate(360deg); }
+}
+.spin-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spinRing 7s linear infinite;
+}
+.spin-ring-rev {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spinRing 9s linear infinite reverse;
+}
