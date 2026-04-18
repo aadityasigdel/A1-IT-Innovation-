@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import workshopImg from "../../assets/ServicesImg/workshop.avif";
@@ -107,6 +108,17 @@ export default function ServicesList() {
 
     return (
         <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+            <Helmet>
+                <title>ICT Technical Workshops | Web & Mobile Development | Nepal</title>
+                <meta name="description" content="Comprehensive ICT workshops in Nepal for web development, mobile apps, and modern technologies. Join our hands-on training programs." />
+                <meta name="keywords" content="technical workshop Nepal, web development workshop, ICT training, coding workshop, skill development" />
+                <meta property="og:title" content="Technical Workshops | A1 IT Innovation" />
+                <meta property="og:description" content="Professional ICT and technical workshops in Nepal" />
+                <meta property="og:url" content="https://www.a1itinnovation.com.np/services/workshop" />
+                <meta name="twitter:title" content="Technical Workshops | A1 IT Innovation" />
+                <meta name="twitter:description" content="ICT technical workshops in Nepal" />
+                <link rel="canonical" href="https://www.a1itinnovation.com.np/services/workshop" />
+            </Helmet>
             <Navigation />
 
             {/* Hero Section */}

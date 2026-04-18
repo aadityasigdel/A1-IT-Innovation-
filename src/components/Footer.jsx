@@ -55,6 +55,15 @@ const servicesLinks = [
       </svg>
     )
   },
+  {
+    href: "/services/devops",
+    label: "DevOps as a Service",
+    svg: (
+      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 4a3 3 0 100 6 3 3 0 000-6zm0 10a5 5 0 100-10 5 5 0 000 10z" />
+      </svg>
+    )
+  },
 ];
 
 const companyLinks = [

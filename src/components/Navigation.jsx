@@ -91,6 +91,7 @@ export default function Navigation() {
     { href: "/services/domain-hosting", label: "🌐 Domain & Hosting" },
     { href: "/services/internship", label: "🧑‍💼 Internship Program" },
     { href: "/services/workshop", label: "🎓 Technical Workshop" },
+    { href: "/services/devops", label: "⚙️ DevOps as a Service" },
   ];
 
   const companyLinks = [

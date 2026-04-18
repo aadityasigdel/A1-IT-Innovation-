@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { FaCheckCircle } from "react-icons/fa";
 import InternshipImg from "../../assets/ServicesImg/internship.avif";
 import Footer from "../../components/Footer";
@@ -49,6 +50,17 @@ export default function InternShip() {
 
     return (
         <>
+            <Helmet>
+                <title>Free IT Internship Program in Nepal | A1 IT Innovation</title>
+                <meta name="description" content="Join our free IT internship program in Nepal. Learn web development, mobile apps, and modern technologies with mentorship from industry experts." />
+                <meta name="keywords" content="internship Nepal, IT internship, free internship, web development internship, tech training" />
+                <meta property="og:title" content="Internship Program | A1 IT Innovation" />
+                <meta property="og:description" content="Free IT internship with hands-on project experience in Nepal" />
+                <meta property="og:url" content="https://www.a1itinnovation.com.np/services/internship" />
+                <meta name="twitter:title" content="Internship Program | A1 IT Innovation" />
+                <meta name="twitter:description" content="Free IT internship in Nepal" />
+                <link rel="canonical" href="https://www.a1itinnovation.com.np/services/internship" />
+            </Helmet>
             <Navigation />
             <main className="min-h-screen mb-20 flex flex-col items-center">
 

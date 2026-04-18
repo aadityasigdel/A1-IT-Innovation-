@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import SecurityAuditImg from "../../assets/ServicesImg/security-testing.svg";
@@ -53,6 +54,17 @@ export default function SecurityAudit() {
 
     return (
         <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+            <Helmet>
+                <title>Security Audit & Testing Services | Nepal | A1 IT Innovation</title>
+                <meta name="description" content="Comprehensive security audit and penetration testing services in Nepal. Protect your applications from vulnerabilities and cyber threats." />
+                <meta name="keywords" content="security audit Nepal, penetration testing, vulnerability assessment, cybersecurity, application security" />
+                <meta property="og:title" content="Security Audit Services | A1 IT Innovation" />
+                <meta property="og:description" content="Professional security testing and vulnerability assessment services" />
+                <meta property="og:url" content="https://www.a1itinnovation.com.np/services/security-audit" />
+                <meta name="twitter:title" content="Security Audit | A1 IT Innovation" />
+                <meta name="twitter:description" content="Security testing and penetration testing services in Nepal" />
+                <link rel="canonical" href="https://www.a1itinnovation.com.np/services/security-audit" />
+            </Helmet>
             <Navigation />
 
             {/* Hero Section */}

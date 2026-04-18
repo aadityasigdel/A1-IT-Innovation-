@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import WebHosting from "../../assets/ServicesImg/web-hosting.jpg";
 import Footer from "../../components/Footer";
 import Navigation from "../../components/Navigation";
@@ -53,6 +54,17 @@ export default function DomainHosting() {
 
     return (
         <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+            <Helmet>
+                <title>Domain & Hosting Services in Nepal | A1 IT Innovation</title>
+                <meta name="description" content="Affordable domain registration and reliable web hosting services in Nepal. Secure, fast, and professional hosting solutions for your website." />
+                <meta name="keywords" content="domain hosting Nepal, web hosting, domain registration, reliable hosting, website hosting" />
+                <meta property="og:title" content="Domain & Hosting Services | A1 IT Innovation" />
+                <meta property="og:description" content="Professional domain registration and web hosting services" />
+                <meta property="og:url" content="https://www.a1itinnovation.com.np/services/domain-hosting" />
+                <meta name="twitter:title" content="Domain & Hosting | A1 IT Innovation" />
+                <meta name="twitter:description" content="Web hosting and domain registration in Nepal" />
+                <link rel="canonical" href="https://www.a1itinnovation.com.np/services/domain-hosting" />
+            </Helmet>
             <Navigation />
 
             {/* Hero Section */}

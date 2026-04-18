@@ -27,6 +27,7 @@ import MobileDev from "./Pages/Services/MobileDev";
 import SecurityAudit from "./Pages/Services/SecurityAudit";
 import WebDev from "./Pages/Services/WebDev";
 import Workshop from "./Pages/Services/Workshop";
+import DevOps from "./Pages/Services/DevOps";
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -67,6 +68,7 @@ function RouteContent() {
       <Route path="/services/mobile-dev" element={<MobileDev />} />
       <Route path="/services/web-dev" element={<WebDev />} />
       <Route path="/services/security-audit" element={<SecurityAudit />} />
+      <Route path="/services/devops" element={<DevOps />} />
     </Routes>
   );
 }
