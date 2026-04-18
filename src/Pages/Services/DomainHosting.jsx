@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet";
-import WebHosting from "../../assets/ServicesImg/web-hosting.jpg";
 import Footer from "../../components/Footer";
 import Navigation from "../../components/Navigation";
 
@@ -98,15 +97,41 @@ export default function DomainHosting() {
                 </div>
 
                 <div className="mt-8 lg:mt-0">
-                    <img
-                        alt="Domain registration and hosting services"
-                        loading="lazy"
-                        width={500}
-                        height={500}
-                        decoding="async"
-                        className="rounded-xl border-4 border-white transform transition duration-500"
-                        src={WebHosting}
-                    />
+                    <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-lg rounded-xl shadow-lg" aria-label="Domain and hosting illustration">
+                      <rect width="500" height="400" rx="16" fill="#FAF5FF"/>
+                      <circle cx="250" cy="160" r="100" fill="#EDE9FE" stroke="#8B5CF6" strokeWidth="2"/>
+                      <ellipse cx="250" cy="160" rx="45" ry="100" fill="none" stroke="#8B5CF6" strokeWidth="1.5"/>
+                      <ellipse cx="250" cy="160" rx="80" ry="100" fill="none" stroke="#8B5CF6" strokeWidth="1" opacity="0.5"/>
+                      <line x1="150" y1="160" x2="350" y2="160" stroke="#8B5CF6" strokeWidth="1.5"/>
+                      <line x1="163" y1="120" x2="337" y2="120" stroke="#8B5CF6" strokeWidth="1" opacity="0.5"/>
+                      <line x1="163" y1="200" x2="337" y2="200" stroke="#8B5CF6" strokeWidth="1" opacity="0.5"/>
+                      <line x1="250" y1="60" x2="250" y2="260" stroke="#8B5CF6" strokeWidth="1.5"/>
+                      <rect x="188" y="148" width="124" height="24" rx="6" fill="#7C3AED"/>
+                      <text x="250" y="164" textAnchor="middle" fontFamily="monospace" fontSize="9" fontWeight="600" fill="white">a1itinnovation.com.np</text>
+                      <rect x="24" y="80" width="90" height="160" rx="10" fill="#1E293B"/>
+                      <rect x="34" y="94" width="70" height="16" rx="4" fill="#334155"/><rect x="38" y="98" width="20" height="8" rx="2" fill="#22D3EE"/><circle cx="92" cy="102" r="4" fill="#22C55E"/>
+                      <rect x="34" y="118" width="70" height="16" rx="4" fill="#334155"/><rect x="38" y="122" width="20" height="8" rx="2" fill="#818CF8"/><circle cx="92" cy="126" r="4" fill="#22C55E"/>
+                      <rect x="34" y="142" width="70" height="16" rx="4" fill="#334155"/><rect x="38" y="146" width="20" height="8" rx="2" fill="#FB923C"/><circle cx="92" cy="150" r="4" fill="#FBBF24"/>
+                      <rect x="34" y="166" width="70" height="16" rx="4" fill="#334155"/><rect x="38" y="170" width="20" height="8" rx="2" fill="#22D3EE"/><circle cx="92" cy="174" r="4" fill="#22C55E"/>
+                      <text x="69" y="215" textAnchor="middle" fontFamily="system-ui" fontSize="9" fontWeight="600" fill="#94A3B8">Server</text>
+                      <text x="69" y="227" textAnchor="middle" fontFamily="system-ui" fontSize="9" fill="#64748B">Rack</text>
+                      <path d="M114 160 L148 160" stroke="#8B5CF6" strokeWidth="2" strokeDasharray="4 3"/>
+                      <polygon points="146,156 154,160 146,164" fill="#8B5CF6"/>
+                      <ellipse cx="406" cy="128" rx="56" ry="20" fill="#DDD6FE"/>
+                      <ellipse cx="372" cy="138" rx="34" ry="18" fill="#DDD6FE"/>
+                      <ellipse cx="440" cy="138" rx="34" ry="18" fill="#DDD6FE"/>
+                      <rect x="342" y="138" width="128" height="18" fill="#DDD6FE"/>
+                      <text x="406" y="152" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#5B21B6">☁ CDN</text>
+                      <path d="M352 148 L350 148" stroke="#8B5CF6" strokeWidth="2" strokeDasharray="4 3"/>
+                      <polygon points="354,144 346,148 354,152" fill="#8B5CF6"/>
+                      <rect x="55" y="290" width="150" height="48" rx="10" fill="#7C3AED"/>
+                      <text x="130" y="309" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="white">DNS Management</text>
+                      <text x="130" y="325" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#DDD6FE">A • CNAME • MX • TXT</text>
+                      <rect x="295" y="290" width="150" height="48" rx="10" fill="#059669"/>
+                      <text x="370" y="309" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="white">SSL Certificate</text>
+                      <text x="370" y="325" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#A7F3D0">🔒 HTTPS Secured</text>
+                      <text x="250" y="282" textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="600" fill="#6D28D9">Hosting Platform</text>
+                    </svg>
                 </div>
             </section>
 

@@ -93,13 +93,87 @@ export default function DevOps() {
             <Navigation />
             
             {/* Hero Section */}
-            <header className="bg-gradient-to-r from-indigo-600 to-blue-700 text-white py-12">
-                <div className="container mx-auto text-center px-4">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">DevOps Outsourcing Services in Nepal</h1>
-                    <p className="text-xl mb-2">Professional CI/CD Pipeline Setup, Kubernetes Deployment & System Design</p>
-                    <p className="text-lg opacity-90">Hand over your infrastructure and server responsibilities to expert DevOps professionals</p>
+            <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 lg:px-12 max-w-7xl mx-auto gap-12 py-20">
+                <div className="flex flex-col gap-8 max-w-2xl text-center lg:text-left">
+                    <div className="space-y-4">
+                        <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+                            Automate Your Infrastructure with <span className="text-indigo-600">Professional DevOps Services</span>
+                        </h1>
+                        <h2 className="text-xl md:text-2xl font-medium text-gray-600">
+                            CI/CD pipelines, Kubernetes deployment & managed cloud infrastructure — handled end-to-end by experts in Nepal.
+                        </h2>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a
+                            href="/contact"
+                            className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3 rounded-lg transition duration-300 inline-flex items-center justify-center"
+                        >
+                            Get Started
+                        </a>
+                        <a
+                            href="/works"
+                            className="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 font-semibold px-8 py-3 rounded-lg transition duration-300 inline-flex items-center justify-center"
+                        >
+                            View Our Work
+                        </a>
+                    </div>
                 </div>
-            </header>
+                <div className="mt-8 lg:mt-0">
+                    <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-lg rounded-xl shadow-lg" aria-label="DevOps CI/CD pipeline illustration">
+                      <rect width="500" height="400" rx="16" fill="#F0F4FF"/>
+                      <rect width="500" height="38" rx="16" fill="#1E293B"/>
+                      <rect x="0" y="22" width="500" height="16" fill="#1E293B"/>
+                      <circle cx="20" cy="19" r="6" fill="#EF4444"/><circle cx="38" cy="19" r="6" fill="#F59E0B"/><circle cx="56" cy="19" r="6" fill="#22C55E"/>
+                      <text x="250" y="24" textAnchor="middle" fontFamily="monospace" fontSize="11" fill="#64748B">CI/CD Pipeline — Running</text>
+                      <ellipse cx="250" cy="74" rx="72" ry="24" fill="#C7D2FE"/>
+                      <ellipse cx="196" cy="84" rx="46" ry="22" fill="#C7D2FE"/>
+                      <ellipse cx="304" cy="84" rx="46" ry="22" fill="#C7D2FE"/>
+                      <rect x="156" y="84" width="188" height="22" fill="#C7D2FE"/>
+                      <text x="250" y="100" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#3730A3">☁ Cloud Infrastructure</text>
+                      <line x1="250" y1="106" x2="250" y2="130" stroke="#6366F1" strokeWidth="2" strokeDasharray="4 3"/>
+                      <line x1="250" y1="130" x2="86" y2="140" stroke="#6366F1" strokeWidth="1.5" strokeDasharray="4 3"/>
+                      <line x1="250" y1="130" x2="414" y2="140" stroke="#6366F1" strokeWidth="1.5" strokeDasharray="4 3"/>
+                      <rect x="30" y="140" width="112" height="70" rx="10" fill="#4F46E5"/>
+                      <rect x="42" y="152" width="88" height="28" rx="5" fill="#312E81"/>
+                      <text x="86" y="165" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#A5B4FC">$ npm run build</text>
+                      <text x="86" y="175" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#818CF8">✓ Compiled #312</text>
+                      <text x="86" y="196" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="white">⚙ Build</text>
+                      <path d="M144 175 L158 175" stroke="#94A3B8" strokeWidth="2"/><polygon points="156,171 164,175 156,179" fill="#94A3B8"/>
+                      <rect x="166" y="140" width="168" height="70" rx="10" fill="#0369A1"/>
+                      <rect x="178" y="152" width="144" height="28" rx="5" fill="#0C4A6E"/>
+                      <text x="250" y="164" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#7DD3FC">✓ unit  ✓ integration</text>
+                      <text x="250" y="174" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#7DD3FC">✓ security  ✓ coverage</text>
+                      <text x="250" y="196" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="white">🧪 Test &amp; Validate</text>
+                      <path d="M336 175 L350 175" stroke="#94A3B8" strokeWidth="2"/><polygon points="348,171 356,175 348,179" fill="#94A3B8"/>
+                      <rect x="358" y="140" width="112" height="70" rx="10" fill="#059669"/>
+                      <rect x="370" y="152" width="88" height="28" rx="5" fill="#065F46"/>
+                      <circle cx="414" cy="166" r="11" fill="none" stroke="#6EE7B7" strokeWidth="2"/><circle cx="414" cy="166" r="3.5" fill="#6EE7B7"/>
+                      <line x1="414" y1="155" x2="414" y2="160" stroke="#6EE7B7" strokeWidth="2"/><line x1="414" y1="172" x2="414" y2="177" stroke="#6EE7B7" strokeWidth="2"/>
+                      <line x1="403" y1="166" x2="408" y2="166" stroke="#6EE7B7" strokeWidth="2"/><line x1="420" y1="166" x2="425" y2="166" stroke="#6EE7B7" strokeWidth="2"/>
+                      <line x1="406" y1="158" x2="410" y2="162" stroke="#6EE7B7" strokeWidth="1.5"/><line x1="418" y1="170" x2="422" y2="174" stroke="#6EE7B7" strokeWidth="1.5"/>
+                      <line x1="422" y1="158" x2="418" y2="162" stroke="#6EE7B7" strokeWidth="1.5"/><line x1="410" y1="170" x2="406" y2="174" stroke="#6EE7B7" strokeWidth="1.5"/>
+                      <text x="414" y="196" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="white">☸ Deploy</text>
+                      <line x1="86" y1="210" x2="86" y2="248" stroke="#CBD5E1" strokeWidth="1.5" strokeDasharray="3 3"/>
+                      <line x1="250" y1="210" x2="250" y2="248" stroke="#CBD5E1" strokeWidth="1.5" strokeDasharray="3 3"/>
+                      <line x1="414" y1="210" x2="414" y2="248" stroke="#CBD5E1" strokeWidth="1.5" strokeDasharray="3 3"/>
+                      <rect x="30" y="248" width="112" height="66" rx="8" fill="#1E293B"/>
+                      <rect x="40" y="258" width="92" height="8" rx="3" fill="#22D3EE"/>
+                      <rect x="40" y="270" width="68" height="3.5" rx="2" fill="#334155"/><rect x="40" y="278" width="52" height="3.5" rx="2" fill="#334155"/><rect x="40" y="286" width="60" height="3.5" rx="2" fill="#334155"/>
+                      <circle cx="132" cy="302" r="6" fill="#22C55E"/><text x="52" y="303" fontFamily="monospace" fontSize="8" fill="#64748B">node-01</text>
+                      <rect x="194" y="248" width="112" height="66" rx="8" fill="#1E293B"/>
+                      <rect x="204" y="258" width="92" height="8" rx="3" fill="#818CF8"/>
+                      <rect x="204" y="270" width="68" height="3.5" rx="2" fill="#334155"/><rect x="204" y="278" width="52" height="3.5" rx="2" fill="#334155"/><rect x="204" y="286" width="60" height="3.5" rx="2" fill="#334155"/>
+                      <circle cx="296" cy="302" r="6" fill="#22C55E"/><text x="216" y="303" fontFamily="monospace" fontSize="8" fill="#64748B">node-02</text>
+                      <rect x="358" y="248" width="112" height="66" rx="8" fill="#1E293B"/>
+                      <rect x="368" y="258" width="92" height="8" rx="3" fill="#FB923C"/>
+                      <rect x="368" y="270" width="68" height="3.5" rx="2" fill="#334155"/><rect x="368" y="278" width="52" height="3.5" rx="2" fill="#334155"/><rect x="368" y="286" width="60" height="3.5" rx="2" fill="#334155"/>
+                      <circle cx="460" cy="302" r="6" fill="#22C55E"/><text x="380" y="303" fontFamily="monospace" fontSize="8" fill="#64748B">node-03</text>
+                      <rect x="118" y="334" width="264" height="30" rx="15" fill="#DCFCE7" stroke="#86EFAC" strokeWidth="1.5"/>
+                      <circle cx="140" cy="349" r="7" fill="#16A34A"/>
+                      <text x="252" y="354" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="600" fill="#15803D">All Systems Operational</text>
+                    </svg>
+                </div>
+            </section>
 
             <main className="container mx-auto py-16 px-4">
                 {/* Introduction Section */}

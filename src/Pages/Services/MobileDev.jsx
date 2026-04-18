@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet";
-import Mobile from "../../assets/ServicesImg/mobile-app.png";
 import Footer from "../../components/Footer";
 import Navigation from "../../components/Navigation";
 
@@ -105,15 +104,67 @@ export default function MobileDev() {
         </div>
 
         <div className="mt-8 lg:mt-0">
-          <img
-            alt="Mobile app development illustration"
-            loading="lazy"
-            width={500}
-            height={500}
-            decoding="async"
-            className="rounded-xl l border-4 border-white transform  transition duration-500"
-            src={Mobile}
-          />
+          <svg viewBox="0 0 500 420" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-lg rounded-xl shadow-lg" aria-label="Mobile app development illustration">
+            <rect width="500" height="420" rx="16" fill="#F0FDF4"/>
+            <rect x="170" y="30" width="160" height="320" rx="28" fill="#1E293B"/>
+            <rect x="175" y="35" width="150" height="310" rx="24" fill="#0F172A"/>
+            <rect x="220" y="35" width="60" height="18" rx="9" fill="#1E293B"/>
+            <circle cx="250" cy="44" r="5" fill="#0F172A"/>
+            <rect x="179" y="56" width="142" height="270" rx="4" fill="#1E293B"/>
+            <rect x="179" y="56" width="142" height="34" rx="4" fill="#4F46E5"/>
+            <text x="250" y="77" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="white">MyApp</text>
+            <rect x="186" y="98" width="58" height="52" rx="10" fill="#312E81"/>
+            <text x="215" y="130" textAnchor="middle" fontSize="22" fill="white">📊</text>
+            <rect x="255" y="98" width="58" height="52" rx="10" fill="#065F46"/>
+            <text x="284" y="130" textAnchor="middle" fontSize="22" fill="white">💬</text>
+            <rect x="186" y="160" width="125" height="11" rx="4" fill="#1D4ED8"/>
+            <rect x="186" y="177" width="100" height="9" rx="3" fill="#334155"/>
+            <rect x="186" y="191" width="115" height="9" rx="3" fill="#334155"/>
+            <rect x="186" y="205" width="90" height="9" rx="3" fill="#334155"/>
+            <rect x="186" y="222" width="125" height="60" rx="6" fill="#0F172A" stroke="#334155" strokeWidth="1"/>
+            <polyline points="192,272 208,252 225,260 242,242 258,246 274,234 291,240 307,228" stroke="#22D3EE" strokeWidth="2" fill="none"/>
+            <circle cx="307" cy="228" r="3" fill="#22D3EE"/>
+            <rect x="179" y="305" width="142" height="21" fill="#0F172A"/>
+            <text x="205" y="319" textAnchor="middle" fontSize="11">🏠</text>
+            <text x="232" y="319" textAnchor="middle" fontSize="11">🔍</text>
+            <text x="268" y="319" textAnchor="middle" fontSize="11">❤️</text>
+            <text x="296" y="319" textAnchor="middle" fontSize="11">👤</text>
+            <rect x="228" y="330" width="44" height="4" rx="2" fill="#475569"/>
+            <rect x="20" y="80" width="118" height="72" rx="12" fill="white" stroke="#D1FAE5" strokeWidth="1.5"/>
+            <rect x="32" y="92" width="44" height="44" rx="10" fill="#3B82F6"/>
+            <text x="54" y="120" textAnchor="middle" fontSize="22" fill="white">📱</text>
+            <text x="90" y="108" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="#1F2937">iOS App</text>
+            <text x="90" y="122" fontFamily="system-ui" fontSize="9" fill="#6B7280">Swift /</text>
+            <text x="90" y="136" fontFamily="system-ui" fontSize="9" fill="#6B7280">React Native</text>
+            <rect x="20" y="230" width="118" height="72" rx="12" fill="white" stroke="#FEF9C3" strokeWidth="1.5"/>
+            <rect x="32" y="242" width="44" height="44" rx="10" fill="#F59E0B"/>
+            <text x="54" y="270" textAnchor="middle" fontSize="22" fill="white">⚡</text>
+            <text x="90" y="258" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="#1F2937">Fast</text>
+            <text x="90" y="272" fontFamily="system-ui" fontSize="9" fill="#6B7280">Optimized</text>
+            <text x="90" y="286" fontFamily="system-ui" fontSize="9" fill="#6B7280">Performance</text>
+            <rect x="362" y="80" width="118" height="72" rx="12" fill="white" stroke="#D1FAE5" strokeWidth="1.5"/>
+            <rect x="374" y="92" width="44" height="44" rx="10" fill="#22C55E"/>
+            <text x="396" y="120" textAnchor="middle" fontSize="22" fill="white">🤖</text>
+            <text x="430" y="108" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="#1F2937">Android</text>
+            <text x="430" y="122" fontFamily="system-ui" fontSize="9" fill="#6B7280">Kotlin /</text>
+            <text x="430" y="136" fontFamily="system-ui" fontSize="9" fill="#6B7280">Flutter</text>
+            <rect x="362" y="230" width="118" height="72" rx="12" fill="white" stroke="#EDE9FE" strokeWidth="1.5"/>
+            <rect x="374" y="242" width="44" height="44" rx="10" fill="#7C3AED"/>
+            <text x="396" y="270" textAnchor="middle" fontSize="22" fill="white">🔗</text>
+            <text x="430" y="258" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="#1F2937">Cross</text>
+            <text x="430" y="272" fontFamily="system-ui" fontSize="9" fill="#6B7280">Platform</text>
+            <text x="430" y="286" fontFamily="system-ui" fontSize="9" fill="#6B7280">Flutter</text>
+            <line x1="138" y1="116" x2="170" y2="116" stroke="#D1D5DB" strokeWidth="1.5" strokeDasharray="3 3"/>
+            <line x1="138" y1="266" x2="170" y2="266" stroke="#D1D5DB" strokeWidth="1.5" strokeDasharray="3 3"/>
+            <line x1="330" y1="116" x2="362" y2="116" stroke="#D1D5DB" strokeWidth="1.5" strokeDasharray="3 3"/>
+            <line x1="330" y1="266" x2="362" y2="266" stroke="#D1D5DB" strokeWidth="1.5" strokeDasharray="3 3"/>
+            <rect x="60" y="370" width="112" height="30" rx="8" fill="#DBEAFE"/>
+            <text x="116" y="389" textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="600" fill="#1D4ED8">50+ Apps Built</text>
+            <rect x="195" y="370" width="112" height="30" rx="8" fill="#DCFCE7"/>
+            <text x="251" y="389" textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="600" fill="#15803D">iOS &amp; Android</text>
+            <rect x="330" y="370" width="112" height="30" rx="8" fill="#EDE9FE"/>
+            <text x="386" y="389" textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="600" fill="#6D28D9">Flutter Ready</text>
+          </svg>
         </div>
       </section>
 

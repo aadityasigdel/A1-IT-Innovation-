@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
-import SecurityAuditImg from "../../assets/ServicesImg/security-testing.svg";
 
 export default function SecurityAudit() {
     const features = [
@@ -90,15 +89,62 @@ export default function SecurityAudit() {
                 </div>
 
                 <div className="mt-8 lg:mt-0">
-                    <img
-                        alt="Security audit and testing illustration"
-                        loading="lazy"
-                        width={500}
-                        height={500}
-                        decoding="async"
-                        className="rounded-xl border-4 border-white transform transition duration-500"
-                        src={SecurityAuditImg}
-                    />
+                    <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-lg rounded-xl shadow-lg" aria-label="Security audit illustration">
+                      <rect width="500" height="400" rx="16" fill="#0F172A"/>
+                      <circle cx="250" cy="185" r="155" stroke="#1E293B" strokeWidth="1"/>
+                      <circle cx="250" cy="185" r="115" stroke="#1E293B" strokeWidth="1"/>
+                      <circle cx="250" cy="185" r="75" stroke="#1E293B" strokeWidth="1"/>
+                      <circle cx="250" cy="185" r="35" stroke="#1E293B" strokeWidth="1"/>
+                      <line x1="250" y1="30" x2="250" y2="340" stroke="#1E293B" strokeWidth="1"/>
+                      <line x1="95" y1="185" x2="405" y2="185" stroke="#1E293B" strokeWidth="1"/>
+                      <path d="M250 98 L300 124 L300 178 Q300 218 250 238 Q200 218 200 178 L200 124 Z" fill="#4F46E5"/>
+                      <path d="M250 110 L288 132 L288 176 Q288 208 250 224 Q212 208 212 176 L212 132 Z" fill="#6366F1"/>
+                      <rect x="234" y="164" width="32" height="26" rx="5" fill="#C7D2FE"/>
+                      <path d="M240 164 L240 157 Q240 148 250 148 Q260 148 260 157 L260 164" stroke="#C7D2FE" strokeWidth="3" fill="none"/>
+                      <circle cx="250" cy="177" r="5" fill="#4F46E5"/>
+                      <circle cx="250" cy="168" r="42" fill="none" stroke="#6366F1" strokeWidth="1" opacity="0.4"/>
+                      <circle cx="250" cy="168" r="52" fill="none" stroke="#4F46E5" strokeWidth="1" opacity="0.2"/>
+                      <rect x="22" y="62" width="140" height="38" rx="8" fill="#1E293B"/>
+                      <circle cx="44" cy="81" r="9" fill="#22C55E"/><line x1="38" y1="81" x2="41" y2="84" stroke="white" strokeWidth="2"/><line x1="41" y1="84" x2="50" y2="75" stroke="white" strokeWidth="2"/>
+                      <text x="62" y="77" fontFamily="system-ui" fontSize="10" fontWeight="600" fill="#D1FAE5">SQL Injection</text>
+                      <text x="62" y="91" fontFamily="monospace" fontSize="9" fill="#64748B">No threats found</text>
+                      <rect x="22" y="112" width="140" height="38" rx="8" fill="#1E293B"/>
+                      <circle cx="44" cy="131" r="9" fill="#22C55E"/><line x1="38" y1="131" x2="41" y2="134" stroke="white" strokeWidth="2"/><line x1="41" y1="134" x2="50" y2="125" stroke="white" strokeWidth="2"/>
+                      <text x="62" y="127" fontFamily="system-ui" fontSize="10" fontWeight="600" fill="#D1FAE5">XSS Attack</text>
+                      <text x="62" y="141" fontFamily="monospace" fontSize="9" fill="#64748B">Protected</text>
+                      <rect x="22" y="162" width="140" height="38" rx="8" fill="#1E293B"/>
+                      <circle cx="44" cy="181" r="9" fill="#F59E0B"/>
+                      <text x="44" y="186" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="700" fill="white">!</text>
+                      <text x="62" y="177" fontFamily="system-ui" fontSize="10" fontWeight="600" fill="#FEF3C7">Open Ports</text>
+                      <text x="62" y="191" fontFamily="monospace" fontSize="9" fill="#64748B">Scanning...</text>
+                      <rect x="22" y="212" width="140" height="38" rx="8" fill="#1E293B"/>
+                      <circle cx="44" cy="231" r="9" fill="#22C55E"/><line x1="38" y1="231" x2="41" y2="234" stroke="white" strokeWidth="2"/><line x1="41" y1="234" x2="50" y2="225" stroke="white" strokeWidth="2"/>
+                      <text x="62" y="227" fontFamily="system-ui" fontSize="10" fontWeight="600" fill="#D1FAE5">SSL/TLS</text>
+                      <text x="62" y="241" fontFamily="monospace" fontSize="9" fill="#64748B">Valid cert ✓</text>
+                      <rect x="338" y="62" width="140" height="38" rx="8" fill="#1E293B"/>
+                      <circle cx="360" cy="81" r="9" fill="#22C55E"/><line x1="354" y1="81" x2="357" y2="84" stroke="white" strokeWidth="2"/><line x1="357" y1="84" x2="366" y2="75" stroke="white" strokeWidth="2"/>
+                      <text x="378" y="77" fontFamily="system-ui" fontSize="10" fontWeight="600" fill="#D1FAE5">Auth Check</text>
+                      <text x="378" y="91" fontFamily="monospace" fontSize="9" fill="#64748B">Secure</text>
+                      <rect x="338" y="112" width="140" height="38" rx="8" fill="#1E293B"/>
+                      <circle cx="360" cy="131" r="9" fill="#EF4444"/>
+                      <text x="360" y="136" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="700" fill="white">✗</text>
+                      <text x="378" y="127" fontFamily="system-ui" fontSize="10" fontWeight="600" fill="#FEE2E2">CSRF Token</text>
+                      <text x="378" y="141" fontFamily="monospace" fontSize="9" fill="#64748B">Fix required</text>
+                      <rect x="338" y="162" width="140" height="38" rx="8" fill="#1E293B"/>
+                      <circle cx="360" cy="181" r="9" fill="#22C55E"/><line x1="354" y1="181" x2="357" y2="184" stroke="white" strokeWidth="2"/><line x1="357" y1="184" x2="366" y2="175" stroke="white" strokeWidth="2"/>
+                      <text x="378" y="177" fontFamily="system-ui" fontSize="10" fontWeight="600" fill="#D1FAE5">Firewall</text>
+                      <text x="378" y="191" fontFamily="monospace" fontSize="9" fill="#64748B">Active</text>
+                      <rect x="338" y="212" width="140" height="38" rx="8" fill="#1E293B"/>
+                      <circle cx="360" cy="231" r="9" fill="#22C55E"/><line x1="354" y1="231" x2="357" y2="234" stroke="white" strokeWidth="2"/><line x1="357" y1="234" x2="366" y2="225" stroke="white" strokeWidth="2"/>
+                      <text x="378" y="227" fontFamily="system-ui" fontSize="10" fontWeight="600" fill="#D1FAE5">Encryption</text>
+                      <text x="378" y="241" fontFamily="monospace" fontSize="9" fill="#64748B">AES-256</text>
+                      <rect x="100" y="308" width="300" height="44" rx="12" fill="#1E293B" stroke="#4F46E5" strokeWidth="1.5"/>
+                      <text x="135" y="324" fontFamily="system-ui" fontSize="9" fill="#94A3B8">Security Score</text>
+                      <text x="390" y="324" textAnchor="end" fontFamily="system-ui" fontSize="9" fill="#94A3B8">Report Ready</text>
+                      <rect x="112" y="330" width="180" height="10" rx="5" fill="#334155"/>
+                      <rect x="112" y="330" width="162" height="10" rx="5" fill="#22C55E"/>
+                      <text x="390" y="340" textAnchor="end" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#22C55E">90%</text>
+                    </svg>
                 </div>
             </section>
 

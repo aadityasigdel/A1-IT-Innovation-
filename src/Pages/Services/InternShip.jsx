@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet";
 import { FaCheckCircle } from "react-icons/fa";
-import InternshipImg from "../../assets/ServicesImg/internship.avif";
 import Footer from "../../components/Footer";
 import Navigation from "../../components/Navigation";
 
@@ -85,14 +84,44 @@ export default function InternShip() {
                         </a>
                     </div>
                     <div className="mt-6 lg:mt-0">
-                        <img
-                            src={InternshipImg}
-                            alt="internship programs"
-                            width="400"
-                            height="500"
-                            loading="lazy"
-                            className="rounded shadow-lg"
-                        />
+                        <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-lg rounded-xl shadow-lg" aria-label="Internship program illustration">
+                          <rect width="500" height="400" rx="16" fill="#FFF7ED"/>
+                          <rect x="60" y="276" width="380" height="14" rx="4" fill="#D97706"/>
+                          <rect x="80" y="290" width="14" height="70" rx="4" fill="#B45309"/>
+                          <rect x="406" y="290" width="14" height="70" rx="4" fill="#B45309"/>
+                          <rect x="110" y="248" width="220" height="32" rx="6" fill="#374151"/>
+                          <rect x="95" y="274" width="252" height="8" rx="4" fill="#1F2937"/>
+                          <rect x="118" y="108" width="206" height="146" rx="8" fill="#1F2937"/>
+                          <rect x="126" y="116" width="190" height="130" rx="4" fill="#0F172A"/>
+                          <rect x="126" y="116" width="190" height="34" rx="4" fill="#4F46E5"/>
+                          <text x="221" y="137" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#C7D2FE">~ internship-project</text>
+                          <text x="136" y="165" fontFamily="monospace" fontSize="8" fill="#F59E0B">const</text>
+                          <text x="174" y="165" fontFamily="monospace" fontSize="8" fill="#60A5FA">skills</text>
+                          <text x="210" y="165" fontFamily="monospace" fontSize="8" fill="#E5E7EB">= [</text>
+                          <text x="136" y="178" fontFamily="monospace" fontSize="8" fill="#34D399">  "React"</text>
+                          <text x="136" y="191" fontFamily="monospace" fontSize="8" fill="#34D399">  "Node.js"</text>
+                          <text x="136" y="204" fontFamily="monospace" fontSize="8" fill="#34D399">  "Flutter"</text>
+                          <text x="136" y="217" fontFamily="monospace" fontSize="8" fill="#E5E7EB">]</text>
+                          <rect x="126" y="224" width="190" height="18" rx="3" fill="#064E3B"/>
+                          <text x="136" y="236" fontFamily="monospace" fontSize="8" fill="#6EE7B7">✓ Internship Complete! 🎓</text>
+                          <rect x="358" y="176" width="70" height="16" rx="4" fill="#EF4444"/>
+                          <rect x="354" y="196" width="74" height="16" rx="4" fill="#3B82F6"/>
+                          <rect x="360" y="216" width="68" height="16" rx="4" fill="#22C55E"/>
+                          <rect x="356" y="236" width="72" height="16" rx="4" fill="#F59E0B"/>
+                          <text x="393" y="262" textAnchor="middle" fontFamily="system-ui" fontSize="9" fill="#92400E">Textbooks</text>
+                          <polygon points="90,136 130,164 50,164" fill="#374151"/>
+                          <rect x="50" y="164" width="80" height="10" rx="2" fill="#1E293B"/>
+                          <line x1="130" y1="164" x2="130" y2="181" stroke="#1E293B" strokeWidth="2"/>
+                          <circle cx="130" cy="184" r="5" fill="#F59E0B"/>
+                          <text x="90" y="204" textAnchor="middle" fontFamily="system-ui" fontSize="9" fill="#92400E">Certified</text>
+                          <rect x="52" y="316" width="120" height="30" rx="8" fill="#FEF3C7"/>
+                          <text x="112" y="335" textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="600" fill="#92400E">🎓 Learn</text>
+                          <rect x="192" y="316" width="116" height="30" rx="8" fill="#DCFCE7"/>
+                          <text x="250" y="335" textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="600" fill="#15803D">⚡ Build</text>
+                          <rect x="328" y="316" width="120" height="30" rx="8" fill="#EDE9FE"/>
+                          <text x="388" y="335" textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="600" fill="#6D28D9">🚀 Grow</text>
+                          <line x1="220" y1="276" x2="220" y2="312" stroke="#D97706" strokeWidth="1.5" strokeDasharray="3 3"/>
+                        </svg>
                     </div>
                 </section>
 
