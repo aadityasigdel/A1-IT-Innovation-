@@ -1,0 +1,52 @@
+/* Typing Animation for Tagline */
+@keyframes typing {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  15% {
+    width: 100%;
+    opacity: 1;
+  }
+  85% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0%, 49% {
+    border-right-color: rgba(79, 70, 229, 1);
+  }
+  50%, 100% {
+    border-right-color: transparent;
+  }
+}
+
+.tagline-typing {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #6366f1;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #6366f1;
+  animation: typing 4s steps(30, end) infinite, blink 0.7s step-end infinite;
+}
+
+.tagline-typing-mobile {
+  display: inline-block;
+  font-size: 0.65rem;
+  color: #6366f1;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #6366f1;
+  animation: typing 4s steps(30, end) infinite, blink 0.7s step-end infinite;
+}

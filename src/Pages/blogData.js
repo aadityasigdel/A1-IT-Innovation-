@@ -731,7 +731,7 @@ Invest in the right monitoring tools today to build a resilient, scalable infras
     date: "2026-04-15",
     category: "DevOps",
     readTime: "12 min",
-    image: "https://www.metricfire.com/blog/monitoring_tools_for_devops.png",
+    image: "https://itconcerns.com.np/images/main/IT-Concerns-1482259202.webp",
     keywords:
       "DevOps monitoring tools, Prometheus, Grafana, Datadog, New Relic, infrastructure monitoring, server uptime monitoring, Kubernetes monitoring, Docker monitoring, application performance monitoring, CI/CD pipeline, log management, system monitoring, real-time monitoring, infrastructure automation, cloud monitoring, AWS monitoring, DevOps tools 2026, monitoring and alerting, error tracking, alert management",
     description:
@@ -1100,7 +1100,7 @@ For the best results, consider hybrid approaches: Local hosting for Nepal-target
     date: "2026-04-18",
     category: "Hosting & Infrastructure",
     readTime: "14 min",
-    image: "https://hostingreviews.com/hosting-providers.jpg",
+    image: "https://tse2.mm.bing.net/th/id/OIP.NBaQ6zPy_VdJhRywMaxaHwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
     keywords:
       "hosting providers Nepal, web hosting Nepal, LinkUp Nepal, Bibsu Innovations, Prabhu Host, Nest Nepal, cloud hosting, AWS, Google Cloud Platform, Microsoft Azure, DigitalOcean, Linode, Vultr, Contabo, Hostinger, best hosting Nepal, affordable hosting, shared hosting, VPS hosting, cloud server, hosting comparison, server hosting Nepal, web server Nepal, managed hosting, infrastructure as a service, Nepal datacenter, SSD hosting, uptime guarantee",
     description:

@@ -114,7 +114,10 @@ export default function Navigation() {
             height={80}
             width={80}
           />
-          <span className="text-xl font-bold text-gray-900">A1 IT Innovation</span>
+          <div className="flex flex-col">
+            <span className="text-xl font-bold text-gray-900">A1 IT Innovation</span>
+            <span className="tagline-typing">Your one Stop IT Solution</span>
+          </div>
         </a>
 
         {/* Desktop Menu */}
@@ -177,7 +180,10 @@ export default function Navigation() {
             {/* Logo */}
             <a href="/" className="flex items-center gap-3 justify-center" onClick={closeMobileMenu}>
               <img src={logoimage} alt="Logo" className="rounded-full object-contain mt-5" height={20} width={20} />
-              <span className="text-xl font-bold text-gray-900">A1 IT Innovation</span>
+              <div className="flex flex-col">
+                <span className="text-lg font-bold text-gray-900">A1 IT Innovation</span>
+                <span className="tagline-typing-mobile">Your one Stop IT Solution</span>
+              </div>
             </a>
 
             {/* Close Button */}
