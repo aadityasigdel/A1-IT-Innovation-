@@ -309,14 +309,15 @@ export default function Aboutus() {
             {/* Founder — centered, larger */}
             {teamMembers.filter((m) => m.isFounder).map((m, i) => (
               <div key={i} className="flex justify-center mb-12">
-                <div className="bg-white rounded-2xl border border-indigo-100 shadow-md hover:shadow-xl transition-all duration-300 p-8 text-center w-56 group">
+                <a href="/sandip-chapagain" className="bg-white rounded-2xl border border-indigo-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 text-center w-56 group block">
                   <div className="flex justify-center mb-4">
                     <Avatar name={m.name} image={m.image} size="lg"/>
                   </div>
                   <h3 className="text-base font-bold text-gray-900">{m.name}</h3>
                   <p className="text-sm text-indigo-600 font-semibold mt-1">{m.role}</p>
                   <span className="inline-block mt-3 text-xs bg-indigo-100 text-indigo-700 px-2.5 py-1 rounded-full font-semibold">👑 Founder</span>
-                </div>
+                  <p className="text-xs text-indigo-400 mt-2 group-hover:text-indigo-600 transition-colors">View Profile →</p>
+                </a>
               </div>
             ))}
 

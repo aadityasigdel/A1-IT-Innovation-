@@ -20,6 +20,9 @@ import WhyUs from "./Pages/CompanyDetails/WhyUS";
 import Terms from "./Pages/CompanyDetails/Terms";
 import Policy from "./Pages/CompanyDetails/PrivacyPolicy";
 
+// Founder profile
+import SandipChapagain from "./Pages/SandipChapagain";
+
 // Courses
 import DigitalMarketing from "./Pages/Courses/DigitalMarketing";
 import Cybersecurity from "./Pages/Courses/Cybersecurity";
@@ -66,6 +69,9 @@ function RouteContent() {
       <Route path="/company/career" element={<Career />} />
       <Route path="/company/terms" element={<Terms />} />
       <Route path="/company/policy" element={<Policy />} />
+
+      {/* Founder */}
+      <Route path="/sandip-chapagain" element={<SandipChapagain />} />
 
       {/* Courses */}
       <Route path="/courses/digital-marketing" element={<DigitalMarketing />} />
