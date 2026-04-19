@@ -187,10 +187,10 @@ export default function Navigation() {
           <div className="absolute inset-0 bg-black/50" onClick={closeMobileMenu}/>
 
           {/* Drawer */}
-          <div className="relative ml-auto w-80 max-w-full h-full bg-white overflow-y-auto shadow-2xl flex flex-col">
+          <div className="relative ml-auto w-80 max-w-full h-full bg-white shadow-2xl flex flex-col">
 
             {/* Drawer header */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
+            <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100 flex-shrink-0">
               <a href="/" className="flex items-center gap-2" onClick={closeMobileMenu}>
                 <img src={logoimage} alt="Logo" className="rounded-full object-contain" height={36} width={36}/>
                 <span className="font-bold text-gray-900 text-sm">A1 IT Innovation</span>
@@ -206,8 +206,26 @@ export default function Navigation() {
               </button>
             </div>
 
-            {/* Nav links */}
-            <div className="flex-1 px-5 py-4 space-y-1">
+            {/* CTA — always visible below header */}
+            <div className="px-5 py-4 border-b border-gray-100 space-y-2 flex-shrink-0">
+              <a
+                href="/contact"
+                onClick={closeMobileMenu}
+                className="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+              >
+                Contact Us
+              </a>
+              <a
+                href="/courses/digital-marketing"
+                onClick={closeMobileMenu}
+                className="block w-full text-center border border-indigo-200 text-indigo-600 hover:bg-indigo-50 font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
+              >
+                📚 Explore Courses
+              </a>
+            </div>
+
+            {/* Nav links — scrollable */}
+            <div className="flex-1 overflow-y-auto px-5 py-4 space-y-1">
               <Dropdown title="Services" links={servicesLinks} isMobile />
               <Dropdown title="Courses"  links={coursesLinks}  isMobile />
 
@@ -226,26 +244,8 @@ export default function Navigation() {
               <Dropdown title="Company" links={companyLinks} isMobile />
             </div>
 
-            {/* CTA */}
-            <div className="px-5 py-5 border-t border-gray-100 space-y-3">
-              <a
-                href="/contact"
-                onClick={closeMobileMenu}
-                className="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-              >
-                Contact Us
-              </a>
-              <a
-                href="/courses/digital-marketing"
-                onClick={closeMobileMenu}
-                className="block w-full text-center border border-indigo-200 text-indigo-600 hover:bg-indigo-50 font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
-              >
-                📚 Explore Courses
-              </a>
-            </div>
-
             {/* Social icons */}
-            <div className="px-5 pb-6 flex gap-4 justify-center">
+            <div className="px-5 py-4 border-t border-gray-100 flex gap-4 justify-center flex-shrink-0">
               <a href="https://www.facebook.com/profile.php?id=61557621773133" target="_blank" rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-gray-100 hover:bg-indigo-100 hover:text-indigo-600 flex items-center justify-center transition-colors">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
