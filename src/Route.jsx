@@ -20,6 +20,12 @@ import WhyUs from "./Pages/CompanyDetails/WhyUS";
 import Terms from "./Pages/CompanyDetails/Terms";
 import Policy from "./Pages/CompanyDetails/PrivacyPolicy";
 
+// Courses
+import DigitalMarketing from "./Pages/Courses/DigitalMarketing";
+import Cybersecurity from "./Pages/Courses/Cybersecurity";
+import DevOpsCourse from "./Pages/Courses/DevOpsCourse";
+import SystemDesign from "./Pages/Courses/SystemDesign";
+
 // Services
 import DomainHosting from "./Pages/Services/DomainHosting";
 import Intern from "./Pages/Services/InternShip.jsx";
@@ -60,6 +66,12 @@ function RouteContent() {
       <Route path="/company/career" element={<Career />} />
       <Route path="/company/terms" element={<Terms />} />
       <Route path="/company/policy" element={<Policy />} />
+
+      {/* Courses */}
+      <Route path="/courses/digital-marketing" element={<DigitalMarketing />} />
+      <Route path="/courses/cybersecurity"     element={<Cybersecurity />} />
+      <Route path="/courses/devops"            element={<DevOpsCourse />} />
+      <Route path="/courses/system-design"     element={<SystemDesign />} />
 
       {/* Services */}
       <Route path="/services/domain-hosting" element={<DomainHosting />} />
