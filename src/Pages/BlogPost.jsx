@@ -55,6 +55,24 @@ export default function BlogPost() {
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.excerpt} />
         <meta name="twitter:image" content={post.image} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": post.title,
+          "description": post.excerpt,
+          "image": post.image,
+          "datePublished": post.date,
+          "dateModified": post.date,
+          "author": { "@type": "Organization", "name": post.author, "url": "https://www.a1itinnovation.com.np" },
+          "publisher": {
+            "@type": "Organization",
+            "name": "A1 IT Innovation",
+            "logo": { "@type": "ImageObject", "url": "https://www.a1itinnovation.com.np/Publiclogo.png" },
+          },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.a1itinnovation.com.np/blog/${post.slug}` },
+          "url": `https://www.a1itinnovation.com.np/blog/${post.slug}`,
+          "inLanguage": "en",
+        }) }} />
       </Helmet>
 
       <Navigation />
@@ -270,37 +288,6 @@ export default function BlogPost() {
           </div>
         </section>
 
-        {/* ✅ JSON-LD Structured Data for Article */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BlogPosting",
-              headline: post.title,
-              description: post.excerpt,
-              image: post.image,
-              datePublished: post.date,
-              dateModified: post.date,
-              author: {
-                "@type": "Organization",
-                name: post.author,
-              },
-              publisher: {
-                "@type": "Organization",
-                name: "A1 IT Innovation",
-                logo: {
-                  "@type": "ImageObject",
-                  url: "https://a1itinnovation.com/logo.png",
-                },
-              },
-              mainEntityOfPage: {
-                "@type": "WebPage",
-                "@id": `https://a1itinnovation.com/blog/${post.slug}`,
-              },
-            }),
-          }}
-        />
       </main>
 
       <Footer />

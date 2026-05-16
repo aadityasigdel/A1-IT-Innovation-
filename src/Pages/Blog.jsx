@@ -16,24 +16,24 @@ export default function Blog() {
           name="description"
           content="Read insights about web development, mobile apps, React, Flutter, Node.js, and IT industry trends from A1 IT Innovation Nepal. Expert articles on software development, digital marketing, and SEO."
         />
-        <meta
-          name="keywords"
-          content="blog, web development, mobile app development, React development, Flutter, Node.js, IT industry Nepal, digital marketing, SEO, software development tips"
-        />
-        <link rel="canonical" href="https://a1itinnovation.com/blog" />
+        <meta name="keywords" content="IT blog, web development blog, mobile app development, DevOps blog, IT outsourcing Nepal, software development tips, React development, Flutter, Node.js, digital marketing, SEO, tech blog Nepal, offshore development guide" />
+        <link rel="canonical" href="https://www.a1itinnovation.com.np/blog" />
 
-        {/* ✅ Open Graph / Social Meta */}
-        <meta
-          property="og:title"
-          content="Blog | A1 IT Innovation — Tech Insights & Development Tips"
-        />
-        <meta
-          property="og:description"
-          content="Explore articles on web development, mobile apps, best practices, and IT industry trends in Nepal."
-        />
-        <meta property="og:url" content="https://a1itinnovation.com/blog" />
+        {/* Open Graph */}
+        <meta property="og:title" content="Blog | A1 IT Innovation — Tech Insights & Development Tips" />
+        <meta property="og:description" content="Expert articles on web development, mobile apps, DevOps, IT outsourcing, and technology trends. Practical guides from A1 IT Innovation." />
+        <meta property="og:url" content="https://www.a1itinnovation.com.np/blog" />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "name": "A1 IT Innovation Blog",
+          "description": "Expert insights on web development, mobile apps, DevOps, IT outsourcing, and technology trends",
+          "url": "https://www.a1itinnovation.com.np/blog",
+          "publisher": { "@type": "Organization", "name": "A1 IT Innovation", "url": "https://www.a1itinnovation.com.np" },
+          "inLanguage": "en",
+        }) }} />
       </Helmet>
 
       <Navigation />
@@ -151,42 +151,6 @@ export default function Blog() {
           </div>
         </section>
 
-        {/* ✅ JSON-LD Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Blog",
-              name: "A1 IT Innovation Blog",
-              description:
-                "Expert insights on web development, mobile apps, and IT industry trends",
-              url: "https://a1itinnovation.com/blog",
-              blogPost: blogPosts.map((post) => ({
-                "@type": "BlogPosting",
-                headline: post.title,
-                description: post.excerpt,
-                datePublished: post.date,
-                author: {
-                  "@type": "Organization",
-                  name: post.author,
-                },
-                image: post.image,
-                url: `https://a1itinnovation.com/blog/${post.slug}`,
-              })),
-            }),
-          }}
-        />
-
-        {/* ✅ Hidden SEO Content */}
-        <div className="hidden">
-          <p>
-            A1 IT Innovation Blog features expert articles on web development, mobile app development, React development, Node.js, Flutter, and IT industry trends in Nepal. Learn about best practices in software development, digital marketing, SEO strategies, and technology insights from experienced developers.
-          </p>
-          <p>
-            Articles cover topics including React best practices, Node.js development, Flutter mobile apps, Python vs Node.js, SEO strategies for tech companies in Nepal, digital marketing insights, and industry trends. Perfect for developers, entrepreneurs, and tech enthusiasts in Nepal.
-          </p>
-        </div>
       </main>
 
       <Footer />

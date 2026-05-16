@@ -80,15 +80,27 @@ export default function DevOps() {
     return (
         <div>
             <Helmet>
-                <title>DevOps Outsourcing Nepal | Cloud Hosting & System Design Experts</title>
-                <meta name="description" content="Professional DevOps outsourcing services in Nepal. CI/CD pipeline setup, Kubernetes deployment, server monitoring, and infrastructure automation. Managed DevOps services for AWS, GCP, Azure, and local Nepal hosting providers." />
-                <meta name="keywords" content="DevOps services Nepal, DevOps outsourcing, CI/CD pipeline setup, Kubernetes deployment, cloud hosting Nepal, managed DevOps services, server management Nepal, infrastructure automation, system design consulting, disaster recovery planning, LinkUp Nepal, Bibsu Innovations, cloud migration, microservices architecture, AWS Nepal, Docker deployment, application monitoring" />
-                <meta property="og:title" content="DevOps Outsourcing Nepal | System Design & Cloud Hosting Experts" />
-                <meta property="og:description" content="Professional DevOps outsourcing and managed infrastructure services in Nepal. CI/CD pipelines, Kubernetes, server monitoring, and 24/7 support." />
+                <title>DevOps as a Service | Managed DevOps, CI/CD &amp; Kubernetes | A1 IT Innovation</title>
+                <meta name="description" content="Professional DevOps as a Service provider. Managed DevOps outsourcing including CI/CD pipeline setup, Kubernetes deployment, 24/7 infrastructure monitoring, and cloud management on AWS, GCP, Azure. 50–70% more affordable than US/EU providers." />
+                <meta name="keywords" content="DevOps as a service, managed DevOps services, DevOps outsourcing company, hire DevOps engineer, CI/CD pipeline setup, Kubernetes managed service, cloud infrastructure management, DevOps consulting, infrastructure as code, Terraform Ansible, Docker Kubernetes deployment, 24/7 server monitoring, cloud migration, microservices architecture, AWS managed services, DevOps for startups, offshore DevOps" />
+                <meta property="og:title" content="DevOps as a Service — Managed CI/CD &amp; Kubernetes | A1 IT Innovation" />
+                <meta property="og:description" content="Managed DevOps outsourcing — CI/CD pipelines, Kubernetes, 24/7 monitoring, and cloud infrastructure at 50–70% lower cost than US/EU providers." />
                 <meta property="og:url" content="https://www.a1itinnovation.com.np/services/devops" />
-                <meta name="twitter:title" content="DevOps Services Nepal | CI/CD & Infrastructure Experts" />
-                <meta name="twitter:description" content="DevOps outsourcing, cloud hosting, and managed services in Nepal" />
+                <meta property="og:type" content="website" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="DevOps as a Service | Managed Kubernetes &amp; CI/CD — A1 IT Innovation" />
+                <meta name="twitter:description" content="Professional managed DevOps outsourcing. CI/CD, Kubernetes, 24/7 monitoring. Nepal-based team, international quality." />
                 <link rel="canonical" href="https://www.a1itinnovation.com.np/services/devops" />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "Service",
+                  "name": "DevOps as a Service",
+                  "provider": { "@type": "Organization", "name": "A1 IT Innovation", "url": "https://www.a1itinnovation.com.np" },
+                  "description": "Managed DevOps outsourcing including CI/CD pipeline setup, Kubernetes deployment, 24/7 infrastructure monitoring, and cloud management.",
+                  "areaServed": ["Nepal", "Worldwide"],
+                  "serviceType": "DevOps as a Service",
+                  "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
+                }) }} />
             </Helmet>
             <Navigation />
             

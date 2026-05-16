@@ -66,15 +66,27 @@ export default function WebDev() {
   return (
     <>
       <Helmet>
-        <title>Web Development Services | Nepal | A1 IT Innovation</title>
-        <meta name="description" content="Professional web development services in Nepal. Custom websites, e-commerce solutions, and web apps built with modern technologies like React, Next.js, and Node.js." />
-        <meta name="keywords" content="web development Nepal, website design, web development company, custom web solutions, React development, web design Nepal" />
-        <meta property="og:title" content="Web Development Services | A1 IT Innovation" />
-        <meta property="og:description" content="Expert web development services - building fast, SEO-optimized websites for businesses in Nepal" />
+        <title>Custom Web Development Company | React, Next.js &amp; Node.js | A1 IT Innovation</title>
+        <meta name="description" content="Professional custom web development company specializing in React.js, Next.js, and Node.js. We build fast, SEO-optimized websites, web applications, e-commerce platforms, and web systems — 50–70% more affordable than US/UK agencies." />
+        <meta name="keywords" content="custom web development company, web development services, React development company, Next.js development, offshore web development, hire web developer, web application development, e-commerce development, SaaS development, web system development, Node.js development, web development outsourcing, affordable web development, web development Nepal" />
+        <meta property="og:title" content="Custom Web Development — React, Next.js &amp; Node.js | A1 IT Innovation" />
+        <meta property="og:description" content="Professional React.js and Next.js web development. Custom websites, web apps, e-commerce, and web systems at 50–70% lower cost than US/UK agencies." />
         <meta property="og:url" content="https://www.a1itinnovation.com.np/services/web-dev" />
-        <meta name="twitter:title" content="Web Development | A1 IT Innovation" />
-        <meta name="twitter:description" content="Professional web development and design in Nepal" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Custom Web Development | React &amp; Next.js — A1 IT Innovation" />
+        <meta name="twitter:description" content="Professional React.js, Next.js, and Node.js web development. Nepal-based team serving clients globally." />
         <link rel="canonical" href="https://www.a1itinnovation.com.np/services/web-dev" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Web Development",
+          "provider": { "@type": "Organization", "name": "A1 IT Innovation", "url": "https://www.a1itinnovation.com.np" },
+          "description": "Professional custom web development using React.js, Next.js, and Node.js for websites, web applications, e-commerce, and SaaS platforms.",
+          "areaServed": ["Nepal", "Worldwide"],
+          "serviceType": "Web Development",
+          "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
+        }) }} />
       </Helmet>
       <Navigation />
 

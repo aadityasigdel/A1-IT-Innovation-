@@ -108,22 +108,22 @@ const stats = [
 ];
 
 const whyUs = [
-  { icon: "🏆", title: "4+ Years Experience",      desc: "Serving businesses across Nepal since 2021 with proven, reliable IT solutions." },
-  { icon: "🇳🇵", title: "Nepal-Focused",            desc: "We understand Nepal's business landscape — local support, local pricing, global quality." },
-  { icon: "⚡", title: "Agile & Fast",              desc: "Lean teams and agile methods mean your project ships on time, every time." },
-  { icon: "💰", title: "Affordable Pricing",        desc: "Enterprise-grade solutions at prices designed for Nepali startups and businesses." },
+  { icon: "🏆", title: "4+ Years Experience",      desc: "Delivering web, mobile, and DevOps solutions since 2021 — proven track record for local and international clients." },
+  { icon: "💰", title: "50–70% Cost Savings",       desc: "Same quality as US/UK agencies at 50–70% lower cost. Enterprise-grade delivery on startup-friendly budgets." },
+  { icon: "⚡", title: "Agile & Fast Delivery",     desc: "Lean teams and agile methods — your project ships on time with transparent progress updates throughout." },
+  { icon: "🌍", title: "Global Quality Standards",  desc: "React, Next.js, Flutter, Kubernetes, Docker — modern tech stack matching international engineering standards." },
 ];
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>A1 IT Innovation Nepal — Top Software, Web &amp; App Development Company | Damak, Jhapa &amp; Kathmandu</title>
-        <meta name="description" content="A1 IT Innovation is Nepal's trusted IT company offering website development, mobile app development, DevOps, AI solutions, security audit, and free IT internships across Damak, Jhapa, Kathmandu and all Nepal." />
-        <meta name="keywords" content="A1 IT Innovation Nepal, IT company Nepal, web development Damak, software company Jhapa, app development Kathmandu, DevOps Nepal, AI solutions Nepal, free internship Nepal, security audit Nepal, domain hosting Nepal, top IT company Nepal 2024" />
+        <title>A1 IT Innovation — Web Development, Mobile Apps &amp; DevOps as a Service | Nepal IT Company</title>
+        <meta name="description" content="A1 IT Innovation is a Nepal-based IT company delivering world-class web development, mobile app development, DevOps as a Service, and software outsourcing to clients globally. 4+ years, 20+ clients, 3 offices." />
+        <meta name="keywords" content="IT company Nepal, web development company Nepal, mobile app development company, DevOps as a service, software outsourcing Nepal, offshore web development, hire Flutter developer, custom web development, managed DevOps services, IT outsourcing Nepal, React development company, web system development, SaaS development, A1 IT Innovation, software development Damak Jhapa Kathmandu" />
         <link rel="canonical" href="https://www.a1itinnovation.com.np/" />
-        <meta property="og:title" content="A1 IT Innovation Nepal — Nepal's Trusted IT Company" />
-        <meta property="og:description" content="Web development, mobile apps, DevOps, AI, and free IT internships. Trusted by 20+ organizations across Nepal." />
+        <meta property="og:title" content="A1 IT Innovation — Web, Mobile &amp; DevOps IT Company | Nepal" />
+        <meta property="og:description" content="Nepal-based IT company delivering web development, mobile apps, DevOps as a Service, and software outsourcing globally. 50–70% more affordable than US/UK agencies." />
         <meta property="og:image" content="https://www.a1itinnovation.com.np/Publiclogo.png" />
         <meta property="og:url" content="https://www.a1itinnovation.com.np" />
         <meta property="og:type" content="website" />
@@ -144,6 +144,17 @@ export default function Home() {
             "https://www.facebook.com/a1itinnovation",
             "https://www.linkedin.com/company/a1itinnovation"
           ],
+          "knowsAbout": ["Web Development", "Mobile App Development", "DevOps as a Service", "Software Outsourcing", "Cybersecurity", "Cloud Infrastructure", "React.js", "Flutter", "Kubernetes", "Docker"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "IT Services",
+            "itemListElement": [
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Web Development"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mobile App Development"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "DevOps as a Service"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Security Audit"}}
+            ]
+          },
         }) }}/>
       </Helmet>
 
@@ -159,7 +170,7 @@ export default function Home() {
             <div className="flex-1 flex flex-col gap-6 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 text-sm font-semibold px-4 py-2 rounded-full w-fit mx-auto lg:mx-0">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                Trusted by 20+ Organizations in Nepal
+                Trusted by 20+ Clients — Nepal &amp; Globally
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
@@ -168,14 +179,15 @@ export default function Home() {
               </h1>
 
               <p className="text-lg text-gray-600 max-w-xl leading-relaxed">
-                A1 IT Innovation delivers world-class web development, mobile apps, DevOps, AI solutions, and free IT internships — empowering businesses and students across Damak, Jhapa, Kathmandu, and all of Nepal.
+                A1 IT Innovation delivers world-class web development, mobile apps, DevOps as a Service, and software solutions — from Damak &amp; Kathmandu to clients worldwide. 50–70% more affordable than US/UK agencies, without compromising quality.
               </p>
 
               {/* Trust pills */}
               <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                <span className="bg-white border border-gray-200 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">📍 Damak, Jhapa & Kathmandu</span>
-                <span className="bg-white border border-gray-200 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">⭐ 4+ Years in Business</span>
-                <span className="bg-white border border-gray-200 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">🎓 Free Internship Program</span>
+                <span className="bg-white border border-gray-200 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">📍 Nepal — 3 Offices</span>
+                <span className="bg-white border border-gray-200 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">⭐ 4+ Years, 19+ Projects</span>
+                <span className="bg-white border border-gray-200 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">🌍 Serving Clients Globally</span>
+                <span className="bg-white border border-gray-200 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">💰 50–70% vs US/UK Rates</span>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-2">
@@ -370,7 +382,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14">
               <span className="inline-block bg-green-100 text-green-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Why A1 IT Innovation?</span>
-              <h2 id="why-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Built for Nepal. Trusted Everywhere.</h2>
+              <h2 id="why-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Built in Nepal. Trusted Worldwide.</h2>
               <div className="w-16 h-1 bg-indigo-600 mx-auto rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

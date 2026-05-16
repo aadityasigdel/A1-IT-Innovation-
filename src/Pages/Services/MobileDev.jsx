@@ -71,6 +71,29 @@ export default function MobileDev() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <Helmet>
+        <title>Mobile App Development Company | Flutter &amp; React Native | A1 IT Innovation</title>
+        <meta name="description" content="Professional mobile app development company specializing in Flutter and React Native. Build high-quality iOS and Android apps at 50–70% lower cost than US agencies. Based in Nepal, serving clients globally." />
+        <meta name="keywords" content="mobile app development company, Flutter app development, React Native development, hire mobile app developer, iOS app development, Android app development, cross-platform app development, offshore mobile app development, mobile app development cost, custom mobile app, app development company Nepal, build mobile app for business" />
+        <meta property="og:title" content="Mobile App Development — Flutter &amp; React Native | A1 IT Innovation" />
+        <meta property="og:description" content="Professional Flutter and React Native app development for iOS and Android. Nepal-based team, international quality, affordable rates." />
+        <meta property="og:url" content="https://www.a1itinnovation.com.np/services/mobile-dev" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Mobile App Development | Flutter &amp; React Native — A1 IT Innovation" />
+        <meta name="twitter:description" content="Professional iOS and Android app development using Flutter. Nepal-based team serving clients globally." />
+        <link rel="canonical" href="https://www.a1itinnovation.com.np/services/mobile-dev" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Mobile App Development",
+          "provider": { "@type": "Organization", "name": "A1 IT Innovation", "url": "https://www.a1itinnovation.com.np" },
+          "description": "Professional Flutter and React Native mobile app development for iOS and Android platforms.",
+          "areaServed": ["Nepal", "Worldwide"],
+          "serviceType": "Mobile App Development",
+          "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
+        }) }} />
+      </Helmet>
       <Navigation />
 
       {/* Hero Section */}
