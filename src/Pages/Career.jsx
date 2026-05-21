@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { FiFileText, FiMail, FiMessageSquare, FiUpload, FiUser } from 'react-icons/fi';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
@@ -120,6 +121,25 @@ const CareerPage = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+            <Helmet>
+                <title>Career at A1 IT Innovation Nepal — Join Our IT Team | Job Openings</title>
+                <meta name="description" content="Explore career opportunities at A1 IT Innovation Nepal. Join our team of web developers, mobile app developers, DevOps engineers, and IT professionals. Apply now — Damak, Kathmandu, and Bhaktapur." />
+                <meta name="keywords" content="career Nepal IT, job Nepal IT company, web developer job Nepal, DevOps engineer job Nepal, software developer job Damak, IT job Jhapa, React developer job Nepal, Flutter developer job Nepal, A1 IT Innovation careers" />
+                <link rel="canonical" href="https://www.a1itinnovation.com.np/company/career" />
+                <meta property="og:title" content="Careers at A1 IT Innovation Nepal — Join Our Team" />
+                <meta property="og:description" content="Join Nepal's growing IT company. Open roles in web development, mobile apps, DevOps, and more. Apply today." />
+                <meta property="og:url" content="https://www.a1itinnovation.com.np/company/career" />
+                <meta property="og:type" content="website" />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "JobPosting",
+                  "title": "IT Professionals — Multiple Roles",
+                  "description": "A1 IT Innovation is hiring web developers, mobile app developers, DevOps engineers, and IT professionals in Nepal.",
+                  "hiringOrganization": { "@type": "Organization", "name": "A1 IT Innovation", "sameAs": "https://www.a1itinnovation.com.np" },
+                  "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Damak", "addressRegion": "Jhapa", "addressCountry": "NP" } },
+                  "employmentType": "FULL_TIME",
+                }) }} />
+            </Helmet>
             <Navigation />
 
             <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

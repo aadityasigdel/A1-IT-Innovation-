@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 
@@ -61,6 +62,38 @@ export default function ContactUS() {
 
     return (
         <>
+            <Helmet>
+                <title>Contact A1 IT Innovation Nepal — Get a Free Quote | WhatsApp &amp; Email</title>
+                <meta name="description" content="Contact A1 IT Innovation for web development, mobile app, DevOps, and IT outsourcing services. Get a free project quote. Reach us via WhatsApp (+977 9816032025), email, or visit our offices in Damak, Kathmandu, and Bhaktapur." />
+                <meta name="keywords" content="contact A1 IT Innovation, IT company contact Nepal, web development quote Nepal, free consultation IT Nepal, WhatsApp IT company Nepal, software project quote, hire developer Nepal, contact us Damak Jhapa Kathmandu" />
+                <link rel="canonical" href="https://www.a1itinnovation.com.np/contact" />
+                <meta property="og:title" content="Contact A1 IT Innovation — Free Quote for Web, Mobile &amp; DevOps" />
+                <meta property="og:description" content="Get in touch for a free consultation on your IT project. Web development, mobile apps, DevOps as a Service. WhatsApp: +977 9816032025." />
+                <meta property="og:url" content="https://www.a1itinnovation.com.np/contact" />
+                <meta property="og:type" content="website" />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "ContactPage",
+                  "name": "Contact A1 IT Innovation",
+                  "url": "https://www.a1itinnovation.com.np/contact",
+                  "description": "Contact page for A1 IT Innovation Nepal — web development, mobile apps, DevOps, and IT outsourcing services.",
+                  "mainEntity": {
+                    "@type": "Organization",
+                    "name": "A1 IT Innovation",
+                    "telephone": "+977-9816032025",
+                    "email": "info@a1itinnovation.com.np",
+                    "sameAs": [
+                      "https://www.facebook.com/a1itinnovationnepal",
+                      "https://www.linkedin.com/company/a1itinnovation/",
+                      "https://www.tiktok.com/@a1itinnovation"
+                    ],
+                    "contactPoint": [
+                      { "@type": "ContactPoint", "telephone": "+977-9816032025", "contactType": "customer service", "availableLanguage": ["English", "Nepali"] },
+                      { "@type": "ContactPoint", "email": "info@a1itinnovation.com.np", "contactType": "sales" }
+                    ]
+                  }
+                }) }} />
+            </Helmet>
             <Navigation />
             <main>
                 <section className="min-h-screen my-10">

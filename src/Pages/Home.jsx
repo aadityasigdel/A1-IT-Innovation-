@@ -141,9 +141,17 @@ export default function Home() {
           "areaServed": ["Damak, Jhapa", "Kathmandu", "Nepal"],
           "telephone": "+977-9816032025",
           "sameAs": [
-            "https://www.facebook.com/a1itinnovation",
-            "https://www.linkedin.com/company/a1itinnovation"
+            "https://www.facebook.com/a1itinnovationnepal",
+            "https://www.linkedin.com/company/a1itinnovation/",
+            "https://www.tiktok.com/@a1itinnovation"
           ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+977-9816032025",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Nepali"],
+            "contactOption": "TollFree"
+          },
           "knowsAbout": ["Web Development", "Mobile App Development", "DevOps as a Service", "Software Outsourcing", "Cybersecurity", "Cloud Infrastructure", "React.js", "Flutter", "Kubernetes", "Docker"],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
