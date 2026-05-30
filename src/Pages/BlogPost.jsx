@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import { useParams, Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import MarkdownRenderer from "../components/MarkdownRenderer";
 import { blogPosts } from "./blogData";
 
 export default function BlogPost() {
@@ -145,41 +146,10 @@ export default function BlogPost() {
           </div>
         </section>
 
-        {/* ✅ Article Content - Redesigned */}
+        {/* ✅ Article Content */}
         <article className="py-20 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
-            <div
-              className="prose prose-lg max-w-none text-gray-800 leading-relaxed"
-              dangerouslySetInnerHTML={{
-                __html: post.content
-                  .split("\n")
-                  .map((line) => {
-                    if (line.startsWith("## ")) {
-                      return `<h2 class="text-4xl font-bold text-gray-900 mt-12 mb-6 pb-3 border-b-2 border-indigo-200">${line.substring(3)}</h2>`;
-                    }
-                    if (line.startsWith("### ")) {
-                      return `<h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4 text-indigo-600">${line.substring(4)}</h3>`;
-                    }
-                    if (line.startsWith("#### ")) {
-                      return `<h4 class="text-xl font-bold text-gray-800 mt-6 mb-3">${line.substring(5)}</h4>`;
-                    }
-                    if (line.startsWith("- ")) {
-                      return `<li class="ml-6 text-gray-700 mb-2 leading-relaxed">${line.substring(2)}</li>`;
-                    }
-                    if (line.startsWith("**") && line.endsWith("**")) {
-                      return `<p class="text-lg font-semibold text-gray-900 mt-4 mb-3 text-indigo-700">${line.replace(/\*\*/g, "")}</p>`;
-                    }
-                    if (line.trim() === "---") {
-                      return "<hr class='my-8 border-t-2 border-gray-200' />";
-                    }
-                    if (line.trim() === "") {
-                      return "";
-                    }
-                    return `<p class="text-gray-700 mb-4 leading-relaxed">${line}</p>`;
-                  })
-                  .join(""),
-              }}
-            />
+            <MarkdownRenderer content={post.content} />
           </div>
         </article>
 
