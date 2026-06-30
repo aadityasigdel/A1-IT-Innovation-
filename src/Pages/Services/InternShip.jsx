@@ -23,6 +23,127 @@ const features = [
     { title: "Certificate & Recognition", desc: "Earn a verified internship certificate on successful completion.", icon: "🎓" },
 ];
 
+const policies = [
+    {
+        category: "Compensation",
+        icon: "💰",
+        color: "bg-emerald-50 border-emerald-200",
+        headerColor: "text-emerald-700",
+        items: [
+            "Internship is completely free — students pay nothing.",
+            "The company does not pay a salary during the internship period.",
+            "If your idea or code goes to production and benefits the company, we will recognize and reward your contribution.",
+        ],
+    },
+    {
+        category: "Working Hours & Schedule",
+        icon: "🕐",
+        color: "bg-blue-50 border-blue-200",
+        headerColor: "text-blue-700",
+        items: [
+            "Core hours: 10:00 AM – 5:00 PM (flexible based on mutual agreement).",
+            "Every Saturday is a day off for all interns.",
+            "Progress check-in meeting every 3 days — be ready to show what you've built.",
+            "Internship is fully remote as of now.",
+        ],
+    },
+    {
+        category: "Daily & Weekly Responsibilities",
+        icon: "📋",
+        color: "bg-violet-50 border-violet-200",
+        headerColor: "text-violet-700",
+        items: [
+            "Maintain a daily learning log — document what you explored, built, or researched each day.",
+            "Weekly review: we go through your log together to track progress and guide direction.",
+            "We always recommend working in a team — collaboration is key.",
+        ],
+    },
+    {
+        category: "What We Provide",
+        icon: "🎁",
+        color: "bg-indigo-50 border-indigo-200",
+        headerColor: "text-indigo-700",
+        items: [
+            "Mentorship from senior engineers throughout your internship.",
+            "Resources: hosting, servers, and infrastructure needed for your projects.",
+            "Full support for students who are curious, who explore new ideas, experiment, and do research.",
+            "Certificate of completion and a recommendation letter upon successful internship finish.",
+        ],
+    },
+    {
+        category: "Eligibility",
+        icon: "✅",
+        color: "bg-amber-50 border-amber-200",
+        headerColor: "text-amber-700",
+        items: [
+            "Familiarity with the relevant technology or framework you're applying for is required.",
+            "Genuine interest in learning, building, and exploring new technologies.",
+            "Open to both college students and self-learners.",
+        ],
+    },
+    {
+        category: "Duration & Job Opportunity",
+        icon: "🚀",
+        color: "bg-rose-50 border-rose-200",
+        headerColor: "text-rose-700",
+        items: [
+            "Minimum duration: 2 months. Maximum: as long as you need — fully flexible.",
+            "If your contribution during the internship goes to production, we will offer you a placement.",
+        ],
+    },
+];
+
+const faqs = [
+    {
+        q: "Is this internship free? Do I have to pay anything?",
+        a: "Yes, the internship is completely free. Students pay nothing to join. There are no registration fees, training fees, or hidden charges of any kind.",
+    },
+    {
+        q: "Will I get a salary or stipend during the internship?",
+        a: "No, the company does not pay a salary or stipend during the internship period. It is a mutual learning and contribution arrangement. However, if your code or idea goes to production and benefits the company, we will recognize and reward your contribution.",
+    },
+    {
+        q: "Is the internship remote or on-site?",
+        a: "The internship is fully remote as of now. You can join from anywhere.",
+    },
+    {
+        q: "What are the working hours?",
+        a: "Core hours are 10:00 AM to 5:00 PM, but they are flexible based on mutual agreement. Every Saturday is a day off. We hold a progress check-in meeting every 3 days where you show what you have built or explored.",
+    },
+    {
+        q: "How long is the internship?",
+        a: "The minimum duration is 2 months. The maximum is entirely your own decision — we are flexible and support students who want to stay longer and keep growing.",
+    },
+    {
+        q: "Do I need to maintain daily documentation?",
+        a: "Yes. Interns are expected to keep a daily learning log documenting what they explored, built, or researched each day. Every week we review this log together to track progress and guide your direction.",
+    },
+    {
+        q: "What resources does A1 IT Innovation provide to interns?",
+        a: "We provide mentorship from senior engineers, access to hosting, servers, and infrastructure needed for your projects. We actively support students who are curious, explore new ideas, experiment, and do research.",
+    },
+    {
+        q: "Will I get a certificate or recommendation letter?",
+        a: "Yes. Upon successful completion you will receive a verified internship certificate and a recommendation letter from A1 IT Innovation.",
+    },
+    {
+        q: "Who is eligible to apply?",
+        a: "Anyone who is familiar with and genuinely interested in the relevant technology or framework they are applying for. We are open to both college students and self-learners. Curiosity and willingness to explore matter most.",
+    },
+    {
+        q: "Will I get a job offer after the internship?",
+        a: "If your contributions during the internship are helpful to the company and go to production, we will definitely offer a placement or full-time role.",
+    },
+    {
+        q: "Do you support team projects?",
+        a: "Yes, we always recommend working in a team. Collaboration, code reviews, and peer learning are a core part of the internship experience here.",
+    },
+    {
+        q: "What kind of support and mentorship do you provide?",
+        a: "Senior engineers guide you throughout the internship. We help with architecture decisions, code reviews, debugging, and career direction. We also motivate students who want to experiment and try new ideas.",
+    },
+];
+
 const technologies = [
     "HTML, CSS, JS",
     "ReactJS",
@@ -48,6 +169,7 @@ export default function InternShip() {
     const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitSuccess, setSubmitSuccess] = useState(false);
+    const [openFaq, setOpenFaq] = useState(null);
     const fileInputRef = useRef(null);
 
     const validate = () => {
@@ -149,15 +271,76 @@ export default function InternShip() {
     return (
         <>
             <Helmet>
-                <title>Free IT Internship Program in Nepal | A1 IT Innovation</title>
-                <meta name="description" content="Join our free IT internship program in Nepal. Learn web development, mobile apps, and modern technologies with mentorship from industry experts." />
-                <meta name="keywords" content="internship Nepal, IT internship, free internship, web development internship, tech training" />
-                <meta property="og:title" content="Internship Program | A1 IT Innovation" />
-                <meta property="og:description" content="Free IT internship with hands-on project experience in Nepal" />
-                <meta property="og:url" content="https://www.a1itinnovation.com.np/services/internship" />
-                <meta name="twitter:title" content="Internship Program | A1 IT Innovation" />
-                <meta name="twitter:description" content="Free IT internship in Nepal" />
+                {/* ── Primary SEO ── */}
+                <title>Free Remote IT Internship in Nepal | Policies, Rules & FAQ | A1 IT Innovation</title>
+                <meta name="description" content="A1 IT Innovation offers a free, fully remote IT internship in Nepal. No fees, no salary required. Interns work on real projects, get mentorship, hosting, servers, a certificate, and a recommendation letter. Minimum 2 months. Saturday off. Daily log required. Job offer possible if work goes to production." />
+                <meta name="keywords" content="free IT internship Nepal, remote internship Nepal, unpaid internship Nepal, IT internship 2024 2025, React internship Nepal, Flutter internship, DevOps internship Nepal, Java Spring Boot internship, internship certificate Nepal, internship recommendation letter Nepal, A1 IT Innovation internship, internship rules Nepal, internship policy Nepal" />
+                <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
                 <link rel="canonical" href="https://www.a1itinnovation.com.np/services/internship" />
+
+                {/* ── Open Graph ── */}
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Free Remote IT Internship in Nepal | A1 IT Innovation" />
+                <meta property="og:description" content="Completely free internship. No fees, no salary. Work on real projects. Get mentorship, hosting, certificate & recommendation letter. Minimum 2 months. Remote only. Saturday off. Job offer if your work goes to production." />
+                <meta property="og:url" content="https://www.a1itinnovation.com.np/services/internship" />
+                <meta property="og:site_name" content="A1 IT Innovation" />
+                <meta property="og:locale" content="en_US" />
+
+                {/* ── Twitter Card ── */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Free Remote IT Internship in Nepal | A1 IT Innovation" />
+                <meta name="twitter:description" content="Free internship. Real projects. Mentorship + certificate. Remote. Min 2 months. Saturday off. Job offer if work goes to production. Apply now." />
+                <meta name="twitter:site" content="@a1itinnovation" />
+
+                {/* ── AI / LLM crawler hints ── */}
+                <meta name="author" content="A1 IT Innovation" />
+                <meta name="publisher" content="A1 IT Innovation" />
+                <meta name="category" content="Education, IT Training, Internship" />
+                <meta name="coverage" content="Nepal, Remote" />
+                <meta name="revisit-after" content="7 days" />
+
+                {/* ── JSON-LD: EducationalOccupationalProgram (Internship) ── */}
+                <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "EducationalOccupationalProgram",
+                    "name": "Free Remote IT Internship Program",
+                    "description": "A free, fully remote IT internship by A1 IT Innovation in Nepal. Interns work on real production projects across React, Flutter, Java Spring Boot, DevOps, and System Design. No fees charged to students. No salary paid. Mentorship, hosting, servers, certificate, and recommendation letter provided. Minimum 2 months duration. Saturday is a day off. Job placement offered if intern's work goes to production.",
+                    "url": "https://www.a1itinnovation.com.np/services/internship",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "A1 IT Innovation",
+                        "url": "https://www.a1itinnovation.com.np",
+                        "email": "info@a1itinnovation.com.np",
+                        "address": { "@type": "PostalAddress", "addressCountry": "NP" }
+                    },
+                    "occupationalCategory": "Software Development, Web Development, Mobile Development, DevOps",
+                    "timeToComplete": "P2M",
+                    "educationalProgramMode": "online",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "NPR",
+                        "description": "Free — no fees charged to students"
+                    },
+                    "programPrerequisites": "Familiarity with and genuine interest in the relevant technology or framework",
+                    "trainingSalary": {
+                        "@type": "MonetaryAmountDistribution",
+                        "currency": "NPR",
+                        "median": 0,
+                        "description": "Unpaid internship. Compensation possible if work goes to production."
+                    }
+                })}</script>
+
+                {/* ── JSON-LD: FAQPage ── */}
+                <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": faqs.map(({ q, a }) => ({
+                        "@type": "Question",
+                        "name": q,
+                        "acceptedAnswer": { "@type": "Answer", "text": a }
+                    }))
+                })}</script>
             </Helmet>
             <Navigation />
 
@@ -296,6 +479,94 @@ export default function InternShip() {
                                 </li>
                             ))}
                         </ul>
+                    </div>
+                </section>
+
+                {/* ── Policies & Rules ── */}
+                <section className="w-full py-20 bg-gradient-to-b from-gray-50 to-white">
+                    <div className="max-w-6xl mx-auto px-4">
+                        <div className="text-center mb-12">
+                            <span className="inline-block bg-indigo-100 text-indigo-700 text-sm font-semibold px-4 py-1 rounded-full mb-4">
+                                📜 Internship Guidelines
+                            </span>
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                                Policies &amp; Rules
+                            </h2>
+                            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+                                Everything you need to know before you start — clear, honest, and straightforward.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                            {policies.map((policy, i) => (
+                                <div key={i} className={`rounded-xl border ${policy.color} p-6 flex flex-col gap-4 hover:shadow-md transition-shadow duration-300`}>
+                                    <div className="flex items-center gap-3">
+                                        <span className="text-3xl">{policy.icon}</span>
+                                        <h3 className={`text-lg font-bold ${policy.headerColor}`}>{policy.category}</h3>
+                                    </div>
+                                    <ul className="flex flex-col gap-2">
+                                        {policy.items.map((item, j) => (
+                                            <li key={j} className="flex items-start gap-2 text-sm text-gray-700 leading-relaxed">
+                                                <FaCheckCircle className="text-gray-400 mt-0.5 shrink-0" />
+                                                <span>{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* ── FAQ ── */}
+                <section className="w-full py-20 bg-white" aria-labelledby="faq-heading">
+                    <div className="max-w-3xl mx-auto px-4">
+                        <div className="text-center mb-12">
+                            <span className="inline-block bg-indigo-100 text-indigo-700 text-sm font-semibold px-4 py-1 rounded-full mb-4">
+                                ❓ Common Questions
+                            </span>
+                            <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                                Frequently Asked Questions
+                            </h2>
+                            <p className="text-gray-500 text-lg">
+                                Everything students ask before applying — answered honestly.
+                            </p>
+                        </div>
+
+                        <div className="flex flex-col gap-3" itemScope itemType="https://schema.org/FAQPage">
+                            {faqs.map((faq, i) => (
+                                <div
+                                    key={i}
+                                    className="border border-gray-200 rounded-xl overflow-hidden"
+                                    itemScope
+                                    itemProp="mainEntity"
+                                    itemType="https://schema.org/Question"
+                                >
+                                    <button
+                                        onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                                        className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left bg-white hover:bg-gray-50 transition-colors duration-200"
+                                        aria-expanded={openFaq === i}
+                                    >
+                                        <span className="font-semibold text-gray-800 text-sm md:text-base" itemProp="name">
+                                            {faq.q}
+                                        </span>
+                                        <span className={`shrink-0 w-6 h-6 flex items-center justify-center rounded-full border-2 border-indigo-300 text-indigo-600 transition-transform duration-300 ${openFaq === i ? "rotate-45" : ""}`}>
+                                            +
+                                        </span>
+                                    </button>
+                                    {openFaq === i && (
+                                        <div
+                                            className="px-6 pb-5 text-gray-600 text-sm md:text-base leading-relaxed border-t border-gray-100 bg-gray-50"
+                                            itemScope
+                                            itemProp="acceptedAnswer"
+                                            itemType="https://schema.org/Answer"
+                                        >
+                                            <p className="pt-4" itemProp="text">{faq.a}</p>
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </section>
 
