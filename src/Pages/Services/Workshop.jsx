@@ -109,15 +109,47 @@ export default function ServicesList() {
     return (
         <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             <Helmet>
-                <title>ICT Technical Workshops | Web & Mobile Development | Nepal</title>
-                <meta name="description" content="Comprehensive ICT workshops in Nepal for web development, mobile apps, and modern technologies. Join our hands-on training programs." />
-                <meta name="keywords" content="technical workshop Nepal, web development workshop, ICT training, coding workshop, skill development" />
-                <meta property="og:title" content="Technical Workshops | A1 IT Innovation" />
-                <meta property="og:description" content="Professional ICT and technical workshops in Nepal" />
-                <meta property="og:url" content="https://www.a1itinnovation.com.np/services/workshop" />
-                <meta name="twitter:title" content="Technical Workshops | A1 IT Innovation" />
-                <meta name="twitter:description" content="ICT technical workshops in Nepal" />
+                <title>ICT Technical Workshops in Nepal | HTML, React, Next.js, Flutter, Spring Boot | A1 IT Innovation</title>
+                <meta name="description" content="Hands-on ICT technical workshops in Nepal by A1 IT Innovation. Topics: HTML/CSS/JS, ReactJS, Next.js, Node.js & Express, Spring Boot, and Flutter. Learn real-world skills with experienced engineers through structured, project-based training sessions." />
+                <meta name="keywords" content="ICT workshop Nepal, technical workshop Nepal, ReactJS workshop Nepal, NextJS workshop Nepal, Flutter workshop Nepal, Spring Boot workshop Nepal, NodeJS workshop Nepal, web development training Nepal, coding bootcamp Nepal, A1 IT Innovation workshop, HTML CSS JavaScript workshop Nepal" />
+                <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+                <meta name="author" content="A1 IT Innovation" />
+                <meta name="publisher" content="A1 IT Innovation" />
+                <meta name="category" content="Education, IT Training, Technical Workshop" />
                 <link rel="canonical" href="https://www.a1itinnovation.com.np/services/workshop" />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="ICT Technical Workshops Nepal | React, Next.js, Flutter, Spring Boot | A1 IT Innovation" />
+                <meta property="og:description" content="Hands-on workshops covering HTML/CSS/JS, ReactJS, Next.js, Node.js, Spring Boot, and Flutter. Structured, project-based training by experienced engineers in Nepal." />
+                <meta property="og:url" content="https://www.a1itinnovation.com.np/services/workshop" />
+                <meta property="og:site_name" content="A1 IT Innovation" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="ICT Technical Workshops Nepal | A1 IT Innovation" />
+                <meta name="twitter:description" content="Hands-on workshops: HTML/CSS/JS, ReactJS, Next.js, Node.js, Spring Boot, Flutter. Real-world skills, project-based training. Nepal." />
+
+                <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "ItemList",
+                    "name": "ICT Technical Workshops by A1 IT Innovation",
+                    "description": "Hands-on ICT technical workshops in Nepal covering modern web and mobile development technologies. Taught by experienced engineers with real-world project-based curriculum.",
+                    "url": "https://www.a1itinnovation.com.np/services/workshop",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "A1 IT Innovation",
+                        "url": "https://www.a1itinnovation.com.np",
+                        "email": "info@a1itinnovation.com.np",
+                        "address": { "@type": "PostalAddress", "addressCountry": "NP" }
+                    },
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "item": { "@type": "Course", "name": "Web Frontend — HTML, CSS, JavaScript", "description": "Learn HTML elements, CSS box model, flexbox, responsive design, JavaScript DOM manipulation, ES6+, Fetch API, and web performance optimization.", "provider": { "@type": "Organization", "name": "A1 IT Innovation" }, "courseMode": "onsite" } },
+                        { "@type": "ListItem", "position": 2, "item": { "@type": "Course", "name": "ReactJS Workshop", "description": "Learn React components, JSX, hooks (useState, useEffect, useContext), Redux, React Router, performance optimization, and deploying React apps.", "provider": { "@type": "Organization", "name": "A1 IT Innovation" }, "courseMode": "onsite" } },
+                        { "@type": "ListItem", "position": 3, "item": { "@type": "Course", "name": "Next.js Workshop", "description": "Learn SSG, ISR, SSR, API routes, NextAuth, dynamic routing, i18n, image optimization, and deploying to Vercel, Netlify, and AWS.", "provider": { "@type": "Organization", "name": "A1 IT Innovation" }, "courseMode": "onsite" } },
+                        { "@type": "ListItem", "position": 4, "item": { "@type": "Course", "name": "Node.js & Express.js Workshop", "description": "Learn Node.js event loop, RESTful API design with Express, MongoDB integration, JWT authentication, Socket.io, and deployment.", "provider": { "@type": "Organization", "name": "A1 IT Innovation" }, "courseMode": "onsite" } },
+                        { "@type": "ListItem", "position": 5, "item": { "@type": "Course", "name": "Spring Boot Workshop", "description": "Learn Spring MVC, Spring Data JPA, Hibernate, Spring Security, microservices architecture, and deploying Spring Boot to AWS.", "provider": { "@type": "Organization", "name": "A1 IT Innovation" }, "courseMode": "onsite" } },
+                        { "@type": "ListItem", "position": 6, "item": { "@type": "Course", "name": "Flutter Workshop", "description": "Learn Dart, Flutter widgets, Provider/Riverpod/Bloc state management, REST API integration, local storage, device features, and publishing to Google Play and App Store.", "provider": { "@type": "Organization", "name": "A1 IT Innovation" }, "courseMode": "onsite" } }
+                    ]
+                })}</script>
             </Helmet>
             <Navigation />
 

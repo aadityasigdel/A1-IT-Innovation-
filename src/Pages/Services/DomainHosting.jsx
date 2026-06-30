@@ -54,15 +54,52 @@ export default function DomainHosting() {
     return (
         <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             <Helmet>
-                <title>Domain & Hosting Services in Nepal | A1 IT Innovation</title>
-                <meta name="description" content="Affordable domain registration and reliable web hosting services in Nepal. Secure, fast, and professional hosting solutions for your website." />
-                <meta name="keywords" content="domain hosting Nepal, web hosting, domain registration, reliable hosting, website hosting" />
-                <meta property="og:title" content="Domain & Hosting Services | A1 IT Innovation" />
-                <meta property="og:description" content="Professional domain registration and web hosting services" />
-                <meta property="og:url" content="https://www.a1itinnovation.com.np/services/domain-hosting" />
-                <meta name="twitter:title" content="Domain & Hosting | A1 IT Innovation" />
-                <meta name="twitter:description" content="Web hosting and domain registration in Nepal" />
+                <title>Domain Registration & Web Hosting Services in Nepal | A1 IT Innovation</title>
+                <meta name="description" content="Affordable domain registration and reliable web hosting services in Nepal by A1 IT Innovation. Features include easy domain management, high-uptime reliable hosting, high-performance infrastructure, top-notch security, and scalable plans for growing businesses." />
+                <meta name="keywords" content="domain registration Nepal, web hosting Nepal, affordable hosting Nepal, reliable hosting Nepal, website hosting Nepal, cloud hosting Nepal, domain management Nepal, secure hosting Nepal, scalable hosting Nepal, A1 IT Innovation hosting" />
+                <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+                <meta name="author" content="A1 IT Innovation" />
+                <meta name="publisher" content="A1 IT Innovation" />
+                <meta name="category" content="Web Hosting, Domain Services, IT Infrastructure" />
                 <link rel="canonical" href="https://www.a1itinnovation.com.np/services/domain-hosting" />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Domain Registration & Web Hosting Nepal | A1 IT Innovation" />
+                <meta property="og:description" content="Affordable domain registration and reliable, secure, high-performance web hosting in Nepal. Scalable plans for businesses of all sizes." />
+                <meta property="og:url" content="https://www.a1itinnovation.com.np/services/domain-hosting" />
+                <meta property="og:site_name" content="A1 IT Innovation" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Domain & Hosting Services Nepal | A1 IT Innovation" />
+                <meta name="twitter:description" content="Affordable domain registration and reliable web hosting in Nepal. Fast, secure, scalable. Managed by A1 IT Innovation." />
+
+                <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "name": "Domain Registration & Web Hosting",
+                    "description": "Affordable domain registration and reliable web hosting services in Nepal. High-uptime hosting with fast performance, robust security, easy management, and scalable plans for businesses.",
+                    "url": "https://www.a1itinnovation.com.np/services/domain-hosting",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "A1 IT Innovation",
+                        "url": "https://www.a1itinnovation.com.np",
+                        "email": "info@a1itinnovation.com.np",
+                        "address": { "@type": "PostalAddress", "addressCountry": "NP" }
+                    },
+                    "serviceType": "Web Hosting",
+                    "areaServed": { "@type": "Country", "name": "Nepal" },
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "Hosting & Domain Services",
+                        "itemListElement": [
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Domain Registration", "description": "Register and manage domains with an easy user-friendly control panel." } },
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reliable Web Hosting", "description": "High-uptime hosting ensuring your website is always accessible with minimal downtime." } },
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "High Performance Hosting", "description": "Fast loading times and optimal performance with advanced hosting infrastructure." } },
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Secure Hosting", "description": "Robust security measures to protect websites and data from threats." } },
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Scalable Hosting Plans", "description": "Hosting solutions that scale to meet the growing needs of any business." } }
+                        ]
+                    }
+                })}</script>
             </Helmet>
             <Navigation />
 

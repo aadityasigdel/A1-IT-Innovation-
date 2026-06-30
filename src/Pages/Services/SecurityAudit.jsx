@@ -54,15 +54,55 @@ export default function SecurityAudit() {
     return (
         <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             <Helmet>
-                <title>Security Audit & Testing Services | Nepal | A1 IT Innovation</title>
-                <meta name="description" content="Comprehensive security audit and penetration testing services in Nepal. Protect your applications from vulnerabilities and cyber threats." />
-                <meta name="keywords" content="security audit Nepal, penetration testing, vulnerability assessment, cybersecurity, application security" />
-                <meta property="og:title" content="Security Audit Services | A1 IT Innovation" />
-                <meta property="og:description" content="Professional security testing and vulnerability assessment services" />
-                <meta property="og:url" content="https://www.a1itinnovation.com.np/services/security-audit" />
-                <meta name="twitter:title" content="Security Audit | A1 IT Innovation" />
-                <meta name="twitter:description" content="Security testing and penetration testing services in Nepal" />
+                <title>Security Audit & Penetration Testing Services in Nepal | A1 IT Innovation</title>
+                <meta name="description" content="Professional security audit and penetration testing services by A1 IT Innovation in Nepal. Services include vulnerability assessment, compliance checks, penetration testing, risk management, and continuous real-time monitoring. Protect your web applications, APIs, and infrastructure from cyber threats." />
+                <meta name="keywords" content="security audit Nepal, penetration testing Nepal, vulnerability assessment Nepal, cybersecurity services Nepal, web application security, API security testing, risk management Nepal, compliance audit Nepal, continuous monitoring Nepal, A1 IT Innovation security" />
+                <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+                <meta name="author" content="A1 IT Innovation" />
+                <meta name="publisher" content="A1 IT Innovation" />
+                <meta name="category" content="Cybersecurity, IT Services" />
                 <link rel="canonical" href="https://www.a1itinnovation.com.np/services/security-audit" />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Security Audit & Penetration Testing | A1 IT Innovation Nepal" />
+                <meta property="og:description" content="Vulnerability assessment, penetration testing, compliance checks, risk management, and continuous monitoring — professional cybersecurity services in Nepal." />
+                <meta property="og:url" content="https://www.a1itinnovation.com.np/services/security-audit" />
+                <meta property="og:site_name" content="A1 IT Innovation" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Security Audit & Penetration Testing Nepal | A1 IT Innovation" />
+                <meta name="twitter:description" content="Vulnerability assessment, pen testing, compliance checks, risk management, and real-time monitoring. Nepal-based cybersecurity experts." />
+
+                <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "name": "Security Audit & Penetration Testing",
+                    "description": "Comprehensive security audit and penetration testing services by A1 IT Innovation. Includes vulnerability assessment, compliance checks, simulated real-world attacks, risk management strategy, and continuous real-time monitoring.",
+                    "url": "https://www.a1itinnovation.com.np/services/security-audit",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "A1 IT Innovation",
+                        "url": "https://www.a1itinnovation.com.np",
+                        "email": "info@a1itinnovation.com.np",
+                        "address": { "@type": "PostalAddress", "addressCountry": "NP" }
+                    },
+                    "serviceType": "Cybersecurity",
+                    "areaServed": [
+                        { "@type": "Country", "name": "Nepal" },
+                        { "@type": "Country", "name": "Global" }
+                    ],
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "Security Services",
+                        "itemListElement": [
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vulnerability Assessment", "description": "Identify and mitigate potential vulnerabilities in your system before they can be exploited." } },
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Compliance Checks", "description": "Ensure systems comply with industry standards and regulations to avoid legal and financial penalties." } },
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Penetration Testing", "description": "Simulate real-world attacks to test the effectiveness of your security measures and identify weaknesses." } },
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Risk Management", "description": "Develop a comprehensive risk management strategy to protect your business from potential threats." } },
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Continuous Monitoring", "description": "Implement continuous monitoring solutions to detect and respond to security incidents in real-time." } }
+                        ]
+                    }
+                })}</script>
             </Helmet>
             <Navigation />
 

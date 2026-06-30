@@ -11,6 +11,8 @@ const DOMAIN_OPTIONS = [
     { value: "System Design", label: "System Design", icon: "🏗️", color: "from-purple-400 to-indigo-500" },
     { value: "React JS", label: "React JS", icon: "⚛️", color: "from-cyan-400 to-blue-500" },
     { value: "Flutter", label: "Flutter", icon: "🦋", color: "from-sky-400 to-blue-600" },
+    { value: "AI / ML", label: "AI / ML", icon: "🤖", color: "from-pink-400 to-rose-500" },
+    { value: "Research", label: "Research", icon: "🔬", color: "from-teal-400 to-emerald-600" },
     { value: "Other", label: "Other", icon: "🔧", color: "from-gray-400 to-gray-600" },
 ];
 
@@ -274,7 +276,7 @@ export default function InternShip() {
                 {/* ── Primary SEO ── */}
                 <title>Free Remote IT Internship in Nepal | Policies, Rules & FAQ | A1 IT Innovation</title>
                 <meta name="description" content="A1 IT Innovation offers a free, fully remote IT internship in Nepal. No fees, no salary required. Interns work on real projects, get mentorship, hosting, servers, a certificate, and a recommendation letter. Minimum 2 months. Saturday off. Daily log required. Job offer possible if work goes to production." />
-                <meta name="keywords" content="free IT internship Nepal, remote internship Nepal, unpaid internship Nepal, IT internship 2024 2025, React internship Nepal, Flutter internship, DevOps internship Nepal, Java Spring Boot internship, internship certificate Nepal, internship recommendation letter Nepal, A1 IT Innovation internship, internship rules Nepal, internship policy Nepal" />
+                <meta name="keywords" content="free IT internship Nepal, remote internship Nepal, unpaid internship Nepal, IT internship 2024 2025, React internship Nepal, Flutter internship, DevOps internship Nepal, Java Spring Boot internship, AI ML internship Nepal, machine learning internship Nepal, research internship Nepal, internship certificate Nepal, internship recommendation letter Nepal, A1 IT Innovation internship, internship rules Nepal, internship policy Nepal" />
                 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
                 <link rel="canonical" href="https://www.a1itinnovation.com.np/services/internship" />
 
@@ -313,7 +315,7 @@ export default function InternShip() {
                         "email": "info@a1itinnovation.com.np",
                         "address": { "@type": "PostalAddress", "addressCountry": "NP" }
                     },
-                    "occupationalCategory": "Software Development, Web Development, Mobile Development, DevOps",
+                    "occupationalCategory": "Software Development, Web Development, Mobile Development, DevOps, Artificial Intelligence, Machine Learning, Research",
                     "timeToComplete": "P2M",
                     "educationalProgramMode": "online",
                     "offers": {
@@ -441,6 +443,8 @@ export default function InternShip() {
                                         {d.value === "System Design" && "Design high-scale architectures"}
                                         {d.value === "React JS" && "Modern frontend development"}
                                         {d.value === "Flutter" && "Cross-platform mobile apps"}
+                                        {d.value === "AI / ML" && "Models, data pipelines & intelligent systems"}
+                                        {d.value === "Research" && "Explore, experiment & publish new ideas"}
                                     </p>
                                 </div>
                             ))}
