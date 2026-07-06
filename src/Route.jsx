@@ -34,9 +34,13 @@ import DomainHosting from "./Pages/Services/DomainHosting";
 import Intern from "./Pages/Services/InternShip.jsx";
 import MobileDev from "./Pages/Services/MobileDev";
 import SecurityAudit from "./Pages/Services/SecurityAudit";
+import DigitalMarketingService from "./Pages/Services/DigitalMarketing";
 import WebDev from "./Pages/Services/WebDev";
 import Workshop from "./Pages/Services/Workshop";
 import DevOps from "./Pages/Services/DevOps";
+
+// Offers
+import LifetimeWebsite from "./Pages/Offers/LifetimeWebsite";
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -86,7 +90,11 @@ function RouteContent() {
       <Route path="/services/mobile-dev" element={<MobileDev />} />
       <Route path="/services/web-dev" element={<WebDev />} />
       <Route path="/services/security-audit" element={<SecurityAudit />} />
+      <Route path="/services/digital-marketing" element={<DigitalMarketingService />} />
       <Route path="/services/devops" element={<DevOps />} />
+
+      {/* Offers */}
+      <Route path="/offers/lifetime-website" element={<LifetimeWebsite />} />
     </Routes>
   );
 }

@@ -1,10 +1,12 @@
 import logoImage from "../assets/logo.png";
 
 const servicesLinks = [
+  { href: "/offers/lifetime-website", label: "🔥 Lifetime Free Domain & Hosting Offer" },
   { href: "/services/web-dev",        label: "Web Development" },
   { href: "/services/mobile-dev",     label: "Mobile App Development" },
   { href: "/services/devops",         label: "DevOps as a Service" },
   { href: "/services/security-audit", label: "Security Audit" },
+  { href: "/services/digital-marketing", label: "Digital Marketing" },
   { href: "/services/domain-hosting", label: "Domain & Hosting" },
   { href: "/services/internship",     label: "Free Internship" },
   { href: "/services/workshop",       label: "Technical Workshop" },

@@ -69,6 +69,22 @@ const services = [
     shortLinkText: "Explore Security",
   },
   {
+    title: "Digital Marketing",
+    description: "Transparent digital marketing — campaign launch, Facebook boosting, video making, free script writing, and free SEO, sized to your business and budget.",
+    icon: (
+      <svg className="w-7 h-7 text-pink-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M3 17L9 11L13 15L21 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M15 7H21V13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+    color: "pink",
+    bg: "bg-pink-50",
+    border: "border-pink-200 hover:border-pink-400",
+    iconBg: "bg-pink-100",
+    link: "/services/digital-marketing",
+    shortLinkText: "Explore Marketing",
+  },
+  {
     title: "Domain & Hosting",
     description: "Reliable and affordable domain registration and web hosting services across Nepal. Fast, secure, and scalable servers.",
     icon: (
@@ -160,7 +176,8 @@ export default function Home() {
               {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Web Development"}},
               {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mobile App Development"}},
               {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "DevOps as a Service"}},
-              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Security Audit"}}
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Security Audit"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Marketing"}}
             ]
           },
         }) }}/>
@@ -322,6 +339,21 @@ export default function Home() {
               </svg>
             </div>
           </div>
+        </section>
+
+        {/* ── LIFETIME OFFER BANNER ── */}
+        <section className="bg-amber-50 border-y border-amber-200 py-4" aria-label="Lifetime website offer">
+          <a
+            href="/offers/lifetime-website"
+            className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center group"
+          >
+            <span className="inline-flex items-center gap-2 text-amber-800 font-semibold">
+              🔥 Evergreen Offer: Free Lifetime Domain + Hosting + SEO — one-time Rs. 30,000, no renewal ever
+            </span>
+            <span className="text-amber-700 font-bold underline group-hover:text-amber-900 whitespace-nowrap">
+              See the offer →
+            </span>
+          </a>
         </section>
 
         {/* ── TRUST STATS BAR ── */}

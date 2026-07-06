@@ -3,10 +3,10 @@ import { useState, useRef, useEffect } from "react";
 const BOT_NAME = "A1 Assistant";
 
 const QUICK_REPLIES = [
+  "Lifetime Offer",
   "Our Services",
+  "Digital Marketing",
   "Free Internship",
-  "Contact Us",
-  "DevOps",
 ];
 
 function getBotReply(input) {
@@ -33,8 +33,14 @@ function getBotReply(input) {
   if (/domain|hosting|host/.test(msg))
     return "🌐 We offer reliable domain registration & web hosting across Nepal — fast, secure, and affordable.\n\nLearn more → /services/domain-hosting";
 
+  if (/lifetime|life time|free domain|free hosting|one.?time|30,?000|renewal|offer\b/.test(msg))
+    return "🔥 Our Lifetime Offer: pay once (Rs. 30,000) and get free lifetime domain, free lifetime hosting, free SEO, AI traffic SEO, and human traffic SEO — no yearly or monthly renewal, ever.\n\nSee the offer → /offers/lifetime-website";
+
+  if (/market|seo|facebook|fb boost|boost|social media|campaign|video|reel|ads?\b|promot/.test(msg))
+    return "📈 We're a transparent digital marketing team in Nepal — campaign launch, Facebook/Instagram boosting, video making with free script writing, free SEO, and affordable ad boosting sized to your business. If you don't exist online, people won't trust you — we fix that.\n\nLearn more → /services/digital-marketing";
+
   if (/service/.test(msg))
-    return "🚀 We offer:\n• Web Development\n• Mobile App Development\n• DevOps as a Service\n• Security Audit\n• Domain & Hosting\n• Free IT Internship\n\nWhich one interests you?";
+    return "🚀 We offer:\n• Web Development\n• Mobile App Development\n• DevOps as a Service\n• Digital Marketing\n• Security Audit\n• Domain & Hosting\n• Free IT Internship\n• 🔥 Lifetime Free Domain & Hosting Offer\n\nWhich one interests you?";
 
   if (/price|cost|rate|charge|budget|afford/.test(msg))
     return "💰 Our pricing is designed to be affordable for Nepali startups and businesses — enterprise-grade quality at local prices.\n\nGet a free quote → /contact";

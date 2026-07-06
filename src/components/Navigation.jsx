@@ -7,6 +7,7 @@ const servicesLinks = [
   { href: "/services/mobile-dev",     icon: "📱", label: "Mobile App Dev",       desc: "Android & iOS with Flutter" },
   { href: "/services/devops",         icon: "⚙️", label: "DevOps as a Service",  desc: "CI/CD, Kubernetes & cloud infra" },
   { href: "/services/security-audit", icon: "🛡️", label: "Security Audit",       desc: "Vulnerability & pen testing" },
+  { href: "/services/digital-marketing", icon: "📈", label: "Digital Marketing",  desc: "Campaigns, FB boosting & free SEO" },
   { href: "/services/domain-hosting", icon: "🌐", label: "Domain & Hosting",     desc: "Registration & managed hosting" },
   { href: "/services/internship",     icon: "🎓", label: "Free Internship",       desc: "Real projects, real mentors" },
   { href: "/services/workshop",       icon: "🏫", label: "Tech Workshop",         desc: "Training at colleges & schools" },
@@ -158,6 +159,12 @@ export default function Navigation() {
             <a href="/blog"    className="font-medium text-gray-700 hover:text-indigo-600 transition-colors py-2">Blog</a>
             <Dropdown title="Company" links={companyLinks} />
             <a
+              href="/offers/lifetime-website"
+              className="font-semibold text-amber-700 bg-amber-50 border border-amber-200 hover:bg-amber-100 transition-colors py-2 px-3 rounded-full whitespace-nowrap"
+            >
+              🔥 Lifetime Offer
+            </a>
+            <a
               href="/contact"
               className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200 ml-1 whitespace-nowrap"
             >
@@ -208,6 +215,13 @@ export default function Navigation() {
 
             {/* CTA — always visible below header */}
             <div className="px-5 py-4 border-b border-gray-100 space-y-2 flex-shrink-0">
+              <a
+                href="/offers/lifetime-website"
+                onClick={closeMobileMenu}
+                className="block w-full text-center bg-amber-50 border border-amber-200 text-amber-700 font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
+              >
+                🔥 Lifetime Free Domain &amp; Hosting Offer
+              </a>
               <a
                 href="/contact"
                 onClick={closeMobileMenu}

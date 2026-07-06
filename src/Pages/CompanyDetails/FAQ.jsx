@@ -32,7 +32,7 @@ const faqData = [
     items: [
       {
         question: "What services do you provide?",
-        answer: "We offer a full range of IT services:\n• Web Development (React, Next.js)\n• Mobile App Development (Android & iOS / Flutter)\n• DevOps as a Managed Service\n• Custom AI & Chatbot Development\n• Security Audit & Vulnerability Testing\n• Domain Registration & Web Hosting\n• Online Courses (Digital Marketing, Cybersecurity, DevOps, System Design)\n• Free IT Internship Program",
+        answer: "We offer a full range of IT services:\n• Web Development (React, Next.js)\n• Mobile App Development (Android & iOS / Flutter)\n• DevOps as a Managed Service\n• Digital Marketing (campaign launch, FB boosting, video making, free SEO)\n• Custom AI & Chatbot Development\n• Security Audit & Vulnerability Testing\n• Domain Registration & Web Hosting\n• Online Courses (Digital Marketing, Cybersecurity, DevOps, System Design)\n• Free IT Internship Program",
       },
       {
         question: "What is your DevOps Managed Service?",
@@ -49,6 +49,58 @@ const faqData = [
       {
         question: "Can you help with software migration and upgrades?",
         answer: "Yes. We handle legacy system migrations, cloud transitions, AI integrations, and platform upgrades — with minimal downtime and full data integrity throughout the process.",
+      },
+    ],
+  },
+  {
+    category: "Lifetime Offer",
+    icon: "🔥",
+    items: [
+      {
+        question: "What is the Lifetime Free Domain & Hosting offer?",
+        answer: "It's a one-time payment package for a business website: Rs. 30,000 once, and we cover your domain registration and web hosting renewal for the lifetime of your website — plus free SEO, AI traffic SEO, and human traffic SEO. No yearly or monthly renewal fee, ever.",
+      },
+      {
+        question: "Is there really no renewal cost later?",
+        answer: "Correct — zero. Most agencies charge you again every year for domain and hosting renewal. We absorb that cost on our side permanently, as long as your website stays with us.",
+      },
+      {
+        question: "Who should consider this offer?",
+        answer: "Any individual or business in Nepal that needs a professional website — especially those who've delayed going online because of recurring hosting/domain costs. Your website is the face of your business; this removes the biggest cost barrier to having one.",
+      },
+      {
+        question: "How do I claim the offer?",
+        answer: "Contact us via the /contact page or call +977-9816032025. We'll confirm your requirements and get your one-time payment website with lifetime domain and hosting started.",
+      },
+    ],
+  },
+  {
+    category: "Digital Marketing",
+    icon: "📈",
+    items: [
+      {
+        question: "Are you a digital marketing agency in Nepal?",
+        answer: "Yes. A1 IT Innovation is a full digital marketing team in Nepal, offering campaign launch & management, Facebook/Instagram boosting, video making with free script writing, free SEO, free marketing advice, and affordable social media ad boosting sized to your business.",
+      },
+      {
+        question: "What makes your digital marketing service different?",
+        answer: "Complete transparency. Every rupee of ad spend is reported clearly — no hidden markups. We believe if you don't exist online, people won't trust you, and if they don't trust you, they won't become your client. That's why we treat your online presence and reporting as seriously as you treat your business.",
+      },
+      {
+        question: "Is SEO really included for free?",
+        answer: "Yes. Free on-page SEO optimization is included with our digital marketing packages at no extra charge — helping your business get discovered organically alongside your paid campaigns.",
+      },
+      {
+        question: "Do you write the ad/video scripts for us?",
+        answer: "Yes, completely free. Our team writes the script and produces the video for your campaign — you don't need a separate content writer or videographer.",
+      },
+      {
+        question: "How is the ad boosting budget decided?",
+        answer: "We size your Facebook/Instagram boosting budget to your business size, goals, and target audience — so small businesses get relevant, affordable campaigns instead of one-size-fits-all pricing.",
+      },
+      {
+        question: "Do I need to already have a website or brand to start?",
+        answer: "No. We offer free marketing advice and brand awareness guidance even before you sign up, so you can make an informed decision — whether you're just starting out or already established.",
       },
     ],
   },
@@ -148,8 +200,8 @@ export default function FaqSection() {
     <>
       <Helmet>
         <title>FAQ | A1 IT Innovation Nepal — IT Services, Courses & Internship Questions Answered</title>
-        <meta name="description" content="Frequently asked questions about A1 IT Innovation Nepal — offices in Damak, Kathmandu & Bhaktapur, DevOps managed services, online courses (Digital Marketing, Cybersecurity, DevOps, System Design), free IT internships, transparent pricing, and more." />
-        <meta name="keywords" content="A1 IT Innovation FAQ, IT company Nepal, DevOps managed service Nepal, online courses Nepal, digital marketing course Nepal, cybersecurity course Nepal, system design course Nepal, free internship Nepal, software company Damak, IT company Kathmandu, Bhaktapur IT company, transparent IT company Nepal" />
+        <meta name="description" content="Frequently asked questions about A1 IT Innovation Nepal — offices in Damak, Kathmandu & Bhaktapur, DevOps managed services, digital marketing team in Nepal, online courses (Digital Marketing, Cybersecurity, DevOps, System Design), free IT internships, transparent pricing, and more." />
+        <meta name="keywords" content="A1 IT Innovation FAQ, IT company Nepal, DevOps managed service Nepal, digital marketing agency Nepal, digital marketing team in Nepal, free domain lifetime Nepal, free hosting lifetime Nepal, one time payment website Nepal, online courses Nepal, digital marketing course Nepal, cybersecurity course Nepal, system design course Nepal, free internship Nepal, software company Damak, IT company Kathmandu, Bhaktapur IT company, transparent IT company Nepal" />
         <meta property="og:title" content="FAQ | A1 IT Innovation Nepal" />
         <meta property="og:description" content="Answers to common questions about A1 IT Innovation's services, internship program, pricing, and process." />
         <meta property="og:url" content="https://www.a1itinnovation.com.np/company/faq" />
