@@ -52,7 +52,7 @@ function getBotReply(input) {
     return "🏢 A1 IT Innovation is Nepal's trusted IT company — founded in 2021, serving 20+ clients with web, mobile, DevOps & AI solutions.\n\nLearn more → /company/about";
 
   if (/portfolio|work|project|client/.test(msg))
-    return "📁 We've delivered 19+ projects for clients across Nepal — from ridesharing platforms to gaming apps.\n\nView our work → /works";
+    return "📁 We've delivered 21+ projects for clients across Nepal — from ridesharing platforms to gaming apps. We also run two products of our own: GigFine and T-Meet.\n\nView our work → /works";
 
   return "Thanks for your message! 🙏 I'm a simple bot for now — for detailed queries, our team is always ready to help.\n\nContact us → /contact";
 }

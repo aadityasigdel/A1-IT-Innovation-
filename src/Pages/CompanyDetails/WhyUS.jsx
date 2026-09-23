@@ -4,7 +4,7 @@ import Navigation from "../../components/Navigation";
 
 const stats = [
   { value: "20+", label: "Clients Served",    icon: "🤝" },
-  { value: "19+", label: "Projects Delivered", icon: "🚀" },
+  { value: "21+", label: "Projects Delivered", icon: "🚀" },
   { value: "4+",  label: "Years Active",        icon: "📅" },
   { value: "500+",label: "Students Trained",    icon: "🎓" },
 ];

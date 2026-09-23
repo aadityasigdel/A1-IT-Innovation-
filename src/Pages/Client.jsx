@@ -8,11 +8,46 @@ import kryzox from "../assets/Clients/KryZone.png";
 import Tufan from "../assets/Clients/tufan.png";
 import Utkrista from "../assets/Clients/utkrista Logo.png";
 import Rolwaling from "../assets/Clients/rh.png";
+import GigFine from "../assets/gigfine-logo-img.webp";
+import TMeet from "../assets/no-background.png";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 
+// T-Meet's logo is white text with a lot of empty space below it,
+// so it needs a dark tile and a zoom toward the mark.
+const tmeetLogoStyle = { transform: "scale(1.9)", transformOrigin: "50% 36%" };
+
 export default function Client() {
+  // Products we designed and built ourselves, end to end.
+  const products = [
+    {
+      logo: GigFine,
+      name: "GigFine",
+      ownProduct: true,
+      url: "https://gigfine.com/",
+      category: "Ridesharing",
+      project: "Complaint & Issue Reporting Platform",
+      location: "Nepal",
+      summary: "If you ride with Pathao, Yango, Tufan, Sajilo or any other app in Nepal, you've probably had a trip go wrong and nowhere useful to report it. GigFine is that place. Riders and passengers post the issue, and it stays on record instead of disappearing into an app's support inbox.",
+      tags: ["Riders", "Passengers", "All ride-share apps"],
+    },
+    {
+      logo: TMeet,
+      name: "T-Meet",
+      ownProduct: true,
+      url: "http://tmeet.tsaedu.com/",
+      category: "Video Conferencing",
+      project: "Video Meeting Platform",
+      location: "Nepal",
+      summary: "A Nepali video conferencing system for online classes and business meetings. Built fully in-house, with meeting data kept under our control rather than routed through a foreign service.",
+      tags: ["Online classes", "Business meetings", "Made in Nepal"],
+      logoBg: "bg-slate-900",
+      logoStyle: tmeetLogoStyle,
+    },
+  ];
+
   const clients = [
+    ...products,
     { logo: Hamrodokan, name: "Hamro Dokan",        url: "#",                                                                                       category: "E-Commerce",  project: "Web Platform",       location: "Nepal"         },
     { logo: damakcampus, name: "Damak Campus",       url: "https://damakcampus.edu.np/",                                                            category: "Education",   project: "College Website",    location: "Damak, Jhapa"  },
     { logo: himalayan,  name: "Himalayan Sanchaya",  url: "https://himalayan-sanchaya.vercel.app/",                                                 category: "Finance",     project: "Web App",            location: "Nepal"         },
@@ -25,26 +60,27 @@ export default function Client() {
   ];
 
   const stats = [
-    { value: "20+",  label: "Clients Served"     },
-    { value: "19+",  label: "Projects Delivered"  },
-    { value: "4+",   label: "Years Active"        },
-    { value: "100%", label: "On-Time Delivery"    },
+    { value: "20+",  label: "Clients"             },
+    { value: "21+",  label: "Projects shipped"    },
+    { value: "2",    label: "Products of our own" },
+    { value: "4+",   label: "Years at it"         },
   ];
 
   const trustPillars = [
-    { icon: "🎯", title: "Result-Driven",        desc: "Every project is measured by outcomes — traffic, conversions, and real business growth for your organisation." },
-    { icon: "🔒", title: "Transparent Process",  desc: "Regular updates, open communication, and clear milestones throughout every phase of your project." },
-    { icon: "⚡", title: "Fast Delivery",         desc: "Agile workflows ensure your project ships on time without compromising on quality or attention to detail." },
-    { icon: "🛡️", title: "After-Launch Support", desc: "We don't disappear after delivery. Ongoing support, maintenance, and upgrades are always included." },
+    { icon: "🎯", title: "We ask about the goal first", desc: "Before we talk features we want to know what the site or app is supposed to change for you: more admissions, fewer phone calls, more orders." },
+    { icon: "🔒", title: "You see the work as it happens", desc: "You get a preview link early and regular updates, so nothing on launch day comes as a surprise." },
+    { icon: "⚡", title: "Small team, short loops",       desc: "The person you talk to is usually the person writing the code. Fixes don't wait on three rounds of hand-offs." },
+    { icon: "🛡️", title: "We stick around after launch",  desc: "Support and maintenance continue after launch. If something breaks, you tell us and we fix it." },
   ];
 
   const industries = [
-    { icon: "🎓", label: "Education"     },
-    { icon: "🏥", label: "Healthcare"    },
-    { icon: "💰", label: "Finance"       },
-    { icon: "🛒", label: "E-Commerce"    },
-    { icon: "🎮", label: "Gaming"         },
-    { icon: "🚗", label: "Ridesharing"   },
+    { icon: "🎓", label: "Education"          },
+    { icon: "🏥", label: "Healthcare"         },
+    { icon: "💰", label: "Finance"            },
+    { icon: "🛒", label: "E-Commerce"         },
+    { icon: "🎮", label: "Gaming"             },
+    { icon: "🚗", label: "Ridesharing"        },
+    { icon: "🎥", label: "Video Conferencing" },
   ];
 
   const categoryColors = {
@@ -56,25 +92,26 @@ export default function Client() {
     "Gaming":       "bg-pink-100 text-pink-700",
     "Ridesharing":  "bg-yellow-100 text-yellow-700",
     "Mobile App":   "bg-indigo-100 text-indigo-700",
+    "Video Conferencing": "bg-sky-100 text-sky-700",
   };
 
   return (
     <>
       <Helmet>
-        <title>Our Clients | A1 IT Innovation Nepal — Trusted IT Partner in Damak, Jhapa &amp; Kathmandu</title>
-        <meta name="description" content="A1 IT Innovation Nepal proudly serves 9+ clients across education, healthcare, finance, and technology. Trusted IT partner for Damak Campus, Himalayan Sanchaya, Brihat Patro, Kryzox, Tufan, Rolwaling Hospital and more." />
-        <meta name="keywords" content="A1 IT Innovation clients, IT company Nepal, software development Damak, web development Jhapa, app development Nepal, IT services Kathmandu, Damak Campus, Himalayan Sanchaya, Brihat Patro, Kryzox, Utkrista, Tufan, Rolwaling Hospital, trusted IT company Nepal" />
+        <title>Clients &amp; Products of A1 IT Innovation | GigFine, T-Meet, Tufan, Kryzox, Damak Campus</title>
+        <meta name="description" content="Clients and products of A1 IT Innovation Nepal: GigFine (ride-share issue reporting), T-Meet (Nepali video conferencing), Tufan, Kryzox, Brihat Patro, Damak Campus, DTEF, Utkrista Shikshya, Himalayan Sanchaya, Rolwaling Hospital and Hamro Dokan." />
+        <meta name="keywords" content="A1 IT Innovation clients, client of A1 IT Innovation, clients of A1 IT, product of A1 IT Innovation, products of A1 IT, A1 IT Innovation products, A1 IT Innovation portfolio, GigFine, GigFine Nepal, T-Meet, TMeet Nepal, Nepali video conferencing, Tufan, Kryzox, Brihat Patro, Damak Campus, DTEF, Utkrista Shikshya, Himalayan Sanchaya, Rolwaling Hospital, Hamro Dokan, IT company Nepal, software company Damak Jhapa" />
         <link rel="canonical" href="https://www.a1itinnovation.com.np/clients" />
-        <meta property="og:title" content="Our Clients | A1 IT Innovation Nepal" />
-        <meta property="og:description" content="Trusted IT partner for 9+ organizations across Nepal — education, healthcare, finance, and technology. View our growing client portfolio." />
+        <meta property="og:title" content="Clients & Products of A1 IT Innovation Nepal" />
+        <meta property="og:description" content="GigFine, T-Meet, Tufan, Kryzox, Damak Campus and more: the products we've built and the organisations we work with across Nepal." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.a1itinnovation.com.np/clients" />
         <meta property="og:image" content="https://www.a1itinnovation.com.np/Publiclogo.png" />
         <meta property="og:locale" content="en_NP" />
         <meta name="robots" content="index, follow" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Clients | A1 IT Innovation Nepal" />
-        <meta name="twitter:description" content="Trusted by 9+ organizations across Nepal in education, healthcare, finance, and technology." />
+        <meta name="twitter:title" content="Clients & Products | A1 IT Innovation Nepal" />
+        <meta name="twitter:description" content="GigFine, T-Meet, Tufan, Kryzox, Damak Campus and more, all built by A1 IT Innovation in Nepal." />
       </Helmet>
 
       <Navigation />
@@ -89,14 +126,14 @@ export default function Client() {
             <div className="flex-1 flex flex-col gap-6 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 text-sm font-semibold px-4 py-2 rounded-full w-fit mx-auto lg:mx-0">
                 <span className="w-2 h-2 bg-indigo-600 rounded-full animate-pulse"></span>
-                20+ Organizations Trust Us
+                Clients &amp; products of A1 IT Innovation
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                Nepal's Most Trusted<br />
-                <span className="text-indigo-600">IT Innovation Partner</span>
+                The people we build for,<br />
+                <span className="text-indigo-600">and the things we've built</span>
               </h1>
               <p className="text-lg text-gray-600 max-w-xl leading-relaxed">
-                From educational institutes in Damak to healthcare providers across Nepal, A1 IT Innovation delivers software, web, and mobile solutions that drive real results.
+                A campus in Damak, a community hospital in Rolwaling, a ride-sharing company, an esports platform. Plus two products of our own: GigFine and T-Meet. Here's who we've worked with so far.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a href="/contact" className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3 rounded-lg transition duration-300 inline-flex items-center justify-center gap-2">
@@ -191,7 +228,7 @@ export default function Client() {
                 {/* ── Client node: Tufan ── */}
                 <circle cx="55" cy="228" r="40" fill="none" stroke="#6366F1" strokeWidth="1.2" strokeDasharray="6 5" opacity="0.45" className="spin-ring"/>
                 <circle cx="55" cy="228" r="34" fill="white" stroke="#E0E7FF" strokeWidth="2"/>
-                <text x="55" y="223" textAnchor="middle" fontSize="18">🎵</text>
+                <text x="55" y="223" textAnchor="middle" fontSize="18">🚗</text>
                 <text x="55" y="241" textAnchor="middle" fontFamily="system-ui,sans-serif" fontSize="8" fontWeight="600" fill="#374151">Tufan</text>
 
                 {/* ── Client node: DTEF (smaller) ── */}
@@ -205,6 +242,16 @@ export default function Client() {
                 <circle cx="325" cy="88" r="28" fill="white" stroke="#E0E7FF" strokeWidth="2"/>
                 <text x="325" y="83" textAnchor="middle" fontSize="15">⭐</text>
                 <text x="325" y="100" textAnchor="middle" fontFamily="system-ui,sans-serif" fontSize="8" fill="#374151">Utkrista</text>
+
+                {/* ── Our products: GigFine & T-Meet ── */}
+                <line x1="250" y1="210" x2="190" y2="380" stroke="#C7D2FE" strokeWidth="1.5" strokeDasharray="5 4"/>
+                <line x1="250" y1="210" x2="310" y2="380" stroke="#C7D2FE" strokeWidth="1.5" strokeDasharray="5 4"/>
+                <circle cx="190" cy="380" r="28" fill="white" stroke="#FCA5A5" strokeWidth="2"/>
+                <text x="190" y="375" textAnchor="middle" fontSize="15">🛺</text>
+                <text x="190" y="392" textAnchor="middle" fontFamily="system-ui,sans-serif" fontSize="8" fontWeight="600" fill="#374151">GigFine</text>
+                <circle cx="310" cy="380" r="28" fill="white" stroke="#7DD3FC" strokeWidth="2"/>
+                <text x="310" y="375" textAnchor="middle" fontSize="15">🎥</text>
+                <text x="310" y="392" textAnchor="middle" fontFamily="system-ui,sans-serif" fontSize="8" fontWeight="600" fill="#374151">T-Meet</text>
 
               </svg>
             </div>
@@ -227,9 +274,9 @@ export default function Client() {
         <section aria-labelledby="clients-heading" className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-10">
-              <h2 id="clients-heading" className="text-3xl font-bold text-gray-900 mb-3">Our Esteemed Clients</h2>
+              <h2 id="clients-heading" className="text-3xl font-bold text-gray-900 mb-3">Who we've worked with</h2>
               <div className="w-16 h-1 bg-indigo-600 mx-auto rounded-full mb-4"></div>
-              <p className="text-gray-500 max-w-xl mx-auto">Trusted by leading organizations across education, healthcare, finance, and technology in Nepal.</p>
+              <p className="text-gray-500 max-w-xl mx-auto">Colleges, a hospital, a savings company, app startups and a couple of our own products.</p>
             </div>
             <div className="relative overflow-hidden rounded-xl bg-white border border-gray-100 py-6 shadow-sm">
               <div className="pointer-events-none absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-white to-transparent z-10"/>
@@ -244,8 +291,10 @@ export default function Client() {
                   <a key={i} href={client.url} target="_blank" rel="noopener noreferrer" title={client.name}
                     className="group relative flex flex-col items-center justify-center w-28 h-28 bg-gray-50 rounded-xl border border-gray-100 hover:border-indigo-200 hover:shadow-md transition duration-300"
                   >
-                    <img src={client.logo} alt={`${client.name} — client of A1 IT Innovation Nepal`}
-                      loading="lazy" width={80} height={80} className="object-contain p-2"/>
+                    <div className={`w-20 h-16 flex items-center justify-center overflow-hidden rounded-lg ${client.logoBg ?? ""}`}>
+                      <img src={client.logo} alt={`${client.name} — ${client.ownProduct ? "product" : "client"} of A1 IT Innovation Nepal`}
+                        loading="lazy" width={80} height={64} style={client.logoStyle} className="max-h-full object-contain p-1"/>
+                    </div>
                     <span className="text-xs text-gray-400 mt-1 text-center px-1 truncate w-full text-center">{client.name}</span>
                   </a>
                 ))}
@@ -255,27 +304,71 @@ export default function Client() {
           </div>
         </section>
 
+        {/* ── Our Own Products ── */}
+        <section aria-labelledby="products-heading" className="py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="max-w-2xl mb-12">
+              <p className="text-sm font-semibold text-indigo-600 mb-2">Products of A1 IT Innovation</p>
+              <h2 id="products-heading" className="text-3xl font-bold text-gray-900 mb-3">Two things we built for ourselves</h2>
+              <p className="text-gray-500">
+                Client work pays the bills, but these two started as problems we kept running into. We designed, built and run both of them in-house.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {products.map((p) => (
+                <article key={p.name} className="flex flex-col border border-gray-200 rounded-2xl overflow-hidden hover:border-indigo-300 hover:shadow-md transition duration-300">
+                  <div className={`h-40 flex items-center justify-center overflow-hidden ${p.logoBg ?? "bg-gray-50"}`}>
+                    <img src={p.logo} alt={`${p.name}, a product of A1 IT Innovation Nepal`} loading="lazy"
+                      style={p.logoStyle} className="max-h-24 max-w-[70%] object-contain"/>
+                  </div>
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <h3 className="text-xl font-bold text-gray-900">{p.name}</h3>
+                      <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700">Our product</span>
+                    </div>
+                    <p className="text-sm text-gray-500 mb-1">{p.project}</p>
+                    <p className="text-gray-600 leading-relaxed mt-3 flex-1">{p.summary}</p>
+                    <div className="flex flex-wrap gap-2 mt-5">
+                      {p.tags.map((t) => (
+                        <span key={t} className="text-xs text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full">{t}</span>
+                      ))}
+                    </div>
+                    <a href={p.url} target="_blank" rel="noopener noreferrer"
+                      className="mt-6 inline-flex items-center gap-1.5 text-indigo-600 hover:text-indigo-800 font-semibold text-sm">
+                      Visit {p.name}
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── Client Cards Grid ── */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14">
-              <h2 className="text-3xl font-bold text-gray-900 mb-3">Partnerships That Matter</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-3">Every project, in one list</h2>
               <div className="w-16 h-1 bg-indigo-600 mx-auto rounded-full mb-4"></div>
-              <p className="text-gray-500 max-w-xl mx-auto">Each partnership represents a commitment to quality, trust, and digital transformation.</p>
+              <p className="text-gray-500 max-w-xl mx-auto">Click any of them to see the live site or app.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {clients.map((client, i) => (
                 <a key={i} href={client.url} target="_blank" rel="noopener noreferrer"
                   className="group flex items-start gap-4 p-5 border border-gray-200 rounded-xl hover:border-indigo-300 hover:shadow-md transition duration-300 bg-white"
                 >
-                  <div className="w-16 h-16 flex-shrink-0 bg-gray-50 rounded-xl flex items-center justify-center border border-gray-100 p-1">
-                    <img src={client.logo} alt={`${client.name} logo`} loading="lazy" width={56} height={56} className="object-contain"/>
+                  <div className={`w-16 h-16 flex-shrink-0 rounded-xl flex items-center justify-center border border-gray-100 p-1 overflow-hidden ${client.logoBg ?? "bg-gray-50"}`}>
+                    <img src={client.logo} alt={`${client.name} logo`} loading="lazy" width={56} height={56} style={client.logoStyle} className="object-contain"/>
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="font-semibold text-gray-900 text-sm mb-1 truncate">{client.name}</h3>
                     <span className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full mb-2 ${categoryColors[client.category] ?? "bg-gray-100 text-gray-600"}`}>
                       {client.category}
                     </span>
+                    {client.ownProduct && (
+                      <span className="inline-block text-xs font-medium px-2 py-0.5 rounded-full mb-2 ml-1 bg-indigo-50 text-indigo-700">Our product</span>
+                    )}
                     <p className="text-xs text-gray-500">{client.project}</p>
                     <p className="text-xs text-gray-400 mt-0.5">📍 {client.location}</p>
                   </div>
@@ -289,9 +382,9 @@ export default function Client() {
         </section>
 
         {/* ── Industries ── */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-white">
           <div className="max-w-5xl mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">Industries We Serve</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">Industries we've worked in</h2>
             <div className="w-16 h-1 bg-indigo-600 mx-auto rounded-full mb-8"></div>
             <div className="flex flex-wrap justify-center gap-4">
               {industries.map((ind, i) => (
@@ -305,16 +398,16 @@ export default function Client() {
         </section>
 
         {/* ── Why Trust Us ── */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14">
-              <h2 className="text-3xl font-bold text-gray-900 mb-3">Why 20+ Organizations Trust A1 IT Innovation</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-3">Why clients keep coming back</h2>
               <div className="w-16 h-1 bg-indigo-600 mx-auto rounded-full mb-4"></div>
-              <p className="text-gray-500 max-w-2xl mx-auto">We don't just build software — we build long-term digital partnerships rooted in trust, quality, and measurable results.</p>
+              <p className="text-gray-500 max-w-2xl mx-auto">Nothing fancy. Just how we work.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {trustPillars.map((pillar, i) => (
-                <div key={i} className="p-6 border border-gray-100 rounded-xl hover:border-indigo-200 hover:shadow-md transition duration-300 text-center group">
+                <div key={i} className="p-6 bg-white border border-gray-100 rounded-xl hover:border-indigo-200 hover:shadow-md transition duration-300 text-center group">
                   <div className="text-4xl mb-4">{pillar.icon}</div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{pillar.title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">{pillar.desc}</p>
@@ -327,8 +420,8 @@ export default function Client() {
         {/* ── CTA ── */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-blue-700 text-white text-center">
           <div className="max-w-3xl mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Join Our Client Family?</h2>
-            <p className="text-indigo-200 text-lg mb-8 max-w-xl mx-auto">Whether you're a startup, institution, or enterprise — we have the expertise to bring your digital vision to life.</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Got something you want built?</h2>
+            <p className="text-indigo-200 text-lg mb-8 max-w-xl mx-auto">Tell us what it is and roughly what you want to spend. We'll tell you honestly whether we're the right fit.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="bg-white text-indigo-600 hover:bg-indigo-50 font-semibold px-8 py-3 rounded-lg transition duration-300">
                 Start Your Project
@@ -348,14 +441,22 @@ export default function Client() {
             "name": "A1 IT Innovation Nepal",
             "url": "https://www.a1itinnovation.com.np",
             "logo": "https://www.a1itinnovation.com.np/Publiclogo.png",
-            "description": "Nepal's trusted IT company serving education, healthcare, finance, and technology sectors. Delivering web development, mobile apps, DevOps, and software solutions since 2023.",
-            "foundingDate": "2023",
+            "description": "IT company in Nepal building web, mobile and software products for education, healthcare, finance, ridesharing and gaming. Maker of GigFine and T-Meet.",
+            "foundingDate": "2021",
             "areaServed": ["Damak, Jhapa", "Kathmandu", "Nepal"],
             "sameAs": [
               "https://www.facebook.com/a1itinnovation",
               "https://www.linkedin.com/company/a1itinnovation"
             ],
-            "knowsAbout": clients.map(c => ({
+            "owns": products.map(p => ({
+              "@type": "SoftwareApplication",
+              "name": p.name,
+              "url": p.url,
+              "description": p.summary,
+              "applicationCategory": p.category,
+              "creator": { "@type": "Organization", "name": "A1 IT Innovation Nepal" }
+            })),
+            "knowsAbout": clients.filter(c => !c.ownProduct).map(c => ({
               "@type": "Organization",
               "name": c.name,
               "url": c.url !== "#" ? c.url : "https://www.a1itinnovation.com.np/clients"

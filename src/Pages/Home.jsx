@@ -1,11 +1,13 @@
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
+import GigFine from "../assets/gigfine-logo-img.webp";
+import TMeet from "../assets/no-background.png";
 
 const services = [
   {
     title: "Web Development",
-    description: "We build fast, SEO-optimized, and responsive websites that grow your business presence all over Nepal — from startups to enterprises.",
+    description: "Websites that load fast, work on a phone and show up on Google. We've built them for colleges, a hospital, shops and startups.",
     icon: (
       <svg className="w-7 h-7 text-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M12 18L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
@@ -23,7 +25,7 @@ const services = [
   },
   {
     title: "Mobile App Development",
-    description: "Professional Android and iOS app development services in Nepal — turning ideas into high-performing mobile experiences.",
+    description: "Android and iOS apps, usually in Flutter so you pay for one codebase instead of two.",
     icon: (
       <svg className="w-7 h-7 text-green-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M12 18H12.01M9 20H15C16.1046 20 17 19.1046 17 18V6C17 4.89543 16.1046 4 15 4H9C7.89543 4 7 4.89543 7 6V18C7 19.1046 7.89543 20 9 20Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -38,7 +40,7 @@ const services = [
   },
   {
     title: "DevOps as a Service",
-    description: "Professional DevOps outsourcing, CI/CD pipeline setup, Kubernetes deployment, and managed cloud infrastructure services across Nepal.",
+    description: "We set up your servers, deployments and monitoring, then look after them so your team doesn't have to.",
     icon: (
       <svg className="w-7 h-7 text-orange-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
@@ -55,7 +57,7 @@ const services = [
   },
   {
     title: "Security Audit",
-    description: "Comprehensive website and app security audit service in Nepal. We detect vulnerabilities and strengthen your system against threats.",
+    description: "We try to break into your site or app before someone else does, then help you fix what we find.",
     icon: (
       <svg className="w-7 h-7 text-yellow-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M12 15V17M6.447 3.93L4.453 5.922C3.726 6.649 3.362 7.017 3.152 7.449C2.942 7.88 2.884 8.36 2.768 9.32L2.146 14.824C2.054 15.584 2.008 15.964 2.153 16.27C2.298 16.576 2.603 16.751 3.212 17.1L8.272 20.052C8.674 20.287 8.875 20.404 9.092 20.454C9.31 20.504 9.534 20.486 9.982 20.45L14.044 20.106C14.438 20.074 14.635 20.058 14.809 19.991C14.984 19.925 15.137 19.812 15.25 19.665L19.367 14.524C19.764 14.024 19.963 13.774 20.023 13.508C20.083 13.241 20.002 12.971 19.84 12.432L18.139 6.524C17.974 5.974 17.892 5.699 17.718 5.49C17.544 5.28 17.305 5.162 16.828 4.925L12.703 2.782C12.298 2.581 12.095 2.48 11.885 2.433C11.675 2.386 11.458 2.393 11.024 2.407L6.555 2.5C6.097 2.515 5.868 2.522 5.689 2.6C5.51 2.677 5.37 2.817 5.089 3.096L4.309 3.876" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -70,7 +72,7 @@ const services = [
   },
   {
     title: "Digital Marketing",
-    description: "Transparent digital marketing — campaign launch, Facebook boosting, video making, free script writing, and free SEO, sized to your business and budget.",
+    description: "Facebook boosting, short videos, scripts and SEO. You see where every rupee went.",
     icon: (
       <svg className="w-7 h-7 text-pink-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M3 17L9 11L13 15L21 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -86,7 +88,7 @@ const services = [
   },
   {
     title: "Domain & Hosting",
-    description: "Reliable and affordable domain registration and web hosting services across Nepal. Fast, secure, and scalable servers.",
+    description: ".com and .com.np domains plus hosting, set up for you. No confusing control panels.",
     icon: (
       <svg className="w-7 h-7 text-purple-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M3 10H21M7 15H8M12 15H13M12 3V4M12 20V21M19 4L18 5M5 19L6 18M18 19L19 18M6 5L5 6M3 14C3 15.1819 3.23279 16.3522 3.68508 17.4442C4.13738 18.5361 4.80031 19.5282 5.63604 20.364C6.47177 21.1997 7.46392 21.8626 8.55585 22.3149C9.64778 22.7672 10.8181 23 12 23C13.1819 23 14.3522 22.7672 15.4442 22.3149C16.5361 21.8626 17.5282 21.1997 18.364 20.364C19.1997 19.5282 19.8626 18.5361 20.3149 17.4442C20.7672 16.3522 21 15.1819 21 14C21 12.8181 20.7672 11.6478 20.3149 10.5558C19.8626 9.46392 19.1997 8.47177 18.364 7.63604C17.5282 6.80031 16.5361 6.13738 15.4442 5.68508C14.3522 5.23279 13.1819 5 12 5C10.8181 5 9.64778 5.23279 8.55585 5.68508C7.46392 6.13738 6.47177 6.80031 5.63604 7.63604C4.80031 8.47177 4.13738 9.46392 3.68508 10.5558C3.23279 11.6478 3 12.8181 3 14Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -101,7 +103,7 @@ const services = [
   },
   {
     title: "Free IT Internship",
-    description: "Gain hands-on IT experience with our free internship programs in web development, app development, and AI training across Nepal.",
+    description: "Free internships in web, app and AI work. You work on real projects with our team, not practice exercises.",
     icon: (
       <svg className="w-7 h-7 text-red-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M19 21V5C19 3.89543 18.1046 3 17 3H7C5.89543 3 5 3.89543 5 5V21M19 21L21 21M19 21H14M5 21L3 21M5 21H10M9 6.99998H10M9 11H10M14 6.99998H15M14 11H15M10 21V16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V21M10 21H14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -118,16 +120,16 @@ const services = [
 
 const stats = [
   { value: "20+", label: "Clients Served",      icon: "🤝" },
-  { value: "19+", label: "Projects Delivered",   icon: "🚀" },
+  { value: "21+", label: "Projects Delivered",   icon: "🚀" },
   { value: "4+",  label: "Years Active",          icon: "📅" },
   { value: "8+",  label: "Team Members",          icon: "👥" },
 ];
 
 const whyUs = [
-  { icon: "🏆", title: "4+ Years Experience",      desc: "Delivering web, mobile, and DevOps solutions since 2021 — proven track record for local and international clients." },
-  { icon: "💰", title: "50–70% Cost Savings",       desc: "Same quality as US/UK agencies at 50–70% lower cost. Enterprise-grade delivery on startup-friendly budgets." },
-  { icon: "⚡", title: "Agile & Fast Delivery",     desc: "Lean teams and agile methods — your project ships on time with transparent progress updates throughout." },
-  { icon: "🌍", title: "Global Quality Standards",  desc: "React, Next.js, Flutter, Kubernetes, Docker — modern tech stack matching international engineering standards." },
+  { icon: "🏆", title: "Doing this since 2021",     desc: "Four years of web, mobile and DevOps work for clients in Nepal and abroad. We have live projects you can go and check." },
+  { icon: "💰", title: "Fair prices",               desc: "For clients abroad we usually cost 50–70% less than a US or UK agency. For Nepali clients, we quote what the job is actually worth." },
+  { icon: "⚡", title: "You talk to the builders",  desc: "No account managers in the middle. You message the developer working on your project and get a straight answer." },
+  { icon: "🧩", title: "We build our own products",  desc: "GigFine and T-Meet are ours. Running our own products keeps us honest about what actually works." },
 ];
 
 export default function Home() {
@@ -135,8 +137,8 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Helmet>
         <title>A1 IT Innovation — Web Development, Mobile Apps &amp; DevOps as a Service | Nepal IT Company</title>
-        <meta name="description" content="A1 IT Innovation is a Nepal-based IT company delivering world-class web development, mobile app development, DevOps as a Service, and software outsourcing to clients globally. 4+ years, 20+ clients, 3 offices." />
-        <meta name="keywords" content="IT company Nepal, web development company Nepal, mobile app development company, DevOps as a service, software outsourcing Nepal, offshore web development, hire Flutter developer, custom web development, managed DevOps services, IT outsourcing Nepal, React development company, web system development, SaaS development, A1 IT Innovation, software development Damak Jhapa Kathmandu" />
+        <meta name="description" content="A1 IT Innovation is a Nepal-based IT company building websites, mobile apps and DevOps setups for clients in Nepal and abroad. Makers of GigFine and T-Meet. 20+ clients, offices in Damak, Kathmandu and Bhaktapur." />
+        <meta name="keywords" content="IT company Nepal, web development company Nepal, mobile app development company, DevOps as a service, software outsourcing Nepal, offshore web development, hire Flutter developer, custom web development, managed DevOps services, IT outsourcing Nepal, React development company, web system development, SaaS development, A1 IT Innovation, software development Damak Jhapa Kathmandu, A1 IT Innovation products, product of A1 IT, client of A1 IT Innovation, GigFine, T-Meet, Nepali video conferencing, ride sharing complaint Nepal" />
         <link rel="canonical" href="https://www.a1itinnovation.com.np/" />
         <meta property="og:title" content="A1 IT Innovation — Web, Mobile &amp; DevOps IT Company | Nepal" />
         <meta property="og:description" content="Nepal-based IT company delivering web development, mobile apps, DevOps as a Service, and software outsourcing globally. 50–70% more affordable than US/UK agencies." />
@@ -168,6 +170,10 @@ export default function Home() {
             "availableLanguage": ["English", "Nepali"],
             "contactOption": "TollFree"
           },
+          "owns": [
+            {"@type": "SoftwareApplication", "name": "GigFine", "url": "https://gigfine.com/", "applicationCategory": "Ride-sharing issue reporting"},
+            {"@type": "SoftwareApplication", "name": "T-Meet", "url": "http://tmeet.tsaedu.com/", "applicationCategory": "Video conferencing"}
+          ],
           "knowsAbout": ["Web Development", "Mobile App Development", "DevOps as a Service", "Software Outsourcing", "Cybersecurity", "Cloud Infrastructure", "React.js", "Flutter", "Kubernetes", "Docker"],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -195,22 +201,22 @@ export default function Home() {
             <div className="flex-1 flex flex-col gap-6 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 text-sm font-semibold px-4 py-2 rounded-full w-fit mx-auto lg:mx-0">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                Trusted by 20+ Clients — Nepal &amp; Globally
+                20+ clients · makers of GigFine &amp; T-Meet
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Nepal's Trusted{" "}
-                <span className="text-indigo-600">IT Company <span className="rocket-fly">🚀</span></span>
+                Software, apps and websites,{" "}
+                <span className="text-indigo-600">built in Damak <span className="rocket-fly">🚀</span></span>
               </h1>
 
               <p className="text-lg text-gray-600 max-w-xl leading-relaxed">
-                A1 IT Innovation delivers world-class web development, mobile apps, DevOps as a Service, and software solutions — from Damak &amp; Kathmandu to clients worldwide. 50–70% more affordable than US/UK agencies, without compromising quality.
+                We're a small team from Jhapa with offices in Kathmandu and Bhaktapur. We build websites, mobile apps and backend systems for businesses in Nepal and abroad, and we run a couple of products of our own.
               </p>
 
               {/* Trust pills */}
               <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                 <span className="bg-white border border-gray-200 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">📍 Nepal — 3 Offices</span>
-                <span className="bg-white border border-gray-200 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">⭐ 4+ Years, 19+ Projects</span>
+                <span className="bg-white border border-gray-200 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">⭐ 4+ Years, 21+ Projects</span>
                 <span className="bg-white border border-gray-200 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">🌍 Serving Clients Globally</span>
                 <span className="bg-white border border-gray-200 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">💰 50–70% vs US/UK Rates</span>
               </div>
@@ -263,7 +269,7 @@ export default function Home() {
 
                 <rect x="230" y="100" width="88" height="54" rx="7" fill="#1E293B"/>
                 <text x="238" y="118" fontFamily="system-ui,sans-serif" fontSize="8" fill="#64748B">Projects</text>
-                <text x="238" y="136" fontFamily="system-ui,sans-serif" fontSize="18" fontWeight="800" fill="#34D399">19+</text>
+                <text x="238" y="136" fontFamily="system-ui,sans-serif" fontSize="18" fontWeight="800" fill="#34D399">21+</text>
                 <rect x="236" y="146" width="40" height="4" rx="2" fill="#34D399" opacity="0.4"/>
 
                 <rect x="326" y="100" width="88" height="54" rx="7" fill="#1E293B"/>
@@ -369,17 +375,53 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── OUR PRODUCTS ── */}
+        <section className="py-16 bg-white" aria-labelledby="products-heading">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+              <div>
+                <p className="text-sm font-semibold text-indigo-600 mb-1">Products of A1 IT Innovation</p>
+                <h2 id="products-heading" className="text-2xl md:text-3xl font-bold text-gray-900">Things we built for ourselves</h2>
+              </div>
+              <a href="/works" className="text-indigo-600 font-semibold text-sm hover:underline">See all our work →</a>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <a href="https://gigfine.com/" target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-5 p-5 border border-gray-200 rounded-2xl hover:border-indigo-300 hover:shadow-md transition">
+                <div className="w-28 h-20 flex-shrink-0 bg-gray-50 rounded-xl flex items-center justify-center p-2">
+                  <img src={GigFine} alt="GigFine, a product of A1 IT Innovation" loading="lazy" className="max-h-full object-contain"/>
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900">GigFine</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed mt-1">A place to report problems with Pathao, Yango, Tufan, Sajilo and other ride-sharing apps, for riders and passengers alike.</p>
+                </div>
+              </a>
+              <a href="http://tmeet.tsaedu.com/" target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-5 p-5 border border-gray-200 rounded-2xl hover:border-indigo-300 hover:shadow-md transition">
+                <div className="w-28 h-20 flex-shrink-0 bg-slate-900 rounded-xl flex items-center justify-center overflow-hidden">
+                  <img src={TMeet} alt="T-Meet, a product of A1 IT Innovation" loading="lazy" className="max-h-full object-contain"
+                    style={{ transform: "scale(1.9)", transformOrigin: "50% 36%" }}/>
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900">T-Meet</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed mt-1">Nepali video conferencing for online classes and business meetings. Built fully in-house, data stays in our hands.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* ── SERVICES ── */}
         <section className="py-20 bg-gray-50" aria-labelledby="services-heading">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14">
               <span className="inline-block bg-indigo-100 text-indigo-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">What We Offer</span>
               <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Complete IT Services Across Nepal
+                What we can help with
               </h2>
               <div className="w-16 h-1 bg-indigo-600 mx-auto rounded-full mb-4"></div>
               <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-                From web and mobile development to DevOps, security, and free internships — we cover every aspect of your digital journey.
+                Most projects start with one of these. Plenty end up using two or three.
               </p>
             </div>
 
@@ -422,7 +464,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14">
               <span className="inline-block bg-green-100 text-green-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Why A1 IT Innovation?</span>
-              <h2 id="why-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Built in Nepal. Trusted Worldwide.</h2>
+              <h2 id="why-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why people pick us</h2>
               <div className="w-16 h-1 bg-indigo-600 mx-auto rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -443,13 +485,13 @@ export default function Home() {
 
             {/* Text */}
             <div className="flex-1">
-              <span className="inline-block bg-indigo-700 text-indigo-200 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">Founded in Nepal, Growing Globally</span>
+              <span className="inline-block bg-indigo-700 text-indigo-200 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">Since 2021</span>
               <h2 id="about-heading" className="text-3xl md:text-4xl font-bold mb-6">About A1 IT Innovation</h2>
               <p className="text-indigo-200 text-lg leading-relaxed mb-6">
-                Founded with a mission to bridge Nepal's digital gap, A1 IT Innovation has grown into a full-service IT powerhouse — delivering scalable web platforms, mobile apps, DevOps infrastructure, and real-world IT training to students and businesses across Nepal.
+                A1 IT Innovation started in Damak, Jhapa in 2021. Since then we've built a ride-sharing app, an esports platform, a Nepali calendar and our own products, GigFine and T-Meet.
               </p>
               <p className="text-indigo-300 leading-relaxed mb-8">
-                Based in Damak, Jhapa with reach across Kathmandu and all of Nepal — we combine global tech standards with local understanding to deliver IT solutions that actually work for Nepali businesses.
+                We also run a free internship, so students get to work on real projects instead of just watching tutorials.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="/company/about" className="bg-white text-indigo-700 hover:bg-indigo-50 font-semibold px-6 py-3 rounded-lg transition duration-300">
@@ -481,7 +523,7 @@ export default function Home() {
 
                 <circle cx="370" cy="130" r="34" fill="#1E3A2F"/>
                 <circle cx="370" cy="130" r="28" fill="#065F46"/>
-                <text x="370" y="125" textAnchor="middle" fontFamily="system-ui,sans-serif" fontSize="14" fontWeight="800" fill="#6EE7B7">19+</text>
+                <text x="370" y="125" textAnchor="middle" fontFamily="system-ui,sans-serif" fontSize="14" fontWeight="800" fill="#6EE7B7">21+</text>
                 <text x="370" y="140" textAnchor="middle" fontFamily="system-ui,sans-serif" fontSize="8"  fill="#A7F3D0">Projects</text>
 
                 <circle cx="340" cy="300" r="34" fill="#3B1F00"/>
@@ -517,8 +559,8 @@ export default function Home() {
         {/* ── CTA ── */}
         <section className="py-16 bg-gradient-to-r from-gray-900 to-indigo-900 text-white text-center">
           <div className="max-w-3xl mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Build Something Great?</h2>
-            <p className="text-gray-300 text-lg mb-8 max-w-xl mx-auto">Tell us your idea — we'll turn it into a world-class digital product, built right here in Nepal.</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Have a project in mind?</h2>
+            <p className="text-gray-300 text-lg mb-8 max-w-xl mx-auto">Tell us about it. If we're not the right team for it, we'll say so.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-3.5 rounded-lg transition duration-300 shadow-lg">
                 Get Free Consultation

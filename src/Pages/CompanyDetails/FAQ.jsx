@@ -18,7 +18,7 @@ const faqData = [
       },
       {
         question: "How long has A1 IT Innovation been operating?",
-        answer: "We have been serving businesses and students across Nepal since 2021 — over 4 years of delivering reliable IT solutions. To date, we have completed 19+ projects, served 20+ clients, and trained 500+ students.",
+        answer: "We have been serving businesses and students across Nepal since 2021 — over 4 years of delivering reliable IT solutions. To date, we have completed 21+ projects, served 20+ clients, and trained 500+ students.",
       },
       {
         question: "How do you work with clients?",

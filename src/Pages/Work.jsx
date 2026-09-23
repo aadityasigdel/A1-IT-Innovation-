@@ -12,9 +12,12 @@ import Tufan from "../assets/Clients/tufan.png";
 import Hamrodokan from "../assets/hamrodokan.png";
 import Himalayansanchaya from "../assets/himalayan-sanchaya.png";
 import Utkrista from "../assets/utkrista.png";
+import GigFine from "../assets/gigfine-logo-img.webp";
+import TMeet from "../assets/no-background.png";
 
 // type color map
 const typeColors = {
+  "Our Product":   "bg-indigo-600 text-white",
   "Web Platform":  "bg-blue-100 text-blue-700",
   "Mobile App":    "bg-green-100 text-green-700",
   "Website":       "bg-purple-100 text-purple-700",
@@ -29,13 +32,35 @@ const categoryColors = {
   "Healthcare":          "bg-red-100 text-red-700",
   "EdTech":              "bg-cyan-100 text-cyan-700",
   "Retail & Grocery":    "bg-lime-100 text-lime-700",
+  "Ridesharing":         "bg-yellow-100 text-yellow-700",
+  "Video Conferencing":  "bg-sky-100 text-sky-700",
 };
 
 const projects = [
   {
+    img: GigFine,
+    title: "GigFine: report ride-sharing problems",
+    description: "Had a bad trip on Pathao, Yango, Tufan or Sajilo and no one to tell? GigFine lets riders and passengers post the problem in one place, whichever app it happened on. Our own product.",
+    type: "Our Product",
+    category: "Ridesharing",
+    status: "Live",
+    link: "https://gigfine.com/",
+  },
+  {
+    img: TMeet,
+    imgBg: "bg-slate-900",
+    imgStyle: { transform: "scale(1.9)", transformOrigin: "50% 36%" },
+    title: "T-Meet: Nepali video conferencing",
+    description: "Video meetings for online classes and business calls, made in Nepal. We built the whole thing, and the meeting data stays with us instead of a foreign provider.",
+    type: "Our Product",
+    category: "Video Conferencing",
+    status: "Live",
+    link: "http://tmeet.tsaedu.com/",
+  },
+  {
     img: Kryzox,
-    title: "Kryzox — Esports Match Organizer",
-    description: "A multi-platform gaming solution for PUBG, Free Fire, and Chess tournaments — featuring wallet integration, match scheduling, real-time leaderboards, and result updates.",
+    title: "Kryzox: esports tournaments",
+    description: "Runs PUBG, Free Fire and chess tournaments end to end. Players top up a wallet, join a match, and see results and leaderboards update as games finish.",
     type: "Web Platform",
     category: "Gaming",
     status: "Live",
@@ -43,8 +68,8 @@ const projects = [
   },
   {
     img: Tufan,
-    title: "Tufan — Ride Sharing & Transport",
-    description: "A smart ride-sharing app enhancing safety and convenience for passengers and operators across Nepal through real-time booking and fleet management.",
+    title: "Tufan: ride sharing",
+    description: "A ride-hailing app for passengers and drivers in Nepal, with live booking on one side and fleet management for operators on the other.",
     type: "Mobile App",
     category: "Transport",
     status: "Live",
@@ -52,8 +77,8 @@ const projects = [
   },
   {
     img: Brihat,
-    title: "Brihat Patro — Nepali Calendar App",
-    description: "A Nepali calendar and panchang app with astrology, festival dates, tithi, and daily updates. Built for culture lovers with a rich UI and offline access.",
+    title: "Brihat Patro: Nepali calendar",
+    description: "Tithi, festivals, panchang and daily rashifal in one app. It also works offline.",
     type: "Mobile App",
     category: "Culture & Lifestyle",
     status: "Live",
@@ -61,8 +86,8 @@ const projects = [
   },
   {
     img: Himalayansanchaya,
-    title: "Himalayan Sanchaya — Business Management",
-    description: "A cloud-based business management system for inventory tracking, analytics dashboards, and operational automation — tailored for Nepali SMEs.",
+    title: "Himalayan Sanchaya: business management",
+    description: "Stock, sales and reports for small Nepali businesses, all on one dashboard instead of scattered spreadsheets.",
     type: "Web Platform",
     category: "Business Management",
     status: "Live",
@@ -70,8 +95,8 @@ const projects = [
   },
   {
     img: Utkrista,
-    title: "Utkrista Shikshya — E-Learning Platform",
-    description: "A scalable online education platform providing affordable and accessible learning for students across Nepal — with course management, assessments, and progress tracking.",
+    title: "Utkrista Shikshya: online learning",
+    description: "Courses, tests and progress tracking for students across Nepal, at a price students outside Kathmandu can manage.",
     type: "Web Platform",
     category: "EdTech",
     status: "Live",
@@ -80,7 +105,7 @@ const projects = [
   {
     img: Damaktechnical,
     title: "Damak Technical Education Foundation",
-    description: "Official digital presence for a leading technical and vocational institution in Nepal — featuring program listings, admissions, notices, and a modern academic UI.",
+    description: "Website for a technical and vocational school in Damak. Programs, admissions and notices, which the school staff can update on their own.",
     type: "Website",
     category: "Education",
     status: "Live",
@@ -89,7 +114,7 @@ const projects = [
   {
     img: DamakMultipleCampus,
     title: "Damak Multiple Campus",
-    description: "A Tribhuvan University-affiliated community campus website with a content management system, notice board, faculty listings, and academic program details.",
+    description: "Website for a TU-affiliated community campus, with a notice board, faculty list and program pages, all run from a simple admin panel.",
     type: "Website",
     category: "Education",
     status: "Live",
@@ -98,7 +123,7 @@ const projects = [
   {
     img: Rolwaling,
     title: "Rolwaling Community Hospital",
-    description: "Official website for a community hospital in Nepal — providing service listings, emergency contact info, health updates, and community health support.",
+    description: "Website for a community hospital. Services, emergency numbers and health notices, kept light so it loads fine on mobile data.",
     type: "Website",
     category: "Healthcare",
     status: "Live",
@@ -106,8 +131,8 @@ const projects = [
   },
   {
     img: Hamrodokan,
-    title: "Hamro Dokan — Grocery Management App",
-    description: "A mobile app for grocery store owners with QR code scanning, inventory control, billing, and sales reporting — built for small retailers across Nepal.",
+    title: "Hamro Dokan: grocery shop app",
+    description: "For small grocery shop owners: scan a QR code to add stock, print a bill, and see the day's sales at closing time.",
     type: "Mobile App",
     category: "Retail & Grocery",
     status: "Live",
@@ -115,13 +140,13 @@ const projects = [
   },
 ];
 
-const filterTabs = ["All", "Web Platform", "Mobile App", "Website"];
+const filterTabs = ["All", "Our Product", "Web Platform", "Mobile App", "Website"];
 
 const stats = [
-  { value: "19+", label: "Projects Delivered", icon: "🚀" },
-  { value: "20+", label: "Happy Clients",       icon: "🤝" },
-  { value: "4+",  label: "Years Active",         icon: "📅" },
-  { value: "8+",  label: "Team Members",         icon: "👥" },
+  { value: "21+", label: "Projects shipped",    icon: "🚀" },
+  { value: "20+", label: "Clients",             icon: "🤝" },
+  { value: "2",   label: "Products of our own", icon: "🧩" },
+  { value: "4+",  label: "Years at it",         icon: "📅" },
 ];
 
 export default function Work() {
@@ -134,27 +159,29 @@ export default function Work() {
   return (
     <>
       <Helmet>
-        <title>Our Portfolio | A1 IT Innovation Nepal — Web, Mobile & App Projects</title>
-        <meta name="description" content="Explore A1 IT Innovation's project portfolio — Kryzox esports platform, Tufan ride-sharing app, Brihat Patro calendar, Utkrista e-learning, Himalayan Sanchaya, and more. Nepal's trusted IT company." />
-        <meta name="keywords" content="A1 IT Innovation portfolio, software projects Nepal, web development Nepal, mobile app development Nepal, IT company projects, Kryzox, Tufan, Brihat Patro, Utkrista, Nepal IT portfolio" />
+        <title>Portfolio &amp; Products of A1 IT Innovation | GigFine, T-Meet, Kryzox, Tufan</title>
+        <meta name="description" content="Everything A1 IT Innovation has built: our own products GigFine (ride-share complaint platform) and T-Meet (Nepali video conferencing), plus Kryzox, Tufan, Brihat Patro, Utkrista Shikshya, Himalayan Sanchaya, Damak Campus, DTEF, Rolwaling Hospital and Hamro Dokan." />
+        <meta name="keywords" content="A1 IT Innovation portfolio, A1 IT Innovation products, product of A1 IT Innovation, products of A1 IT, project of A1 IT Innovation, client of A1 IT Innovation, built by A1 IT Innovation, GigFine, GigFine Nepal, ride sharing complaint Nepal, Pathao complaint, Yango complaint, T-Meet, TMeet, Nepali video conferencing, video meeting app Nepal, Kryzox, Tufan, Brihat Patro, Utkrista Shikshya, Himalayan Sanchaya, Damak Campus, software projects Nepal" />
         <link rel="canonical" href="https://www.a1itinnovation.com.np/works" />
-        <meta property="og:title" content="Our Portfolio | A1 IT Innovation Nepal" />
-        <meta property="og:description" content="View A1 IT Innovation's featured projects — web platforms, mobile apps, and websites for businesses and institutions across Nepal." />
+        <meta property="og:title" content="Portfolio & Products | A1 IT Innovation Nepal" />
+        <meta property="og:description" content="GigFine, T-Meet, Kryzox, Tufan, Brihat Patro and more. The apps, platforms and websites we've built in Nepal." />
         <meta property="og:url" content="https://www.a1itinnovation.com.np/works" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "name": "Portfolio | A1 IT Innovation Nepal",
-          "description": "A1 IT Innovation's project portfolio — web platforms, mobile apps, and websites built for clients across Nepal.",
+          "name": "Portfolio & Products | A1 IT Innovation Nepal",
+          "description": "Products and client projects built by A1 IT Innovation: GigFine, T-Meet, Kryzox, Tufan, Brihat Patro and more.",
           "url": "https://www.a1itinnovation.com.np/works",
           "mainEntity": {
             "@type": "ItemList",
             "itemListElement": projects.map((p, i) => ({
-              "@type": "CreativeWork",
+              "@type": p.type === "Our Product" ? "SoftwareApplication" : "CreativeWork",
               "position": i + 1,
               "name": p.title,
               "description": p.description,
+              "creator": { "@type": "Organization", "name": "A1 IT Innovation Nepal", "url": "https://www.a1itinnovation.com.np" },
+              ...(p.type === "Our Product" ? { "applicationCategory": p.category } : {}),
               ...(p.link ? { "url": p.link } : {}),
             })),
           },
@@ -173,13 +200,13 @@ export default function Work() {
             <div className="flex-1 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 text-sm font-semibold px-4 py-2 rounded-full mb-6">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"/>
-                19+ Projects Delivered Across Nepal
+                Products &amp; projects by A1 IT Innovation
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-5">
-                Our <span className="text-indigo-600">Portfolio</span>
+                What we've <span className="text-indigo-600">built</span>
               </h1>
               <p className="text-lg text-gray-600 max-w-xl leading-relaxed mb-8">
-                From ride-sharing apps and esports platforms to hospital websites and e-learning systems — we've partnered with businesses and institutions across Nepal to build digital products that make a real difference.
+                A ride-sharing app, an esports platform, a Nepali calendar, a few college and hospital websites. Also two products that are ours: GigFine and T-Meet. Most of these are live, so go and try them.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a href="/contact" className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3.5 rounded-lg shadow-md transition-colors inline-flex items-center justify-center gap-2">
@@ -252,7 +279,7 @@ export default function Work() {
 
                 {/* Floating stat cards */}
                 <rect x="20" y="305" width="100" height="48" rx="10" fill="white" stroke="#E0E7FF" strokeWidth="1.5"/>
-                <text x="70" y="325" textAnchor="middle" fontFamily="system-ui" fontSize="18" fontWeight="800" fill="#4F46E5">19+</text>
+                <text x="70" y="325" textAnchor="middle" fontFamily="system-ui" fontSize="18" fontWeight="800" fill="#4F46E5">21+</text>
                 <text x="70" y="343" textAnchor="middle" fontFamily="system-ui" fontSize="9" fill="#64748B">Projects</text>
 
                 <rect x="135" y="305" width="100" height="48" rx="10" fill="white" stroke="#E0E7FF" strokeWidth="1.5"/>
@@ -290,10 +317,10 @@ export default function Work() {
 
             <div className="text-center mb-10">
               <span className="inline-block bg-indigo-100 text-indigo-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Our Work</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Projects We've Built</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The full list</h2>
               <div className="w-16 h-1 bg-indigo-600 mx-auto rounded-full mb-4"/>
               <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-                Web platforms, mobile apps, and websites for leading organizations across Nepal.
+                Filter by "Our Product" to see just the things we own and run ourselves.
               </p>
             </div>
 
@@ -322,11 +349,12 @@ export default function Work() {
                   className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col"
                 >
                   {/* Logo area */}
-                  <div className="bg-gray-50 border-b border-gray-100 px-6 py-8 flex items-center justify-center h-44">
+                  <div className={`${project.imgBg ?? "bg-gray-50"} border-b border-gray-100 px-6 py-8 flex items-center justify-center h-44 overflow-hidden`}>
                     <img
                       src={project.img}
-                      alt={`${project.title} — A1 IT Innovation Nepal`}
+                      alt={`${project.title} — ${project.type === "Our Product" ? "product" : "project"} of A1 IT Innovation Nepal`}
                       className="max-h-28 max-w-full object-contain"
+                      style={project.imgStyle}
                       loading="lazy"
                     />
                   </div>
@@ -378,13 +406,13 @@ export default function Work() {
         {/* ── CTA ── */}
         <section className="py-20 bg-gradient-to-r from-gray-900 to-indigo-900 text-white text-center">
           <div className="max-w-3xl mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Build Your Next Project?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Want yours on this page?</h2>
             <p className="text-gray-300 text-lg mb-10 max-w-xl mx-auto">
-              Tell us your idea — we'll turn it into a world-class digital product, built right here in Nepal.
+              Send us a message about what you're trying to build. The first call is free and there's no pressure to sign anything.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-3.5 rounded-lg transition duration-300 shadow-lg">
-                Get Free Consultation
+                Talk to us
               </a>
               <a href="/clients" className="border border-gray-500 hover:border-gray-300 text-gray-300 hover:text-white font-semibold px-8 py-3.5 rounded-lg transition duration-300">
                 Meet Our Clients

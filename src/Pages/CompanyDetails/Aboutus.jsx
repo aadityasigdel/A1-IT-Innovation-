@@ -11,28 +11,23 @@ import Navigation      from "../../components/Navigation";
 
 const stats = [
   { value: "20+",  label: "Clients Served",   icon: "🤝" },
-  { value: "19+",  label: "Projects Delivered",icon: "🚀" },
+  { value: "21+",  label: "Projects Delivered",icon: "🚀" },
   { value: "4+",   label: "Years Active",       icon: "📅" },
   { value: "500+", label: "Students Trained",   icon: "🎓" },
 ];
 
 const offices = [
-  { city: "Damak, Jhapa",                  label: "Main Office",     icon: "🏢", desc: "Our founding office — where it all started." },
-  { city: "Kageshwori Manohara, Kathmandu",label: "Kathmandu Office",icon: "🏙️", desc: "Serving capital-based clients and partnerships." },
-  { city: "Sallaghari, Bhaktapur",         label: "Bhaktapur Office",icon: "🏘️", desc: "Expanding our reach across the Kathmandu Valley." },
+  { city: "Damak, Jhapa",                  label: "Main Office",     icon: "🏢", desc: "Where we started, and still our main base." },
+  { city: "Kageshwori Manohara, Kathmandu",label: "Kathmandu Office",icon: "🏙️", desc: "For clients and meetings in the capital." },
+  { city: "Sallaghari, Bhaktapur",         label: "Bhaktapur Office",icon: "🏘️", desc: "Our second office in the valley." },
 ];
 
 const coreValues = [
-  { icon: "🚀", title: "Innovation",           desc: "We embrace change and build solutions that push what's possible in Nepal's tech landscape." },
-  { icon: "🤝", title: "Collaboration",         desc: "Teamwork drives us — diverse ideas, one shared mission." },
-  { icon: "⭐", title: "Integrity",             desc: "Honesty and transparency in every client interaction, every project, every decision." },
-  { icon: "💡", title: "Customer-Centricity",   desc: "Our clients' success is our success. We listen first, build second." },
-  { icon: "📚", title: "Continuous Learning",   desc: "We grow constantly — through mentorship, training, and hands-on experience." },
-  { icon: "💪", title: "Resilience",            desc: "We face challenges with determination and turn setbacks into stepping stones." },
-  { icon: "🫶", title: "Empathy",               desc: "Understanding people's real needs is how we build technology that actually matters." },
-  { icon: "⚖️", title: "Equity",               desc: "Fair opportunities for all — in our team, our internship program, and our community." },
-  { icon: "🙏", title: "Respect",               desc: "Every voice matters. We treat all people — clients, interns, and teammates — with dignity." },
-  { icon: "😊", title: "Joyful Workplace",      desc: "We build a culture where creativity thrives and people love showing up to work." },
+  { icon: "🗣️", title: "Say it straight",        desc: "If a feature is a bad idea or a deadline is unrealistic, we'd rather tell you before we start than after." },
+  { icon: "🔧", title: "Ship early, then improve", desc: "We'd rather put a working version in front of you early than polish something in private for months." },
+  { icon: "📚", title: "Teach what we know",     desc: "That's why the internship is free. Students learn by working on real projects next to us." },
+  { icon: "🤝", title: "Stay after launch",      desc: "Launch day isn't the end of the job. We keep fixing, updating and picking up the phone." },
+  { icon: "🇳🇵", title: "Build for Nepal first", desc: "Patchy mobile data, Nepali dates, small budgets. We design for how people here actually use their phones." },
 ];
 
 const teamMembers = [
@@ -83,7 +78,11 @@ export default function Aboutus() {
           "url": "https://www.a1itinnovation.com.np",
           "logo": "https://www.a1itinnovation.com.np/Publiclogo.png",
           "foundingDate": "2021",
-          "description": "Nepal's trusted IT company offering web development, mobile apps, DevOps, AI solutions, online courses, and free internships.",
+          "description": "Software company from Damak, Jhapa building websites, mobile apps and DevOps setups. Makers of GigFine and T-Meet. Runs a free internship for students.",
+          "owns": [
+            { "@type": "SoftwareApplication", "name": "GigFine", "url": "https://gigfine.com/" },
+            { "@type": "SoftwareApplication", "name": "T-Meet", "url": "http://tmeet.tsaedu.com/" },
+          ],
           "telephone": "+977-9816032025",
           "location": [
             { "@type": "Place", "name": "Damak, Jhapa, Nepal" },
@@ -116,7 +115,7 @@ export default function Aboutus() {
                 About <span className="text-indigo-600">A1 IT Innovation</span>
               </h1>
               <p className="text-lg text-gray-600 max-w-xl leading-relaxed mb-6">
-                We're a Nepal-based IT company on a mission to bridge the digital gap — delivering world-class web, mobile, DevOps, and AI solutions to businesses and giving students real tech careers through our free internship program.
+                We're a software company from Damak, Jhapa. We build websites, apps and server setups for businesses, run two products of our own (GigFine and T-Meet), and take on students as free interns.
               </p>
               <div className="flex flex-wrap gap-2 justify-center lg:justify-start mb-8">
                 <span className="bg-white border border-gray-200 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">📍 3 Offices Across Nepal</span>
@@ -172,7 +171,7 @@ export default function Aboutus() {
                 <text x="385" y="122" textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="#1F2937">Impact</text>
                 <text x="355" y="148" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="800" fill="#4F46E5">20+</text>
                 <text x="355" y="160" textAnchor="middle" fontFamily="system-ui" fontSize="7" fill="#64748B">Clients</text>
-                <text x="385" y="148" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="800" fill="#059669">19+</text>
+                <text x="385" y="148" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="800" fill="#059669">21+</text>
                 <text x="385" y="160" textAnchor="middle" fontFamily="system-ui" fontSize="7" fill="#64748B">Projects</text>
                 <text x="415" y="148" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="800" fill="#D97706">4+</text>
                 <text x="415" y="160" textAnchor="middle" fontFamily="system-ui" fontSize="7" fill="#64748B">Years</text>
@@ -217,21 +216,21 @@ export default function Aboutus() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <span className="inline-block bg-indigo-100 text-indigo-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Our Story</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Built in Nepal. Growing Globally.</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">How we got here</h2>
               <div className="w-16 h-1 bg-indigo-600 mx-auto rounded-full mt-4"/>
             </div>
             <div className="bg-gradient-to-br from-indigo-50 to-white border border-indigo-100 rounded-2xl p-8 md:p-10 space-y-5 text-gray-700 leading-relaxed text-[15px]">
               <p className="text-lg">
-                <strong className="text-indigo-700">A1 IT Innovation</strong> was founded in 2021 with a single mission: to bridge Nepal's digital gap by delivering reliable, affordable, and world-class IT solutions to businesses and students across the country.
+                <strong className="text-indigo-700">A1 IT Innovation</strong> started in Damak, Jhapa in 2021. The thinking was simple: businesses here need good websites and software too, and they shouldn't have to go to Kathmandu or abroad to get them.
               </p>
               <p>
-                What started as a small team in Damak, Jhapa has grown into a full-service IT company with offices in Kathmandu and Bhaktapur — serving 20+ clients across diverse industries including gaming, transport, healthcare, education, and business management.
+                Since then we've opened offices in Kathmandu and Bhaktapur and worked with 20+ clients, including colleges, a community hospital, a ride-sharing company, an esports platform, and a handful of shops and startups.
               </p>
               <p>
-                We believe technology should be accessible to everyone. That's why we offer a <strong>100% free internship program</strong> — giving students across Nepal the chance to work on real projects, learn from experienced mentors, and launch careers in tech without any barriers.
+                Along the way we built two products of our own. <strong>GigFine</strong> gives riders and passengers one place to report problems with Pathao, Yango, Tufan, Sajilo and the rest. <strong>T-Meet</strong> is a Nepali video conferencing system for classes and business meetings. We designed, built and run both of them.
               </p>
               <p>
-                Today, A1 IT Innovation provides web development, mobile app development, DevOps managed services, AI solutions, online courses, and security audits — all built on our core commitment: <strong>transparency, quality, and client clarity</strong>.
+                We also run a <strong>free internship program</strong>. Students work on real projects alongside the team instead of paying for yet another course.
               </p>
             </div>
 
@@ -241,14 +240,14 @@ export default function Aboutus() {
                 <div className="text-3xl mb-3">🎯</div>
                 <h3 className="text-xl font-bold mb-3">Our Mission</h3>
                 <p className="text-indigo-200 text-sm leading-relaxed">
-                  To empower Nepali businesses and students with technology — delivering affordable, world-class IT solutions and creating pathways into tech careers through real-world education.
+                  Build software that Nepali businesses can afford and actually use, and give students a real way into the industry.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-2xl p-7">
                 <div className="text-3xl mb-3">🔭</div>
                 <h3 className="text-xl font-bold mb-3">Our Vision</h3>
                 <p className="text-indigo-100 text-sm leading-relaxed">
-                  To be Nepal's most trusted IT partner — recognized for transparency, innovation, and the positive impact we create for every business and student we work with.
+                  More products like GigFine and T-Meet: made in Nepal, and good enough that people use them without caring where they were built.
                 </p>
               </div>
             </div>
@@ -280,11 +279,11 @@ export default function Aboutus() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-14">
               <span className="inline-block bg-purple-100 text-purple-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">What We Stand For</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What we care about</h2>
               <div className="w-16 h-1 bg-indigo-600 mx-auto rounded-full"/>
-              <p className="text-gray-500 mt-4 max-w-xl mx-auto">The principles that guide every project, every hire, and every client relationship.</p>
+              <p className="text-gray-500 mt-4 max-w-xl mx-auto">A short list, on purpose.</p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
               {coreValues.map((v, i) => (
                 <div key={i} className="bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:bg-indigo-50 hover:border-indigo-200 hover:shadow-md transition-all duration-300 group text-center">
                   <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">{v.icon}</div>
@@ -303,7 +302,7 @@ export default function Aboutus() {
               <span className="inline-block bg-indigo-100 text-indigo-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">The People</span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
               <div className="w-16 h-1 bg-indigo-600 mx-auto rounded-full"/>
-              <p className="text-gray-500 mt-4">The talented people behind every project we deliver.</p>
+              <p className="text-gray-500 mt-4">The people who actually build the stuff.</p>
             </div>
 
             {/* Founder — centered, larger */}
