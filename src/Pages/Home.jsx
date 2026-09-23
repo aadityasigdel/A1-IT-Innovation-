@@ -205,8 +205,8 @@ export default function Home() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Software, apps and websites,{" "}
-                <span className="text-indigo-600">built in Damak <span className="rocket-fly">🚀</span></span>
+                Nepal's Trusted{" "}
+                <span className="text-indigo-600">IT Company <span className="rocket-fly">🚀</span></span>
               </h1>
 
               <p className="text-lg text-gray-600 max-w-xl leading-relaxed">
