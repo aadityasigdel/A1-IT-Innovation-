@@ -42,6 +42,11 @@ import DevOps from "./Pages/Services/DevOps";
 // Offers
 import LifetimeWebsite from "./Pages/Offers/LifetimeWebsite";
 
+// Products
+import A1Scanner from "./Pages/Products/A1Scanner/A1Scanner";
+import A1ScannerPrivacyPolicy from "./Pages/Products/A1Scanner/PrivacyPolicy";
+import A1ScannerTerms from "./Pages/Products/A1Scanner/Terms";
+
 // Scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -95,6 +100,11 @@ function RouteContent() {
 
       {/* Offers */}
       <Route path="/offers/lifetime-website" element={<LifetimeWebsite />} />
+
+      {/* Products */}
+      <Route path="/products/a1-scanner" element={<A1Scanner />} />
+      <Route path="/products/a1-scanner/privacy-policy" element={<A1ScannerPrivacyPolicy />} />
+      <Route path="/products/a1-scanner/terms-and-conditions" element={<A1ScannerTerms />} />
     </Routes>
   );
 }

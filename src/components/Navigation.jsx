@@ -9,6 +9,7 @@ const servicesLinks = [
   { href: "/services/security-audit", icon: "🛡️", label: "Security Audit",       desc: "Vulnerability & pen testing" },
   { href: "/services/digital-marketing", icon: "📈", label: "Digital Marketing",  desc: "Campaigns, FB boosting & free SEO" },
   { href: "/services/domain-hosting", icon: "🌐", label: "Domain & Hosting",     desc: "Registration & managed hosting" },
+  { href: "/products/a1-scanner",     icon: "📷", label: "A1 Scanner App",        desc: "Safe offline document scanner" },
   { href: "/services/internship",     icon: "🎓", label: "Free Internship",       desc: "Real projects, real mentors" },
   { href: "/services/workshop",       icon: "🏫", label: "Tech Workshop",         desc: "Training at colleges & schools" },
 ];

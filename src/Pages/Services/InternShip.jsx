@@ -274,15 +274,15 @@ export default function InternShip() {
         <>
             <Helmet>
                 {/* ── Primary SEO ── */}
-                <title>Free Remote IT Internship in Nepal | Policies, Rules & FAQ | A1 IT Innovation</title>
-                <meta name="description" content="A1 IT Innovation offers a free, fully remote IT internship in Nepal. No fees, no salary required. Interns work on real projects, get mentorship, hosting, servers, a certificate, and a recommendation letter. Minimum 2 months. Saturday off. Daily log required. Job offer possible if work goes to production." />
-                <meta name="keywords" content="free IT internship Nepal, remote internship Nepal, unpaid internship Nepal, IT internship 2024 2025, React internship Nepal, Flutter internship, DevOps internship Nepal, Java Spring Boot internship, AI ML internship Nepal, machine learning internship Nepal, research internship Nepal, internship certificate Nepal, internship recommendation letter Nepal, A1 IT Innovation internship, internship rules Nepal, internship policy Nepal" />
+                <title>Internship in Nepal for IT Students | Free Remote IT Internship | A1 IT Innovation</title>
+                <meta name="description" content="Looking for an internship in Nepal for IT students? A1 IT Innovation offers a free, fully remote IT internship in Nepal. No fees, no salary required. Interns work on real projects, get mentorship, hosting, servers, a certificate, and a recommendation letter. Minimum 2 months. Saturday off. Daily log required. Job offer possible if work goes to production." />
+                <meta name="keywords" content="internship in Nepal for IT students, internship in Nepal for IT student, IT internship for students in Nepal, free IT internship Nepal, remote internship Nepal, unpaid internship Nepal, IT internship 2024 2025, React internship Nepal, Flutter internship, DevOps internship Nepal, Java Spring Boot internship, AI ML internship Nepal, machine learning internship Nepal, research internship Nepal, internship certificate Nepal, internship recommendation letter Nepal, A1 IT Innovation internship, internship rules Nepal, internship policy Nepal" />
                 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
                 <link rel="canonical" href="https://www.a1itinnovation.com.np/services/internship" />
 
                 {/* ── Open Graph ── */}
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Free Remote IT Internship in Nepal | A1 IT Innovation" />
+                <meta property="og:title" content="Internship in Nepal for IT Students | Free Remote IT Internship | A1 IT Innovation" />
                 <meta property="og:description" content="Completely free internship. No fees, no salary. Work on real projects. Get mentorship, hosting, certificate & recommendation letter. Minimum 2 months. Remote only. Saturday off. Job offer if your work goes to production." />
                 <meta property="og:url" content="https://www.a1itinnovation.com.np/services/internship" />
                 <meta property="og:site_name" content="A1 IT Innovation" />
@@ -290,7 +290,7 @@ export default function InternShip() {
 
                 {/* ── Twitter Card ── */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Free Remote IT Internship in Nepal | A1 IT Innovation" />
+                <meta name="twitter:title" content="Internship in Nepal for IT Students | Free Remote IT Internship | A1 IT Innovation" />
                 <meta name="twitter:description" content="Free internship. Real projects. Mentorship + certificate. Remote. Min 2 months. Saturday off. Job offer if work goes to production. Apply now." />
                 <meta name="twitter:site" content="@a1itinnovation" />
 
@@ -356,10 +356,10 @@ export default function InternShip() {
                                 🎓 Applications Open
                             </span>
                             <h1 className="text-2xl md:text-4xl font-bold">
-                                Kickstart Your Career with Our Internship Programs
+                                Free Internship in Nepal for IT Students
                             </h1>
                             <p className="text-xl md:text-2xl font-medium mt-2 text-gray-600">
-                                Gain real-world experience, build industry skills, and grow with Nepal's innovative IT team.
+                                Kickstart your career: gain real-world experience, build industry skills, and grow with Nepal's innovative IT team.
                             </p>
                         </div>
 
