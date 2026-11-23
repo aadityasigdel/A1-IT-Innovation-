@@ -9,7 +9,8 @@ import Rolwaling from "../assets/Clients/rolwaling.png";
 import Damaktechnical from "../assets/Clients/DT.png";
 import Kryzox from "../assets/Clients/KryZone.png";
 import Tufan from "../assets/Clients/tufan.png";
-import Hamrodokan from "../assets/hamrodokan.png";
+// Hamro Dokan hidden from the website (Nov 2026). Uncomment here and below to restore.
+// import Hamrodokan from "../assets/hamrodokan.png";
 import Himalayansanchaya from "../assets/himalayan-sanchaya.png";
 import Utkrista from "../assets/utkrista.png";
 import GigFine from "../assets/gigfine-logo-img.webp";
@@ -129,15 +130,16 @@ const projects = [
     status: "Live",
     link: "https://www.rolwalingsamudaikaaspatal.com.np/",
   },
-  {
-    img: Hamrodokan,
-    title: "Hamro Dokan: grocery shop app",
-    description: "For small grocery shop owners: scan a QR code to add stock, print a bill, and see the day's sales at closing time.",
-    type: "Mobile App",
-    category: "Retail & Grocery",
-    status: "Live",
-    link: null,
-  },
+  // Hamro Dokan hidden (Nov 2026):
+  // {
+  //   img: Hamrodokan,
+  //   title: "Hamro Dokan: grocery shop app",
+  //   description: "For small grocery shop owners: scan a QR code to add stock, print a bill, and see the day's sales at closing time.",
+  //   type: "Mobile App",
+  //   category: "Retail & Grocery",
+  //   status: "Live",
+  //   link: null,
+  // },
 ];
 
 const filterTabs = ["All", "Our Product", "Web Platform", "Mobile App", "Website"];
@@ -160,7 +162,7 @@ export default function Work() {
     <>
       <Helmet>
         <title>Portfolio &amp; Products of A1 IT Innovation | GigFine, T-Meet, Kryzox, Tufan</title>
-        <meta name="description" content="Everything A1 IT Innovation has built: our own products GigFine (ride-share complaint platform) and T-Meet (Nepali video conferencing), plus Kryzox, Tufan, Brihat Patro, Utkrista Shikshya, Himalayan Sanchaya, Damak Campus, DTEF, Rolwaling Hospital and Hamro Dokan." />
+        <meta name="description" content="Everything A1 IT Innovation has built: our own products GigFine (ride-share complaint platform) and T-Meet (Nepali video conferencing), plus Kryzox, Tufan, Brihat Patro, Utkrista Shikshya, Himalayan Sanchaya, Damak Campus, DTEF and Rolwaling Hospital." />
         <meta name="keywords" content="A1 IT Innovation portfolio, A1 IT Innovation products, product of A1 IT Innovation, products of A1 IT, project of A1 IT Innovation, client of A1 IT Innovation, built by A1 IT Innovation, GigFine, GigFine Nepal, ride sharing complaint Nepal, Pathao complaint, Yango complaint, T-Meet, TMeet, Nepali video conferencing, video meeting app Nepal, Kryzox, Tufan, Brihat Patro, Utkrista Shikshya, Himalayan Sanchaya, Damak Campus, software projects Nepal" />
         <link rel="canonical" href="https://www.a1itinnovation.com.np/works" />
         <meta property="og:title" content="Portfolio & Products | A1 IT Innovation Nepal" />

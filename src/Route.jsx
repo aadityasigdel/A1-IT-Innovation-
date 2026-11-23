@@ -46,6 +46,8 @@ import LifetimeWebsite from "./Pages/Offers/LifetimeWebsite";
 import A1Scanner from "./Pages/Products/A1Scanner/A1Scanner";
 import A1ScannerPrivacyPolicy from "./Pages/Products/A1Scanner/PrivacyPolicy";
 import A1ScannerTerms from "./Pages/Products/A1Scanner/Terms";
+import TwinLanePrivacyPolicy from "./Pages/Products/TwinLane/PrivacyPolicy";
+import TwinLaneTerms from "./Pages/Products/TwinLane/Terms";
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -105,6 +107,8 @@ function RouteContent() {
       <Route path="/products/a1-scanner" element={<A1Scanner />} />
       <Route path="/products/a1-scanner/privacy-policy" element={<A1ScannerPrivacyPolicy />} />
       <Route path="/products/a1-scanner/terms-and-conditions" element={<A1ScannerTerms />} />
+      <Route path="/products/twin-lane/privacy-policy" element={<TwinLanePrivacyPolicy />} />
+      <Route path="/products/twin-lane/terms-and-conditions" element={<TwinLaneTerms />} />
     </Routes>
   );
 }

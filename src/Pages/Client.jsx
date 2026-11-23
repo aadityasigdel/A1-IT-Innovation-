@@ -2,7 +2,8 @@ import { Helmet } from "react-helmet";
 import Birhat from "../assets/Clients/brihat.webp";
 import damakcampus from "../assets/Clients/dmc.jpg";
 import Shree from "../assets/Clients/dtef.jpg";
-import Hamrodokan from "../assets/Clients/hamrodokan Logo.png";
+// Hamro Dokan hidden from the website (Nov 2026). Uncomment here and below to restore.
+// import Hamrodokan from "../assets/Clients/hamrodokan Logo.png";
 import himalayan from "../assets/Clients/himalayan.webp";
 import kryzox from "../assets/Clients/KryZone.png";
 import Tufan from "../assets/Clients/tufan.png";
@@ -48,7 +49,7 @@ export default function Client() {
 
   const clients = [
     ...products,
-    { logo: Hamrodokan, name: "Hamro Dokan",        url: "#",                                                                                       category: "E-Commerce",  project: "Web Platform",       location: "Nepal"         },
+    // { logo: Hamrodokan, name: "Hamro Dokan",        url: "#",                                                                                       category: "E-Commerce",  project: "Web Platform",       location: "Nepal"         },
     { logo: damakcampus, name: "Damak Campus",       url: "https://damakcampus.edu.np/",                                                            category: "Education",   project: "College Website",    location: "Damak, Jhapa"  },
     { logo: himalayan,  name: "Himalayan Sanchaya",  url: "https://himalayan-sanchaya.vercel.app/",                                                 category: "Finance",     project: "Web App",            location: "Nepal"         },
     { logo: Shree,      name: "DTEF",                url: "https://damaktechnical.edu.np/",                                                         category: "Education",   project: "Institute Website",  location: "Damak, Jhapa"  },
@@ -99,8 +100,8 @@ export default function Client() {
     <>
       <Helmet>
         <title>Clients &amp; Products of A1 IT Innovation | GigFine, T-Meet, Tufan, Kryzox, Damak Campus</title>
-        <meta name="description" content="Clients and products of A1 IT Innovation Nepal: GigFine (ride-share issue reporting), T-Meet (Nepali video conferencing), Tufan, Kryzox, Brihat Patro, Damak Campus, DTEF, Utkrista Shikshya, Himalayan Sanchaya, Rolwaling Hospital and Hamro Dokan." />
-        <meta name="keywords" content="A1 IT Innovation clients, client of A1 IT Innovation, clients of A1 IT, product of A1 IT Innovation, products of A1 IT, A1 IT Innovation products, A1 IT Innovation portfolio, GigFine, GigFine Nepal, T-Meet, TMeet Nepal, Nepali video conferencing, Tufan, Kryzox, Brihat Patro, Damak Campus, DTEF, Utkrista Shikshya, Himalayan Sanchaya, Rolwaling Hospital, Hamro Dokan, IT company Nepal, software company Damak Jhapa" />
+        <meta name="description" content="Clients and products of A1 IT Innovation Nepal: GigFine (ride-share issue reporting), T-Meet (Nepali video conferencing), Tufan, Kryzox, Brihat Patro, Damak Campus, DTEF, Utkrista Shikshya, Himalayan Sanchaya and Rolwaling Hospital." />
+        <meta name="keywords" content="A1 IT Innovation clients, client of A1 IT Innovation, clients of A1 IT, product of A1 IT Innovation, products of A1 IT, A1 IT Innovation products, A1 IT Innovation portfolio, GigFine, GigFine Nepal, T-Meet, TMeet Nepal, Nepali video conferencing, Tufan, Kryzox, Brihat Patro, Damak Campus, DTEF, Utkrista Shikshya, Himalayan Sanchaya, Rolwaling Hospital, IT company Nepal, software company Damak Jhapa" />
         <link rel="canonical" href="https://www.a1itinnovation.com.np/clients" />
         <meta property="og:title" content="Clients & Products of A1 IT Innovation Nepal" />
         <meta property="og:description" content="GigFine, T-Meet, Tufan, Kryzox, Damak Campus and more: the products we've built and the organisations we work with across Nepal." />
@@ -218,12 +219,14 @@ export default function Client() {
                 <text x="380" y="358" textAnchor="middle" fontFamily="system-ui,sans-serif" fontSize="8" fontWeight="600" fill="#374151">Rolwaling</text>
                 <text x="380" y="369" textAnchor="middle" fontFamily="system-ui,sans-serif" fontSize="8" fill="#6B7280">Hospital</text>
 
-                {/* ── Client node: Hamro Dokan ── */}
+                {/* ── Client node: Hamro Dokan (hidden Nov 2026) ──
                 <circle cx="120" cy="345" r="40" fill="none" stroke="#818CF8" strokeWidth="1.2" strokeDasharray="6 5" opacity="0.45" className="spin-ring-rev"/>
                 <circle cx="120" cy="345" r="34" fill="white" stroke="#E0E7FF" strokeWidth="2"/>
                 <text x="120" y="340" textAnchor="middle" fontSize="18">🛒</text>
                 <text x="120" y="358" textAnchor="middle" fontFamily="system-ui,sans-serif" fontSize="8" fontWeight="600" fill="#374151">Hamro</text>
                 <text x="120" y="369" textAnchor="middle" fontFamily="system-ui,sans-serif" fontSize="8" fill="#6B7280">Dokan</text>
+
+                */}
 
                 {/* ── Client node: Tufan ── */}
                 <circle cx="55" cy="228" r="40" fill="none" stroke="#6366F1" strokeWidth="1.2" strokeDasharray="6 5" opacity="0.45" className="spin-ring"/>

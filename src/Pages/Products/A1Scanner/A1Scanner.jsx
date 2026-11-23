@@ -4,9 +4,8 @@ import Navigation from "../../../components/Navigation";
 import splashImage from "../../../assets/a1-scanner-logo-light-mode.jpeg";
 import logoImage from "../../../assets/a1-scanner-logo-darkmode.jpeg";
 
-// Set this to the Play Store listing once the app is live,
-// e.g. "https://play.google.com/store/apps/details?id=np.com.a1itinnovation.scanner"
-const PLAY_STORE_URL = "";
+// Live Google Play listing. If this is ever emptied, the button falls back to "Coming soon".
+const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.a1_scanner";
 
 const PAGE_URL = "https://www.a1itinnovation.com.np/products/a1-scanner";
 // Absolute URL (served from /public) for social share previews and schema — crawlers don't resolve hashed asset paths.

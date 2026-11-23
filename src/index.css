@@ -36,18 +36,6 @@ html {
   animation-play-state: paused;
 }
 
-@keyframes rocketFly {
-  0%   { transform: translateY(0) rotate(0deg); }
-  30%  { transform: translateY(-18px) rotate(-15deg); }
-  60%  { transform: translateY(-8px) rotate(10deg); }
-  100% { transform: translateY(0) rotate(0deg); }
-}
-
-.rocket-fly {
-  display: inline-block;
-  animation: rocketFly 1.6s ease-in-out infinite;
-}
-
 /* ── Client network animations ── */
 
 /* Heartbeat on center A1 IT circle */
