@@ -48,6 +48,8 @@ import A1ScannerPrivacyPolicy from "./Pages/Products/A1Scanner/PrivacyPolicy";
 import A1ScannerTerms from "./Pages/Products/A1Scanner/Terms";
 import TwinLanePrivacyPolicy from "./Pages/Products/TwinLane/PrivacyPolicy";
 import TwinLaneTerms from "./Pages/Products/TwinLane/Terms";
+import PaisaAayoPrivacyPolicy from "./Pages/Products/PaisaAayo/PrivacyPolicy";
+import PaisaAayoTerms from "./Pages/Products/PaisaAayo/Terms";
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -109,6 +111,8 @@ function RouteContent() {
       <Route path="/products/a1-scanner/terms-and-conditions" element={<A1ScannerTerms />} />
       <Route path="/products/twin-lane/privacy-policy" element={<TwinLanePrivacyPolicy />} />
       <Route path="/products/twin-lane/terms-and-conditions" element={<TwinLaneTerms />} />
+      <Route path="/products/paisa-aayo/privacy-policy" element={<PaisaAayoPrivacyPolicy />} />
+      <Route path="/products/paisa-aayo/terms-and-conditions" element={<PaisaAayoTerms />} />
     </Routes>
   );
 }
