@@ -4,6 +4,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import { FiFileText, FiMail, FiPhone, FiUpload, FiUser } from "react-icons/fi";
 import Footer from "../../components/Footer";
 import Navigation from "../../components/Navigation";
+import { applyInternship } from "../../api/a1";
 
 const DOMAIN_OPTIONS = [
     { value: "Java Spring Boot", label: "Java Spring Boot", icon: "☕", color: "from-orange-400 to-red-500" },
@@ -166,6 +167,7 @@ export default function InternShip() {
         designation: "",
         experience: "",
         cv: null,
+        website: "", // honeypot: hidden from people, bots fill it
     });
 
     const [errors, setErrors] = useState({});
@@ -233,6 +235,19 @@ export default function InternShip() {
         }
 
         setIsSubmitting(true);
+
+        // 1) Our backend: saves the application + CV and mails the student a "thank you" with the policies
+        const backend = new FormData();
+        backend.append("fullName", formData.fullName);
+        backend.append("email", formData.email);
+        backend.append("phone", formData.phone);
+        backend.append("collegeName", formData.isCollegeStudent ? formData.collegeName : "");
+        backend.append("designation", formData.designation);
+        backend.append("experience", formData.experience);
+        backend.append("website", formData.website);
+        backend.append("cv", formData.cv);
+
+        // 2) FormSubmit: the same application (with CV) to the office mailbox, as before
         const payload = new FormData();
         payload.append("fullName", formData.fullName);
         payload.append("email", formData.email);
@@ -246,16 +261,26 @@ export default function InternShip() {
         payload.append("_template", "box");
 
         try {
-            const response = await fetch("https://formsubmit.co/info@a1itinnovation.com.np", {
-                method: "POST",
-                body: payload,
-            });
-            if (response.ok) {
+            // Backend first: a 4xx is a real form problem (e.g. not a PDF), so stop before mailing the office
+            let saved = false;
+            try {
+                await applyInternship(backend);
+                saved = true;
+            } catch (err) {
+                if (err.status >= 400 && err.status < 500) {
+                    setErrors({ submit: err.message });
+                    return;
+                }
+            }
+            const mailed = await fetch("https://formsubmit.co/info@a1itinnovation.com.np", { method: "POST", body: payload })
+                .then((r) => r.ok)
+                .catch(() => false);
+            if (saved || mailed) {
                 setSubmitSuccess(true);
                 setFormData({
                     fullName: "", email: "", phone: "",
                     isCollegeStudent: false, collegeName: "",
-                    designation: "", experience: "", cv: null,
+                    designation: "", experience: "", cv: null, website: "",
                 });
                 setErrors({});
             } else {
@@ -486,8 +511,8 @@ export default function InternShip() {
                     </div>
                 </section>
 
-                {/* ── Policies & Rules ── */}
-                <section className="w-full py-20 bg-gradient-to-b from-gray-50 to-white">
+                {/* ── Policies & Rules ── (the "thank you" mail links to #policies) */}
+                <section id="policies" className="scroll-mt-24 w-full py-20 bg-gradient-to-b from-gray-50 to-white">
                     <div className="max-w-6xl mx-auto px-4">
                         <div className="text-center mb-12">
                             <span className="inline-block bg-indigo-100 text-indigo-700 text-sm font-semibold px-4 py-1 rounded-full mb-4">
@@ -583,6 +608,12 @@ export default function InternShip() {
                             </h2>
                             <div className="w-20 h-1.5 bg-indigo-600 mx-auto mb-4 rounded-full"></div>
                             <p className="text-gray-500">Fill out the form below and we'll get back to you within a few days.</p>
+                            <p className="text-sm text-gray-500 mt-2">
+                                Already an intern?{" "}
+                                <a href="/internship/certificate" className="text-indigo-600 font-semibold hover:underline">
+                                    Download or verify your certificate
+                                </a>
+                            </p>
                         </div>
 
                         <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -595,7 +626,7 @@ export default function InternShip() {
                                     </div>
                                     <h3 className="text-2xl font-bold text-gray-900 mb-3">Application Submitted! 🎉</h3>
                                     <p className="text-gray-600 mb-8 max-w-md mx-auto">
-                                        Thank you for applying! We've received your application and will review it carefully. We'll reach out within a few days.
+                                        Thank you for applying! We've received your application and will review it carefully. We'll reach out within a few days. A confirmation email is on its way (please check your spam folder too).
                                     </p>
                                     <button
                                         onClick={() => setSubmitSuccess(false)}
@@ -606,6 +637,17 @@ export default function InternShip() {
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit} className="p-8 space-y-6" encType="multipart/form-data">
+                                    {/* Honeypot: hidden from people */}
+                                    <input
+                                        type="text"
+                                        name="website"
+                                        value={formData.website}
+                                        onChange={handleChange}
+                                        tabIndex={-1}
+                                        autoComplete="off"
+                                        aria-hidden="true"
+                                        className="hidden"
+                                    />
 
                                     {/* Full Name */}
                                     <div>

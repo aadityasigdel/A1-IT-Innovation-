@@ -8,9 +8,13 @@ const servicesLinks = [
   { href: "/services/security-audit", label: "Security Audit" },
   { href: "/services/digital-marketing", label: "Digital Marketing" },
   { href: "/services/domain-hosting", label: "Domain & Hosting" },
-  { href: "/products/a1-scanner",     label: "A1 Scanner – Safe Offline Scanner App" },
   { href: "/services/internship",     label: "Free Internship" },
   { href: "/services/workshop",       label: "Technical Workshop" },
+];
+
+// Our own products (not services)
+const productsLinks = [
+  { href: "/products/a1-scanner", label: "A1 Scanner – Safe Offline Scanner App" },
 ];
 
 const coursesLinks = [
@@ -137,6 +141,17 @@ export default function Footer() {
           <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Courses</h3>
           <ul className="space-y-2.5 mb-6">
             {coursesLinks.map((l) => (
+              <li key={l.href}>
+                <a href={l.href} className="text-sm text-gray-400 hover:text-indigo-400 transition-colors duration-200 flex items-center gap-2">
+                  <span className="w-1 h-1 bg-indigo-500 rounded-full flex-shrink-0"/>
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Products</h3>
+          <ul className="space-y-2.5 mb-6">
+            {productsLinks.map((l) => (
               <li key={l.href}>
                 <a href={l.href} className="text-sm text-gray-400 hover:text-indigo-400 transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1 h-1 bg-indigo-500 rounded-full flex-shrink-0"/>

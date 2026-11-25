@@ -9,9 +9,13 @@ const servicesLinks = [
   { href: "/services/security-audit", icon: "🛡️", label: "Security Audit",       desc: "Vulnerability & pen testing" },
   { href: "/services/digital-marketing", icon: "📈", label: "Digital Marketing",  desc: "Campaigns, FB boosting & free SEO" },
   { href: "/services/domain-hosting", icon: "🌐", label: "Domain & Hosting",     desc: "Registration & managed hosting" },
-  { href: "/products/a1-scanner",     icon: "📷", label: "A1 Scanner App",        desc: "Safe offline document scanner" },
   { href: "/services/internship",     icon: "🎓", label: "Free Internship",       desc: "Real projects, real mentors" },
   { href: "/services/workshop",       icon: "🏫", label: "Tech Workshop",         desc: "Training at colleges & schools" },
+];
+
+// Our own products — kept out of the Services dropdown
+const productsLinks = [
+  { href: "/products/a1-scanner", icon: "📷", label: "A1 Scanner App", desc: "Safe offline document scanner" },
 ];
 
 const coursesLinks = [
@@ -154,6 +158,7 @@ export default function Navigation() {
         {!isMobileView && (
           <div className="flex items-center gap-5 text-sm">
             <Dropdown title="Services" links={servicesLinks} />
+            <Dropdown title="Products" links={productsLinks} />
             <Dropdown title="Courses" links={coursesLinks} />
             <a href="/clients" className="font-medium text-gray-700 hover:text-indigo-600 transition-colors py-2">Clients</a>
             <a href="/works"   className="font-medium text-gray-700 hover:text-indigo-600 transition-colors py-2">Works</a>
@@ -242,6 +247,7 @@ export default function Navigation() {
             {/* Nav links — scrollable */}
             <div className="flex-1 overflow-y-auto px-5 py-4 space-y-1">
               <Dropdown title="Services" links={servicesLinks} isMobile />
+              <Dropdown title="Products" links={productsLinks} isMobile />
               <Dropdown title="Courses"  links={coursesLinks}  isMobile />
 
               {[

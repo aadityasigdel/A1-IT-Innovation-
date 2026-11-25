@@ -39,6 +39,10 @@ import WebDev from "./Pages/Services/WebDev";
 import Workshop from "./Pages/Services/Workshop";
 import DevOps from "./Pages/Services/DevOps";
 
+// Internship certificate (download / verify) + A1 admin panel (backend: User-Service com.userservice.a1)
+import InternshipCertificate from "./Pages/Internship/Certificate";
+import InternshipAdmin from "./Pages/Admin/InternshipAdmin";
+
 // Offers
 import LifetimeWebsite from "./Pages/Offers/LifetimeWebsite";
 
@@ -101,6 +105,11 @@ function RouteContent() {
       <Route path="/services/security-audit" element={<SecurityAudit />} />
       <Route path="/services/digital-marketing" element={<DigitalMarketingService />} />
       <Route path="/services/devops" element={<DevOps />} />
+
+      {/* Internship certificate + admin */}
+      <Route path="/internship/certificate" element={<InternshipCertificate />} />
+      <Route path="/internship/verify" element={<InternshipCertificate />} />
+      <Route path="/admin/internships" element={<InternshipAdmin />} />
 
       {/* Offers */}
       <Route path="/offers/lifetime-website" element={<LifetimeWebsite />} />

@@ -55,9 +55,15 @@
   </url>
   <url>
     <loc>https://www.a1itinnovation.com.np/services/internship</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.a1itinnovation.com.np/internship/certificate</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.a1itinnovation.com.np/services/workshop</loc>
