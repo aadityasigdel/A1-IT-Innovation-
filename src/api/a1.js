@@ -39,7 +39,29 @@ async function request(path, { method = "GET", json, form, admin = false, blob =
 }
 
 // ── Public ──
-export const applyInternship = (formData) => request("/internships", { method: "POST", form: formData });
+// XHR (not fetch) so the form can show the CV upload progress. 60 s timeout: a student is never left waiting.
+export function applyInternship(formData, onProgress) {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", `${A1_API}/internships`);
+    xhr.timeout = 60_000;
+    xhr.upload.onprogress = (e) => {
+      if (e.lengthComputable && onProgress) onProgress(Math.round((e.loaded / e.total) * 100));
+    };
+    xhr.onload = () => {
+      let body = null;
+      try { body = JSON.parse(xhr.responseText); } catch { /* not JSON */ }
+      if (xhr.status >= 200 && xhr.status < 300) return resolve(body);
+      const err = new Error(body?.message || `Request failed (${xhr.status})`);
+      err.status = xhr.status;
+      reject(err);
+    };
+    const fail = (msg) => () => { const err = new Error(msg); err.status = 0; reject(err); };
+    xhr.onerror = fail("Network error");
+    xhr.ontimeout = fail("Timed out");
+    xhr.send(formData);
+  });
+}
 export const downloadCertificate = (email, code) =>
   request("/certificates/download", { method: "POST", json: { email, code }, blob: true });
 export const verifyCertificate = (no) => request(`/certificates/${encodeURIComponent(no.trim())}`);

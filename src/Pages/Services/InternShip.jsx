@@ -172,6 +172,7 @@ export default function InternShip() {
 
     const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [uploadPercent, setUploadPercent] = useState(0);
     const [submitSuccess, setSubmitSuccess] = useState(false);
     const [openFaq, setOpenFaq] = useState(null);
     const fileInputRef = useRef(null);
@@ -235,6 +236,7 @@ export default function InternShip() {
         }
 
         setIsSubmitting(true);
+        setUploadPercent(0);
 
         // 1) Our backend: saves the application + CV and mails the student a "thank you" with the policies
         const backend = new FormData();
@@ -247,7 +249,8 @@ export default function InternShip() {
         backend.append("website", formData.website);
         backend.append("cv", formData.cv);
 
-        // 2) FormSubmit: the same application (with CV) to the office mailbox, as before
+        // 2) FormSubmit: ONLY if our backend is down (the backend itself mails the office the
+        //    application with the CV). Before, this ran every time and kept students waiting.
         const payload = new FormData();
         payload.append("fullName", formData.fullName);
         payload.append("email", formData.email);
@@ -261,18 +264,18 @@ export default function InternShip() {
         payload.append("_template", "box");
 
         try {
-            // Backend first: a 4xx is a real form problem (e.g. not a PDF), so stop before mailing the office
             let saved = false;
             try {
-                await applyInternship(backend);
+                await applyInternship(backend, setUploadPercent);
                 saved = true;
             } catch (err) {
+                // 4xx = a real form problem (e.g. not a PDF): show it
                 if (err.status >= 400 && err.status < 500) {
                     setErrors({ submit: err.message });
                     return;
                 }
             }
-            const mailed = await fetch("https://formsubmit.co/info@a1itinnovation.com.np", { method: "POST", body: payload })
+            const mailed = saved || await fetch("https://formsubmit.co/info@a1itinnovation.com.np", { method: "POST", body: payload })
                 .then((r) => r.ok)
                 .catch(() => false);
             if (saved || mailed) {
@@ -863,7 +866,9 @@ export default function InternShip() {
                                                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                                                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                                                 </svg>
-                                                Submitting...
+                                                {uploadPercent > 0 && uploadPercent < 100
+                                                    ? `Uploading CV… ${uploadPercent}%`
+                                                    : "Submitting..."}
                                             </>
                                         ) : (
                                             "Submit Internship Application 🚀"
