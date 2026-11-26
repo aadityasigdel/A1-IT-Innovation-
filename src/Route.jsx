@@ -57,6 +57,8 @@ import TwinLanePrivacyPolicy from "./Pages/Products/TwinLane/PrivacyPolicy";
 import TwinLaneTerms from "./Pages/Products/TwinLane/Terms";
 import PaisaAayoPrivacyPolicy from "./Pages/Products/PaisaAayo/PrivacyPolicy";
 import PaisaAayoTerms from "./Pages/Products/PaisaAayo/Terms";
+import InternshipNepalPrivacyPolicy from "./Pages/Products/InternshipNepal/PrivacyPolicy";
+import InternshipNepalTerms from "./Pages/Products/InternshipNepal/Terms";
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -141,6 +143,8 @@ function RouteContent() {
       <Route path="/products/twin-lane/terms-and-conditions" element={<TwinLaneTerms />} />
       <Route path="/products/paisa-aayo/privacy-policy" element={<PaisaAayoPrivacyPolicy />} />
       <Route path="/products/paisa-aayo/terms-and-conditions" element={<PaisaAayoTerms />} />
+      <Route path="/products/internship-nepal/privacy-policy" element={<InternshipNepalPrivacyPolicy />} />
+      <Route path="/products/internship-nepal/terms-and-conditions" element={<InternshipNepalTerms />} />
     </Routes>
   );
 }
