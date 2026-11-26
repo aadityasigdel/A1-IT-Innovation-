@@ -2,6 +2,7 @@
 import './App.css'
 import RoutSetup from './Route'
 import ChatBot from './components/ChatBot'
+import { isPortalHost } from './Portal/portalHost'
 
 function WhatsAppButton() {
   return (
@@ -24,8 +25,9 @@ function App() {
   return (
     <>
       <RoutSetup/>
-      <WhatsAppButton />
-      <ChatBot />
+      {/* Marketing site only; the intern portal stays clean */}
+      {!isPortalHost() && <WhatsAppButton />}
+      {!isPortalHost() && <ChatBot />}
     </>
   )
 }

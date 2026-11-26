@@ -7,6 +7,7 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
+Disallow: /internship/track/
 Disallow: /register
 Disallow: /auth/
 Disallow: /user/
@@ -19,6 +20,7 @@ User-agent: Googlebot
 Allow: /
 Disallow: /api/
 Disallow: /admin/
+Disallow: /internship/track/
 Disallow: /register
 Disallow: /auth/
 Disallow: /user/
@@ -33,6 +35,7 @@ User-agent: Bingbot
 Allow: /
 Disallow: /api/
 Disallow: /admin/
+Disallow: /internship/track/
 Disallow: /register
 Disallow: /auth/
 Crawl-delay: 5
@@ -42,6 +45,7 @@ User-agent: DuckDuckBot
 Allow: /
 Disallow: /api/
 Disallow: /admin/
+Disallow: /internship/track/
 Crawl-delay: 10
 
 # ─── SEO tool crawlers (rate-limited) ──────────────────────────────────────

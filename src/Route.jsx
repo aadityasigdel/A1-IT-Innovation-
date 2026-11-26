@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import PageWrapper from "./components/PageWrapper";
 
@@ -41,7 +41,10 @@ import DevOps from "./Pages/Services/DevOps";
 
 // Internship certificate (download / verify) + A1 admin panel (backend: User-Service com.userservice.a1)
 import InternshipCertificate from "./Pages/Internship/Certificate";
+import InternshipTrack from "./Pages/Internship/Track";
 import InternshipAdmin from "./Pages/Admin/InternshipAdmin";
+import { PortalHome, PortalTask } from "./Portal/Portal";
+import { isPortalHost } from "./Portal/portalHost";
 
 // Offers
 import LifetimeWebsite from "./Pages/Offers/LifetimeWebsite";
@@ -66,7 +69,22 @@ function ScrollToTop() {
   return null;
 }
 
+// portal.a1itinnovation.com.np (same build, served on the VPS): intern portal + admin panel only
+function PortalRoutes() {
+  return (
+    <Routes>
+      <Route path="/" element={<PortalHome />} />
+      <Route path="/tasks/:id" element={<PortalTask />} />
+      <Route path="/admin" element={<InternshipAdmin />} />
+      <Route path="/admin/internships" element={<InternshipAdmin />} />
+      <Route path="/internship/track/:token" element={<InternshipTrack />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  );
+}
+
 function RouteContent() {
+  if (isPortalHost()) return <PortalRoutes />;
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -109,6 +127,7 @@ function RouteContent() {
       {/* Internship certificate + admin */}
       <Route path="/internship/certificate" element={<InternshipCertificate />} />
       <Route path="/internship/verify" element={<InternshipCertificate />} />
+      <Route path="/internship/track/:token" element={<InternshipTrack />} />
       <Route path="/admin/internships" element={<InternshipAdmin />} />
 
       {/* Offers */}
