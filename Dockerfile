@@ -2,6 +2,8 @@
 # Same build as www: the app shows the portal when the host name starts with "portal.".
 FROM node:20-alpine AS build
 WORKDIR /app
+# Portal is noindex: no Chrome download, no prerender
+ENV PUPPETEER_SKIP_DOWNLOAD=1 SKIP_PRERENDER=1
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .

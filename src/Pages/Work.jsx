@@ -15,6 +15,7 @@ import Himalayansanchaya from "../assets/himalayan-sanchaya.png";
 import Utkrista from "../assets/utkrista.png";
 import GigFine from "../assets/gigfine-logo-img.webp";
 import TMeet from "../assets/no-background.png";
+import { APPS } from "../appLinks";
 
 // type color map
 const typeColors = {
@@ -35,6 +36,7 @@ const categoryColors = {
   "Retail & Grocery":    "bg-lime-100 text-lime-700",
   "Ridesharing":         "bg-yellow-100 text-yellow-700",
   "Video Conferencing":  "bg-sky-100 text-sky-700",
+  "Room Rentals":        "bg-emerald-100 text-emerald-700",
 };
 
 const projects = [
@@ -46,6 +48,29 @@ const projects = [
     category: "Ridesharing",
     status: "Live",
     link: "https://gigfine.com/",
+    playStore: APPS.gigfine.url,
+  },
+  {
+    img: APPS.gigfineRentals.icon,
+    imgStyle: { borderRadius: 24 },
+    title: "GigFine Rentals: rooms and flats you can trust",
+    description: "Find a room or flat in Nepal with real photos, the monthly rent and the exact area. Landlords and agents are checked before their rooms go live. Our own product.",
+    type: "Our Product",
+    category: "Room Rentals",
+    status: "Live",
+    link: null,
+    playStore: APPS.gigfineRentals.url,
+  },
+  {
+    img: APPS.internshipNepal.icon,
+    imgStyle: { borderRadius: 24 },
+    title: "Internship Nepal: our internship app",
+    description: "Students across Nepal apply for our free remote IT internship, follow their application, do daily check-ins and tasks with a mentor, and download their certificate. Our own product.",
+    type: "Our Product",
+    category: "Education",
+    status: "Live",
+    link: "/services/internship",
+    playStore: APPS.internshipNepal.url,
   },
   {
     img: TMeet,
@@ -147,7 +172,7 @@ const filterTabs = ["All", "Our Product", "Web Platform", "Mobile App", "Website
 const stats = [
   { value: "21+", label: "Projects shipped",    icon: "🚀" },
   { value: "20+", label: "Clients",             icon: "🤝" },
-  { value: "2",   label: "Products of our own", icon: "🧩" },
+  { value: "4",   label: "Products of our own", icon: "🧩" },
   { value: "4+",  label: "Years at it",         icon: "📅" },
 ];
 
@@ -184,7 +209,8 @@ export default function Work() {
               "description": p.description,
               "creator": { "@type": "Organization", "name": "A1 IT Innovation Nepal", "url": "https://www.a1itinnovation.com.np" },
               ...(p.type === "Our Product" ? { "applicationCategory": p.category } : {}),
-              ...(p.link ? { "url": p.link } : {}),
+              ...(p.link || p.playStore ? { "url": p.playStore || p.link } : {}),
+              ...(p.playStore ? { "operatingSystem": "Android", "downloadUrl": p.playStore } : {}),
             })),
           },
         })}</script>
@@ -383,7 +409,17 @@ export default function Work() {
                     <p className="text-gray-500 text-sm leading-relaxed flex-1">{project.description}</p>
 
                     {/* Link */}
-                    <div className="mt-5">
+                    <div className="mt-5 flex flex-wrap items-center gap-4">
+                      {project.playStore && (
+                        <a
+                          href={project.playStore}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 bg-gray-900 hover:bg-black text-white font-semibold text-sm px-3 py-1.5 rounded-lg transition-colors"
+                        >
+                          ▶ Google Play
+                        </a>
+                      )}
                       {project.link ? (
                         <a
                           href={project.link}
@@ -394,7 +430,7 @@ export default function Work() {
                           Visit Project
                           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                         </a>
-                      ) : (
+                      ) : !project.playStore && (
                         <span className="text-xs text-gray-400 italic">Website coming soon</span>
                       )}
                     </div>

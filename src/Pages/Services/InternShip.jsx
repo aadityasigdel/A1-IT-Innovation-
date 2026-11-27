@@ -5,6 +5,10 @@ import { FiFileText, FiMail, FiPhone, FiUpload, FiUser } from "react-icons/fi";
 import Footer from "../../components/Footer";
 import Navigation from "../../components/Navigation";
 import { applyInternship } from "../../api/a1";
+import PlayStoreButton from "../../components/PlayStoreButton";
+import { APPS } from "../../appLinks";
+
+const APP = APPS.internshipNepal;
 
 const DOMAIN_OPTIONS = [
     { value: "Java Spring Boot", label: "Java Spring Boot", icon: "☕", color: "from-orange-400 to-red-500" },
@@ -361,6 +365,21 @@ export default function InternShip() {
                     }
                 })}</script>
 
+                {/* ── JSON-LD: the Android app ── */}
+                <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "MobileApplication",
+                    "name": APP.name,
+                    "operatingSystem": "Android",
+                    "applicationCategory": "EducationalApplication",
+                    "description": APP.desc,
+                    "url": APP.url,
+                    "downloadUrl": APP.url,
+                    "installUrl": APP.url,
+                    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "NPR" },
+                    "publisher": { "@type": "Organization", "name": "A1 IT Innovation", "url": "https://www.a1itinnovation.com.np" }
+                })}</script>
+
                 {/* ── JSON-LD: FAQPage ── */}
                 <script type="application/ld+json">{JSON.stringify({
                     "@context": "https://schema.org",
@@ -400,9 +419,15 @@ export default function InternShip() {
                             ))}
                         </div>
 
-                        <a href="#apply" className="w-fit bg-indigo-600 font-semibold text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md hover:shadow-lg">
-                            Apply for Internship ↓
-                        </a>
+                        <div className="flex flex-wrap items-center gap-3 justify-center lg:justify-start">
+                            <a href="#apply" className="w-fit bg-indigo-600 font-semibold text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md hover:shadow-lg">
+                                Apply for Internship ↓
+                            </a>
+                            <PlayStoreButton href={APP.url} appName={APP.name} />
+                        </div>
+                        <p className="text-sm text-gray-500 -mt-4">
+                            📱 New: apply and do your whole internship from the <strong>Internship Nepal</strong> app.
+                        </p>
                     </div>
 
                     <div className="mt-6 lg:mt-0">
@@ -617,6 +642,18 @@ export default function InternShip() {
                                     Download or verify your certificate
                                 </a>
                             </p>
+                        </div>
+
+                        {/* Apply from the app instead */}
+                        <div className="mb-8 flex flex-col sm:flex-row items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-lg">
+                            <img src={APP.icon} alt="Internship Nepal app icon" loading="lazy" className="w-16 h-16 rounded-2xl bg-white p-1 flex-shrink-0" />
+                            <div className="flex-1 text-center sm:text-left">
+                                <p className="font-bold text-lg">Apply from the Internship Nepal app</p>
+                                <p className="text-sm text-indigo-100">
+                                    Same application, plus status updates, daily check-ins, tasks, notifications and your certificate, all on your phone.
+                                </p>
+                            </div>
+                            <PlayStoreButton href={APP.url} appName={APP.name} variant="light" />
                         </div>
 
                         <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">

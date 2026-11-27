@@ -3,6 +3,8 @@ import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import GigFine from "../assets/gigfine-logo-img.webp";
 import TMeet from "../assets/no-background.png";
+import PlayStoreButton from "../components/PlayStoreButton";
+import { APPS } from "../appLinks";
 
 const services = [
   {
@@ -407,6 +409,21 @@ export default function Home() {
                   <p className="text-sm text-gray-500 leading-relaxed mt-1">Nepali video conferencing for online classes and business meetings. Built fully in-house, data stays in our hands.</p>
                 </div>
               </a>
+            </div>
+
+            {/* Our Android apps */}
+            <h3 className="text-lg font-bold text-gray-900 mt-12 mb-5">Our apps on Google Play</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[APPS.internshipNepal, APPS.gigfine, APPS.gigfineRentals].map((app) => (
+                <div key={app.url} className="flex flex-col gap-4 p-5 border border-gray-200 rounded-2xl hover:border-indigo-300 hover:shadow-md transition">
+                  <div className="flex items-center gap-4">
+                    <img src={app.icon} alt={`${app.name} app icon`} loading="lazy" className="w-14 h-14 rounded-2xl flex-shrink-0 shadow-sm"/>
+                    <h4 className="font-bold text-gray-900">{app.name}</h4>
+                  </div>
+                  <p className="text-sm text-gray-500 leading-relaxed flex-1">{app.desc}</p>
+                  <PlayStoreButton href={app.url} appName={app.name} className="w-fit"/>
+                </div>
+              ))}
             </div>
           </div>
         </section>

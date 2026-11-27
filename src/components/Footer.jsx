@@ -1,4 +1,5 @@
 import logoImage from "../assets/logo.png";
+import { APPS } from "../appLinks";
 
 const servicesLinks = [
   { href: "/offers/lifetime-website", label: "🔥 Lifetime Free Domain & Hosting Offer" },
@@ -15,6 +16,8 @@ const servicesLinks = [
 // Our own products (not services)
 const productsLinks = [
   { href: "/products/a1-scanner", label: "A1 Scanner – Safe Offline Scanner App" },
+  // Android apps on Google Play
+  ...[APPS.internshipNepal, APPS.gigfine, APPS.gigfineRentals].map((a) => ({ href: a.url, label: `${a.name} App`, external: true })),
 ];
 
 const coursesLinks = [
@@ -153,7 +156,7 @@ export default function Footer() {
           <ul className="space-y-2.5 mb-6">
             {productsLinks.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className="text-sm text-gray-400 hover:text-indigo-400 transition-colors duration-200 flex items-center gap-2">
+                <a href={l.href} {...(l.external && { target: "_blank", rel: "noopener noreferrer" })} className="text-sm text-gray-400 hover:text-indigo-400 transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1 h-1 bg-indigo-500 rounded-full flex-shrink-0"/>
                   {l.label}
                 </a>
