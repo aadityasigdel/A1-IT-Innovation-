@@ -39,13 +39,13 @@ export default function BlogPost() {
         <meta name="keywords" content={post.keywords} />
         <meta name="author" content={post.author} />
         <meta name="publish_date" content={post.date} />
-        <link rel="canonical" href={`https://a1itinnovation.com/blog/${post.slug}`} />
+        <link rel="canonical" href={`https://www.a1itinnovation.com.np/blog/${post.slug}`} />
 
         {/* Open Graph for Social Sharing */}
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={post.image} />
-        <meta property="og:url" content={`https://a1itinnovation.com/blog/${post.slug}`} />
+        <meta property="og:url" content={`https://www.a1itinnovation.com.np/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content={post.date} />
         <meta property="article:author" content={post.author} />
@@ -170,7 +170,7 @@ export default function BlogPost() {
                   <p className="text-sm font-semibold text-gray-500 uppercase">Share Article</p>
                   <div className="flex gap-3">
                     <a
-                      href={`https://www.facebook.com/sharer/sharer.php?u=https://a1itinnovation.com/blog/${post.slug}`}
+                      href={`https://www.facebook.com/sharer/sharer.php?u=https://www.a1itinnovation.com.np/blog/${post.slug}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-lg transition duration-300 shadow-md hover:shadow-lg flex items-center gap-2"
@@ -181,7 +181,7 @@ export default function BlogPost() {
                       Facebook
                     </a>
                     <a
-                      href={`https://twitter.com/intent/tweet?url=https://a1itinnovation.com/blog/${post.slug}&text=${post.title}`}
+                      href={`https://twitter.com/intent/tweet?url=https://www.a1itinnovation.com.np/blog/${post.slug}&text=${post.title}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-blue-400 hover:bg-blue-500 text-white font-bold px-6 py-3 rounded-lg transition duration-300 shadow-md hover:shadow-lg flex items-center gap-2"

@@ -448,7 +448,7 @@ export default function Client() {
             "foundingDate": "2021",
             "areaServed": ["Damak, Jhapa", "Kathmandu", "Nepal"],
             "sameAs": [
-              "https://www.facebook.com/a1itinnovation",
+              "https://www.facebook.com/a1itinnovationnepal",
               "https://www.linkedin.com/company/a1itinnovation"
             ],
             "owns": products.map(p => ({
